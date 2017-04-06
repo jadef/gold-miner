@@ -11,7 +11,6 @@ var
   concat      = require('gulp-concat'), // Concatinate files
   eslint      = require('gulp-eslint'), // Linting of JavaScript
   imagemin    = require('gulp-imagemin'), // Process Images
-  mustache    = require('gulp-mustache'), // Interpolate mustache files
   order       = require('gulp-order'), // Order files
   plumber     = require('gulp-plumber'), // Pipe error patch
   sassLint    = require('gulp-sass-lint'), // Linting of Sass
@@ -53,17 +52,6 @@ gulp.task('clean', function() {
 gulp.task('start', function() {
   return gulp.src([source + 'start/**/*'])
     .pipe(gulp.dest(dest));
-});
-
-// -- Build Templates
-gulp.task('templates', function() {
-  var model = JSON.parse(fs.readFileSync(source + 'model.json', 'utf8'));
-
-  return gulp.src(source + 'index.mustache')
-    .pipe(plumber())
-    .pipe(mustache(model, { extension: '.html' }))
-    .pipe(gulp.dest(dest))
-    .pipe(browserSync.reload({ stream: true }));
 });
 
 // -- Build JS
@@ -176,12 +164,9 @@ gulp.task('watch', ['build'], function() {
   });
 
   // All the watches
-  gulp.watch(source + 'index.mustache', ['templates']);
-  gulp.watch(source + 'templates/**/*.mustache', ['templates']);
   gulp.watch(source + 'sass/**/*.scss', ['css']);
   gulp.watch(source + 'scripts/**/*.js', ['js']);
   gulp.watch(source + 'images/**/*', ['images']);
-  gulp.watch(source + 'model.json', ['templates']);
 
 });
 
@@ -189,5 +174,5 @@ gulp.task('watch', ['build'], function() {
 // ------ Builders ------
 
 gulp.task('default', ['watch']);
-gulp.task('compile', sequence('clean', ['images', 'js', 'css'], 'templates', 'start'));
-gulp.task('build', sequence('images', 'js', 'css', 'templates'));
+gulp.task('compile', sequence('clean', ['images', 'js', 'css'], 'start'));
+gulp.task('build', sequence('images', 'js', 'css'));
