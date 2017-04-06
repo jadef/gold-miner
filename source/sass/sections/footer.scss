@@ -1,0 +1,7 @@
+// ----- Footer
+footer {
+  @include wire;
+  margin: auto;
+  max-width: $xlarge;
+  min-height: 72px;
+}

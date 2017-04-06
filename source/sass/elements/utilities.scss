@@ -21,3 +21,9 @@
   font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
+
+// Responsive resizing by default
+img {
+  max-height: 100%;
+  max-width: 100%;
+}

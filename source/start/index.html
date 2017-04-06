@@ -8,31 +8,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!--   <link href="images/favicon.ico" rel="shortcut icon">
-  <link href="images/touch.png" rel="apple-touch-icon-precomposed">
+  <link href="images/touch.png" rel="apple-touch-icon-precomposed"> -->
 
-  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700,300italic,700italic' rel='stylesheet' type='text/css'> -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <!-- STRUCTURE -->
   <header>
-    <section class="logo">
-      Logo
-    </section>
-    <section class="intro">
-      Intro
-<!--       <h2>Picking Technologies</h2>
-      <p>Always keep learning. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae gravida enim. Integer eget odio pellentesque, aliquam sapien quis, aliquam mauris. Etiam a volutpat magna.</p> -->
-    </section>
-    <div class="totop">
-      To Top
-    </div>
+    <div class="wrapper">
+      <section class="logo">
+        <img src="images/mining crest.svg" alt="Gold Miner Logo" />
+      </section><!-- .logo -->
+      <section class="intro">
+        <h2>Picking Technologies</h2>
+        <p>Always keep learning. <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae gravida enim. Integer eget odio pellentesque, aliquam sapien quis, aliquam mauris. Etiam a volutpat magna.</span></p>
+      </section><!-- .intro -->
+      <div class="totop">
+        To Top
+      </div><!-- .totop -->
+    </div><!-- .wrapper -->
   </header>
   <main>
     <section class="tags controls">
-      Tags
-<!--       <div class="trigger">Tags Filter</div>
+      <div class="trigger">Tags Filter</div>
       <ul class="list">
         <li>Abstraction</li>
         <li>Automated</li>
@@ -40,8 +39,8 @@
         <li>CSS</li>
         <li>Framework</li>
         <li>Grid</li>
-        <li>JavaScript</li>
-        <li>Node</li>
+        <li class="active">JavaScript</li>
+        <li class="active">Node</li>
         <li>PHP</li>
         <li>Preprocessor</li>
         <li>Ruby</li>
@@ -55,14 +54,30 @@
         <li>Another </li>
         <li>Another </li>
         <li>Another </li>
-        <li>Another </li>
-        <li>Another </li>
-      </ul> -->
+      </ul>
     </section>
     <section class="letters controls">
-      Letter Jump
-<!--       <ul>
-        <li>A</li>
+
+      <div class="handle">
+        <svg viewBox="0 0 31 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <defs>
+            <polygon id="path-1" points="10 0 20 20 0 20"></polygon>
+            <filter x="-55.0%" y="-35.0%" width="210.0%" height="210.0%" filterUnits="objectBoundingBox" id="filter-2">
+              <feOffset dx="0" dy="4" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+              <feGaussianBlur stdDeviation="3" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+              <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.15 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+            </filter>
+          </defs>
+            <g id="Triangle" transform="translate(1.000000, 6.000000)">
+              <g transform="translate(10.000000, 10.000000) rotate(-90.000000) translate(-10.000000, -10.000000) ">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use fill="#DE7A22" fill-rule="evenodd" xlink:href="#path-1"></use>
+              </g>
+            </g>
+        </svg>
+      </div><!-- .handle -->
+      <ul>
+        <li class="active">A</li>
         <li>B</li>
         <li>C</li>
         <li>D</li>
@@ -88,7 +103,7 @@
         <li>X</li>
         <li>Y</li>
         <li>Z</li>
-      </ul> -->
+      </ul>
     </section>
     <div class="entries">
       <section class="entry">Entry</section>

@@ -1,0 +1,70 @@
+// ----- Header
+
+// -- Structure
+header {
+  background-color: $c-tan;
+  // box-shadow: inset 0 -4px 20px 0 rgba($c-black, 0.25);
+  background-image: linear-gradient($c-tan 80%, $c-burnt-tan 100%);
+
+  .wrapper {
+    margin: auto;
+    max-width: $xlarge;
+    padding-bottom: 20px;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    min-height: 72px;
+  }
+
+  .intro {
+    padding: $gutter;
+    text-align: center;
+
+    p {
+      font-size: 18px;
+      line-height: 26px;
+    }
+
+    span {
+      display: none;
+    }
+  }
+
+  // MQ Small
+  @include breakpoint(small) {
+    .wrapper {
+      align-items: center;
+      display: flex;
+      height: $s-header;
+      padding-bottom: 0;
+    }
+
+    .logo {
+      @include columns(4);
+      max-height: $s-header;
+      padding: $gutter;
+    }
+
+    .intro {
+      @include columns(8);
+      text-align: left;
+
+      span {
+        display: inline;
+      }
+    }
+  }
+
+  // MQ Medium
+  @include breakpoint(medium) {
+    .logo {
+      @include columns(3);
+    }
+
+    .intro {
+      @include columns(9);
+    }
+  }
+}

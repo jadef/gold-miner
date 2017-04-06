@@ -1,0 +1,46 @@
+// ----- Tags
+.tags {
+  .trigger {
+    @include wire;
+  }
+
+  ul {
+    border-left: 1px solid $c-primary;
+    display: none;
+    font-size: 12px;
+    list-style: none;
+
+    li {
+      padding: 3px 15px;
+
+      &.active {
+        background-color: $c-accent;
+        color: $c-light;
+        padding-right: 30px;
+        position: relative;
+
+        &::after {
+          content: 'x';
+          position: absolute;
+          right: 10px;
+        }
+      }
+    }
+  }
+
+  @include breakpoint(small) {
+    padding: $gutter 0 $gutter 10px;
+
+    .trigger {
+      display: none;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      height: 100%;
+      justify-content: space-between;
+    }
+  }
+}

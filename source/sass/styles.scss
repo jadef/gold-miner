@@ -8,14 +8,16 @@
 
 // Elements
 @import 'elements/structure';
-// @import 'elements/fonts';
+@import 'elements/fonts';
 @import 'elements/utilities';
-// @import 'elements/type';
+@import 'elements/type';
 
 // Sections
-// @import 'sections/header';
-// @import 'sections/file';
-// @import 'sections/footer';
+@import 'sections/header';
+@import 'sections/main';
+@import 'sections/footer';
 
 // Components
-// @import 'components/file';
+@import 'components/tags';
+@import 'components/letters';
+@import 'components/totop';

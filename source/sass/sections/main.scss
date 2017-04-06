@@ -1,0 +1,88 @@
+// ----- Main Content
+main {
+  margin: auto;
+  max-width: $xlarge;
+
+  .tags {
+    min-height: 72px;
+  }
+
+  .letters {
+    display: none;
+  }
+
+  .entries {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .entry {
+    @include wire;
+    height: 400px;
+  }
+
+  // MQ Small
+  @include breakpoint(small) {
+    display: flex;
+
+    .tags,
+    .letters {
+      height: calc(100vh - #{$s-header});
+      position: fixed;
+      top: $s-header;
+    }
+
+    .tags {
+      @include columns(4);
+      order: 1;
+    }
+
+    .entries {
+      @include columns(7);
+      @include columns(4, margin-left);
+      order: 2;
+    }
+
+    .letters {
+      @include columns(1);
+      @include columns(11, margin-left);
+      display: flex;
+      order: 3;
+    }
+  }
+
+  // MQ Medium
+  @include breakpoint(medium) {
+    .tags {
+      @include columns(2);
+      order: 1;
+    }
+
+    .letters {
+      @include columns(1);
+      @include columns(2, margin-left);
+      order: 2;
+    }
+
+    .entries {
+      @include columns(9);
+      @include columns(3, margin-left);
+      order: 3;
+    }
+  }
+  // MQ Medium
+  @include breakpoint(xlarge) {
+    .tags {
+      width: 250px;
+    }
+
+    .letters {
+      margin-left: 250px;
+      width: 120px;
+    }
+
+    .entries {
+      margin-left: 370px;
+    }
+  }
+}

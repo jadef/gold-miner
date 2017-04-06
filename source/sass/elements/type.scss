@@ -1,39 +1,33 @@
 // ----- Base styles
-// html,
-// button,
-// input,
-// select,
-// textarea {
-//   color: $c-body;
-//   font-family: 'Source Sans Pro', Arial, 'Helvetica Neue', Helvetica, sans-serif;
-// }
+html {
+  color: $c-dark;
+  font-family: 'Nunito Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: $s-base;
+  font-weight: 400;
+  line-height: 1.2em;
+  margin: 0;
+  min-height: 100%;
+  padding: 0;
+  position: relative;
+}
 
-// html {
-//   font-size: 1.125em;
-//   font-weight: 300;
-//   line-height: 1.4em;
-//   margin: 0;
-//   min-height: 100%;
-//   padding: 0;
-//   position: relative;
-// }
+body {
+  background-color: $c-background;
+  height: 100%;
 
-// body {
-//   background-color: $c-blue-light1;
-//   height: 100%;
-
-//   &::after {
-//     background: transparent url('../images/background-b.jpg') no-repeat top center;
-//     background-size: cover;
-//     content: '';
-//     height: 100%;
-//     left: 0;
-//     position: fixed;
-//     top: 0;
-//     width: 100%;
-//     z-index: -1;
-//   }
-// }
+  &::after {
+    background: $c-gr-light;
+    // background: transparent url('../images/background-b.jpg') no-repeat top center;
+    background-size: cover;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+  }
+}
 
 // hr {
 //   border: 0;
@@ -45,11 +39,22 @@
 //   padding: 0;
 // }
 
-// h1,
-// h2 {
-//   font-weight: 300;
-//   line-height: 1.1em;
-// }
+h1,
+h2 {
+  font-family: 'Cabin', 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 1.1em;
+}
+
+h2 {
+  color: $c-accent;
+  font-size: 30px;
+  padding-bottom: 0.5em;
+
+  @include breakpoint(small) {
+    font-size: 48px;
+  }
+}
 
 // h2 {
 //   color: $c-blue-dark3;

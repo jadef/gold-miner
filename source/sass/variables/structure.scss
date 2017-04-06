@@ -8,6 +8,13 @@ $full:    100%;
 
 $gutter: 20px;
 
+// ----- Sizes
+
+$s-base: 15px;
+
+$s-header: 250px;
+$s-header-small: 72px;
+
 // ----- Media Query Mixin
 // ex:
 //
@@ -35,15 +42,8 @@ $gutter: 20px;
 // ------------------------
 //
 // ex. @include columns(6);
-// ex. @include columns(6, end);
-// ex. @include columns(12, last);
-// ex. @include columns(1, lastone, 2);
+// ex. @include columns(12);
 
-@mixin columns($cols: 12, $end: null, $base: 12) {
-  @if $end == null {
-    padding-right: $gutter;
-  } @else {
-    padding-right: 0;
-  }
-  width: (($cols/$base) * 100%);
+@mixin columns($cols: 12, $attribute: width, $base: 12) {
+  #{$attribute}: (($cols/$base) * 100%);
 }

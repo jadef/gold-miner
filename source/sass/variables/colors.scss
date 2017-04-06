@@ -1,18 +1,33 @@
 // ----- Colors
-$c-white:         #fff;
-$c-gray-light:    #ccc;
-$c-gray-dark:     #3e3e3e;
-$c-black:         #000;
+$c-white:       #fff;
+$c-orange:      #de7a22;
+$c-orange2:     #f4cc70;
+$c-tan:         #f8e4b5;
+$c-tan2:        #fdf9f0;
+$c-burnt-tan:   #d7c69d;
+$c-teal:        #20948b;
+$c-black:       #4a4a4a;
 
 // ----- Wires
-$c-w-grey:        #979797;
-$c-w-lt-grey:     #d8d8d8;
-$c-w-dk-grey:     #4a4a4a;
-
+$c-w-grey:      #979797;
+$c-w-lt-grey:   #d8d8d8;
+$c-w-dk-grey:   #4a4a4a;
 
 // ----- Pallette
-// $c-primary:       $c-blue-dark1;
-// $c-secondary:     $c-blue-dark2;
-$c-light:         $c-white;
-$c-dark:          $c-black;
-// $c-accent:        $c-orange1;
+$c-primary:     $c-orange;
+$c-secondary:   $c-orange2;
+$c-light:       $c-white;
+$c-dark:        $c-black;
+$c-accent:      $c-teal;
+$c-background:  $c-tan2;
+
+// ----- Gradients
+$c-gr-light: linear-gradient($c-white 0%, $c-background 50%);
+$c-gr-light2: linear-gradient($c-white 0%, $c-secondary 100%);
+$c-gr-primary: linear-gradient($c-primary 0%, $c-secondary 100%);
+
+
+
+
+
+

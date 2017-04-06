@@ -1,13 +1,7 @@
 // ----- Wireframe Structure
-header,
-main,
-footer {
-  margin: auto;
-  max-width: $xlarge;
-}
 
-section,
-footer {
+// !! TEMP
+@mixin wire {
   align-items: center;
   background-color: $c-w-lt-grey;
   border: 1px solid $c-w-grey;
@@ -22,102 +16,4 @@ footer {
   display: none;
 }
 
-header {
-  .logo {
-    min-height: 72px;
-  }
-
-  .intro {
-    height: 228px;
-  }
-
-  .totop {
-    display: none;
-  }
-
-  // MQ Small
-  @include breakpoint(small) {
-    display: flex;
-
-    .logo {
-      @include columns(4);
-    }
-
-    .intro {
-      @include columns(8, last);
-    }
-  }
-
-  // MQ Medium
-  @include breakpoint(medium) {
-    .logo {
-      @include columns(3);
-    }
-
-    .intro {
-      @include columns(9, last);
-    }
-  }
-}
-
-main {
-  .tags {
-    min-height: 72px;
-  }
-
-  .letters {
-    display: none;
-  }
-
-  .entries {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .entry {
-    height: 400px;
-  }
-
-  // MQ Small
-  @include breakpoint(small) {
-    display: flex;
-
-    .tags {
-      @include columns(4);
-      order: 1;
-    }
-
-    .entries {
-      @include columns(7);
-      order: 2;
-    }
-
-    .letters {
-      @include columns(1, end);
-      display: flex;
-      order: 3;
-    }
-  }
-
-  // MQ Medium
-  @include breakpoint(medium) {
-    .tags {
-      @include columns(2);
-      order: 1;
-    }
-
-    .letters {
-      @include columns(1);
-      order: 2;
-    }
-
-    .entries {
-      @include columns(9, end);
-      order: 3;
-    }
-  }
-}
-
-footer {
-  min-height: 72px;
-}
+// -----
