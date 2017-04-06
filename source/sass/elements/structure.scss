@@ -1,0 +1,60 @@
+// ----- Wireframe Structure
+header,
+main,
+footer {
+  max-width: 1440px;
+  margin: auto;
+}
+
+section,
+footer {
+  align-items: center;
+  background-color: $c-w-lt-grey;
+  border: 1px solid $c-w-grey;
+  color: $c-w-dk-grey;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.notes {
+  display: none;
+}
+
+header {
+  .logo {
+    min-height: 72px;
+  }
+
+  .intro {
+    height: 228px;
+  }
+
+  .totop {
+    display: none;
+  }
+}
+
+main {
+  .tags {
+    height: 72px;
+  }
+
+  .letters {
+    display: none;
+  }
+
+  .entries {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .entry {
+    height: 400px;
+  }
+}
+
+footer {
+
+}
