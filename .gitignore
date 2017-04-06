@@ -1,0 +1,29 @@
+# Environment #
+###############
+/.project
+.settings/
+/.buildpath
+.bundle
+.tmp
+.sass-cache
+node_modules/
+
+# Editor temps and files #
+##########################
+.idea
+*~
+*.iml
+*.sw[po]
+TODO.md
+
+# Logs and databases #
+######################
+*.log
+*.sqlite
+*.tmp
+*.bak
+*.map
+
+# OS generated files #
+######################
+.DS_Store
