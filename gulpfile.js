@@ -8,15 +8,15 @@ var
   gulp        = require('gulp'), // Base Gulp
   autoprefixer= require('gulp-autoprefixer'), // Autoprefix css
   compass     = require('gulp-compass'), // Compass - Compile Sass
-  concat      = require('gulp-concat'), // Concatinate files
-  eslint      = require('gulp-eslint'), // Linting of JavaScript
+  // concat      = require('gulp-concat'), // Concatinate files
+  // eslint      = require('gulp-eslint'), // Linting of JavaScript
   imagemin    = require('gulp-imagemin'), // Process Images
   order       = require('gulp-order'), // Order files
   plumber     = require('gulp-plumber'), // Pipe error patch
   sassLint    = require('gulp-sass-lint'), // Linting of Sass
   sequence    = require('gulp-sequence'), // Order tasks
   sourcemaps  = require('gulp-sourcemaps'), // JS/CSS sourcemaps
-  uglify      = require('gulp-uglify'), // JS minification
+  // uglify      = require('gulp-uglify'), // JS minification
   gutil       = require('gulp-util'), // Various utilities like colors and noop
   watch       = require('gulp-watch'); // Watching files
 
@@ -55,29 +55,6 @@ gulp.task('start', function() {
 });
 
 // -- Build JS
-gulp.task('js', ['js-lint'], function() {
-
-  gutil.log('Building scripts ' + gutil.colors.yellow((isProduction ? 'with' : 'without')) + ' uglification...');
-
-  gulp.src(source + 'scripts/**/*.js')
-      .pipe(order([
-        // Control folder order this way
-        'source/scripts/vendor/retina.js',
-        // Our custom onload last
-        'source/scripts/onload.js',
-        // Catch for any unaccounted for files
-        'source/scripts/**/*.js'
-      ], {base: source + 'scripts/'}))
-      .pipe(sourceMap ? sourcemaps.init() : gutil.noop())
-      .pipe(concat('scripts.js'))
-      .pipe(isProduction ? uglify({mangle: true}) : gutil.noop())
-      .pipe(sourceMap ? sourcemaps.write('.') : gutil.noop())
-      .pipe(gulp.dest(dest))
-      .pipe(browserSync.reload({ stream: true }))
-      .on('error', function (error) {
-        gutil.log(error);
-      });
-});
 
 // -- Build Images
 gulp.task('images', function() {
@@ -144,13 +121,6 @@ gulp.task('sass-lint', function () {
     .pipe(sassLint.failOnError());
 });
 
-gulp.task('js-lint', function () {
-  return gulp.src(source + 'scripts/**/*.js')
-    .pipe(eslint())
-    .pipe(eslint.format())
-    .pipe(eslint.failAfterError());
-});
-
 // ------ Watchers ------
 
 // -- Watch, Sync, Build... repeat
@@ -165,7 +135,6 @@ gulp.task('watch', ['build'], function() {
 
   // All the watches
   gulp.watch(source + 'sass/**/*.scss', ['css']);
-  gulp.watch(source + 'scripts/**/*.js', ['js']);
   gulp.watch(source + 'images/**/*', ['images']);
 
 });
@@ -174,5 +143,5 @@ gulp.task('watch', ['build'], function() {
 // ------ Builders ------
 
 gulp.task('default', ['watch']);
-gulp.task('compile', sequence('clean', ['images', 'js', 'css'], 'start'));
-gulp.task('build', sequence('images', 'js', 'css'));
+gulp.task('compile', sequence('clean', ['images', 'css'], 'start'));
+gulp.task('build', sequence('images', 'css'));
