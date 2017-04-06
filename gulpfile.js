@@ -121,13 +121,17 @@ gulp.task('sass-lint', function () {
     .pipe(sassLint.failOnError());
 });
 
+gulp.task('reload', function() {
+  browserSync.reload();
+})
+
 // ------ Watchers ------
 
 // -- Watch, Sync, Build... repeat
 gulp.task('watch', ['build'], function() {
   browserSync({
     notify: false,
-    port: 5050,
+    port: 5060,
     server: {
       baseDir: [dest]
     }
@@ -136,6 +140,7 @@ gulp.task('watch', ['build'], function() {
   // All the watches
   gulp.watch(source + 'sass/**/*.scss', ['css']);
   gulp.watch(source + 'images/**/*', ['images']);
+  gulp.watch(source + 'start/**/*', ['start', 'reload']);
 
 });
 
