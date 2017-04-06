@@ -1,0 +1,19 @@
+{
+  "name": "jadef-gold-miner",
+  "version": "0.1.0",
+  "description": "Jade Faist Technical Notes",
+  "author": "Jade Faist",
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:jadef/gold-miner.git"
+  },
+  "license": "ISC",
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp"
+  }
+}
