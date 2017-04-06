@@ -1,0 +1,49 @@
+// ----- Breakpoints
+$xsmall:  460px;
+$small:   670px;
+$medium:  768px;
+$large:   1000px;
+$xlarge:  1440px;
+$full:    100%;
+
+$gutter: 20px;
+
+// ----- Media Query Mixin
+// ex:
+//
+// .selector {
+//   @include breakpoint(large) {
+//      additional attributes
+//   }
+// }
+@mixin breakpoint($size: $xsmall) {
+  @if $size == xsmall {
+    @media only screen and (min-width: #{$xsmall}) { @content; }
+  } @else if $size == small {
+    @media only screen and (min-width: #{$small}) { @content; }
+  } @else if $size == medium {
+    @media only screen and (min-width: #{$medium}) { @content; }
+  } @else if $size == large {
+    @media only screen and (min-width: #{$large})  { @content; }
+  } @else if $size == xlarge {
+    @media only screen and (min-width: #{$xlarge}) { @content; }
+  }
+}
+
+// ------------------------
+// ---- Responsive Columns
+// ------------------------
+//
+// ex. @include columns(6);
+// ex. @include columns(6, end);
+// ex. @include columns(12, last);
+// ex. @include columns(1, lastone, 2);
+
+@mixin columns($cols: 12, $end: null, $base: 12) {
+  @if $end == null {
+    padding-right: $gutter;
+  } @else {
+    padding-right: 0;
+  }
+  width: (($cols/$base) * 100%);
+}
