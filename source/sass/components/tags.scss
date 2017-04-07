@@ -11,9 +11,11 @@
     list-style: none;
 
     li {
+      cursor: pointer;
       padding: 3px 15px;
 
       &.active {
+        background: $c-gr-accent;
         background-color: $c-accent;
         color: $c-light;
         padding-right: 30px;

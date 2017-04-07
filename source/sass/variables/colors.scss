@@ -22,9 +22,10 @@ $c-accent:      $c-teal;
 $c-background:  $c-tan2;
 
 // ----- Gradients
-$c-gr-light: linear-gradient($c-white 0%, $c-background 50%);
-$c-gr-light2: linear-gradient($c-white 0%, $c-secondary 100%);
+$c-gr-light:   linear-gradient($c-white 0%, $c-background 50%);
+$c-gr-light2:  linear-gradient($c-white 0%, $c-secondary 100%);
 $c-gr-primary: linear-gradient($c-primary 0%, $c-secondary 100%);
+$c-gr-accent:  linear-gradient(-90deg, #47b8af 0%, $c-teal 100%);
 
 
 
