@@ -1,0 +1,68 @@
+// ----- Entries
+
+.entry {
+  background: $c-light;
+  box-shadow: 0 2px 6px 0 rgba($c-dark, 0.15);
+  margin: 0 $gutter $gutter $gutter;
+  position: relative;
+
+  .title {
+    align-items: stretch;
+    background-color: $c-primary;
+    box-shadow: inset -2px 0 3px 0 rgba($c-dark, 0.25);
+    color: $c-light;
+    display: flex;
+    flex-direction: column;
+    height: 50px;
+    justify-content: center;
+    margin-top: 15px;
+    padding: 0 50px 0 10px;
+  }
+
+  .external {
+    height: 50px;
+    position: absolute;
+    right: 0;
+    top: 15px;
+    width: 50px;
+  }
+
+  .desc {
+    padding: 10px;
+  }
+
+  .stamp {
+    font-size: 9px;
+    line-height: 14px;
+    margin-bottom: -2em;
+    text-align: right;
+  }
+
+  @include breakpoint(small) {
+    margin: $gutter ($gutter + 50px) $gutter $gutter;
+
+    .external {
+      background-color: $c-primary;
+      box-shadow: 0 2px 4px 0 rgba($c-dark, 0.35);
+      right: -50px;
+      top: 13px;
+    }
+
+    .desc {
+      display: flex;
+    }
+
+    .content {
+      width: 70%;
+    }
+
+    .stamp {
+      bottom: 0;
+      margin-bottom: 0;
+      position: absolute;
+      right: -70px;
+      text-align: left;
+      width: 65px;
+    }
+  }
+}

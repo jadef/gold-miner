@@ -3,11 +3,11 @@ main {
   margin: auto;
   max-width: $xlarge;
 
-  .tags {
+  .controls.tags {
     min-height: 72px;
   }
 
-  .letters {
+  .controls.letters {
     display: none;
   }
 
@@ -16,23 +16,18 @@ main {
     flex-direction: column;
   }
 
-  .entry {
-    @include wire;
-    height: 400px;
-  }
-
   // MQ Small
   @include breakpoint(small) {
     display: flex;
 
-    .tags,
-    .letters {
+    .controls.tags,
+    .controls.letters {
       height: calc(100vh - #{$s-header});
       position: fixed;
       top: $s-header;
     }
 
-    .tags {
+    .controls.tags {
       @include columns(4);
       order: 1;
     }
@@ -43,7 +38,7 @@ main {
       order: 2;
     }
 
-    .letters {
+    .controls.letters {
       @include columns(1);
       @include columns(11, margin-left);
       display: flex;
@@ -53,12 +48,12 @@ main {
 
   // MQ Medium
   @include breakpoint(medium) {
-    .tags {
+    .controls.tags {
       @include columns(2);
       order: 1;
     }
 
-    .letters {
+    .controls.letters {
       @include columns(1);
       @include columns(2, margin-left);
       order: 2;
@@ -72,11 +67,11 @@ main {
   }
   // MQ Medium
   @include breakpoint(xlarge) {
-    .tags {
+    .controls.tags {
       width: 250px;
     }
 
-    .letters {
+    .controls.letters {
       margin-left: 250px;
       width: 120px;
     }
