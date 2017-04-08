@@ -58,22 +58,20 @@
     </section>
     <section class="letters controls">
       <div class="handle">
-        <svg viewBox="0 0 31 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <svg viewBox="0 0 32 32">
           <defs>
-            <polygon id="path-1" points="10 0 20 20 0 20"></polygon>
-            <filter x="-55.0%" y="-35.0%" width="210.0%" height="210.0%" filterUnits="objectBoundingBox" id="filter-2">
+            <filter id="triangle-shadow" x="-55.0%" y="-35.0%" width="210.0%" height="210.0%" filterUnits="objectBoundingBox">
               <feOffset dx="0" dy="4" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
               <feGaussianBlur stdDeviation="3" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
               <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.15 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
             </filter>
           </defs>
-            <g id="Triangle" transform="translate(1.000000, 6.000000)">
-              <g transform="translate(10.000000, 10.000000) rotate(-90.000000) translate(-10.000000, -10.000000) ">
-                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
-                <use fill="#DE7A22" fill-rule="evenodd" xlink:href="#path-1"></use>
-              </g>
-            </g>
+          <g transform="translate(10, 10) rotate(-90) translate(-10, -10) ">
+            <use fill="black" fill-opacity="1" filter="url(#triangle-shadow)" xlink:href="#triangle"></use>
+            <polygon id="triangle" points="10 0 20 20 0 20"></polygon>
+          </g>
         </svg>
+
       </div><!-- .handle -->
       <ul>
         <li class="active">A</li>
@@ -109,9 +107,37 @@
       <section class="entry">
         <div class="title">
           <h3>Browserify</h3>
-          <a class="external" href="#">External Link</a>
+          <a class="external" href="#"><img src="images/external.svg" alt="external link" /></a>
         </div><!-- .title -->
-        <div class="rating">3 out of 5 Stars</div>
+        <div class="rating">
+          <svg class="star" viewBox="0 0 26 26">
+            <defs>
+              <filter id="star-shadow" x="-55.0%" y="-35.0%" width="210.0%" height="210.0%" filterUnits="objectBoundingBox">
+                <feOffset dx="0" dy="4" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                <feGaussianBlur stdDeviation="3" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.15 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+              </filter>
+            </defs>
+            <use fill="black" fill-opacity="1" filter="url(#star-shadow)" xlink:href="#star"></use>
+            <polygon id="star" points="10 14 4.12214748 18.0901699 6.19577393 11.236068 0.489434837 6.90983006 7.64885899 6.76393202 10 0 12.351141 6.76393202 19.5105652 6.90983006 13.8042261 11.236068 15.8778525 18.0901699"></polygon>
+          </svg>
+          <svg class="star" viewBox="0 0 26 26">
+            <use fill="black" fill-opacity="1" filter="url(#star-shadow)" xlink:href="#star"></use>
+            <polygon id="star" points="10 14 4.12214748 18.0901699 6.19577393 11.236068 0.489434837 6.90983006 7.64885899 6.76393202 10 0 12.351141 6.76393202 19.5105652 6.90983006 13.8042261 11.236068 15.8778525 18.0901699"></polygon>
+          </svg>
+          <svg class="star" viewBox="0 0 26 26">
+            <use fill="black" fill-opacity="1" filter="url(#star-shadow)" xlink:href="#star"></use>
+            <polygon id="star" points="10 14 4.12214748 18.0901699 6.19577393 11.236068 0.489434837 6.90983006 7.64885899 6.76393202 10 0 12.351141 6.76393202 19.5105652 6.90983006 13.8042261 11.236068 15.8778525 18.0901699"></polygon>
+          </svg>
+          <svg class="star no" viewBox="0 0 26 26">
+            <use fill="black" fill-opacity="1" filter="url(#star-shadow)" xlink:href="#star"></use>
+            <polygon id="star" points="10 14 4.12214748 18.0901699 6.19577393 11.236068 0.489434837 6.90983006 7.64885899 6.76393202 10 0 12.351141 6.76393202 19.5105652 6.90983006 13.8042261 11.236068 15.8778525 18.0901699"></polygon>
+          </svg>
+          <svg class="star no" viewBox="0 0 26 26">
+            <use fill="black" fill-opacity="1" filter="url(#star-shadow)" xlink:href="#star"></use>
+            <polygon id="star" points="10 14 4.12214748 18.0901699 6.19577393 11.236068 0.489434837 6.90983006 7.64885899 6.76393202 10 0 12.351141 6.76393202 19.5105652 6.90983006 13.8042261 11.236068 15.8778525 18.0901699"></polygon>
+          </svg>
+        </div>
         <div class="desc">
           <div class="content">
             <p>Collects JS modules (and script files) and mushes them all into a single app file. Often compared to requireJS.</p>
@@ -130,9 +156,37 @@
       <section class="entry">
         <div class="title">
           <h3>Browserify</h3>
-          <a class="external" href="#">External Link</a>
+          <a class="external" href="#"><img src="images/external.svg" alt="external link" /></a>
         </div><!-- .title -->
-        <div class="rating">3 out of 5 Stars</div>
+        <div class="rating">
+          <svg class="star" viewBox="0 0 26 26">
+            <defs>
+              <filter id="star-shadow" x="-55.0%" y="-35.0%" width="210.0%" height="210.0%" filterUnits="objectBoundingBox">
+                <feOffset dx="0" dy="4" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                <feGaussianBlur stdDeviation="3" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.15 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+              </filter>
+            </defs>
+            <use fill="black" fill-opacity="1" filter="url(#star-shadow)" xlink:href="#star"></use>
+            <polygon id="star" points="10 14 4.12214748 18.0901699 6.19577393 11.236068 0.489434837 6.90983006 7.64885899 6.76393202 10 0 12.351141 6.76393202 19.5105652 6.90983006 13.8042261 11.236068 15.8778525 18.0901699"></polygon>
+          </svg>
+          <svg class="star" viewBox="0 0 26 26">
+            <use fill="black" fill-opacity="1" filter="url(#star-shadow)" xlink:href="#star"></use>
+            <polygon id="star" points="10 14 4.12214748 18.0901699 6.19577393 11.236068 0.489434837 6.90983006 7.64885899 6.76393202 10 0 12.351141 6.76393202 19.5105652 6.90983006 13.8042261 11.236068 15.8778525 18.0901699"></polygon>
+          </svg>
+          <svg class="star" viewBox="0 0 26 26">
+            <use fill="black" fill-opacity="1" filter="url(#star-shadow)" xlink:href="#star"></use>
+            <polygon id="star" points="10 14 4.12214748 18.0901699 6.19577393 11.236068 0.489434837 6.90983006 7.64885899 6.76393202 10 0 12.351141 6.76393202 19.5105652 6.90983006 13.8042261 11.236068 15.8778525 18.0901699"></polygon>
+          </svg>
+          <svg class="star no" viewBox="0 0 26 26">
+            <use fill="black" fill-opacity="1" filter="url(#star-shadow)" xlink:href="#star"></use>
+            <polygon id="star" points="10 14 4.12214748 18.0901699 6.19577393 11.236068 0.489434837 6.90983006 7.64885899 6.76393202 10 0 12.351141 6.76393202 19.5105652 6.90983006 13.8042261 11.236068 15.8778525 18.0901699"></polygon>
+          </svg>
+          <svg class="star no" viewBox="0 0 26 26">
+            <use fill="black" fill-opacity="1" filter="url(#star-shadow)" xlink:href="#star"></use>
+            <polygon id="star" points="10 14 4.12214748 18.0901699 6.19577393 11.236068 0.489434837 6.90983006 7.64885899 6.76393202 10 0 12.351141 6.76393202 19.5105652 6.90983006 13.8042261 11.236068 15.8778525 18.0901699"></polygon>
+          </svg>
+        </div>
         <div class="desc">
           <div class="content">
             <p>Collects JS modules (and script files) and mushes them all into a single app file. Often compared to requireJS.</p>
@@ -151,9 +205,37 @@
       <section class="entry">
         <div class="title">
           <h3>Browserify</h3>
-          <a class="external" href="#">External Link</a>
+          <a class="external" href="#"><img src="images/external.svg" alt="external link" /></a>
         </div><!-- .title -->
-        <div class="rating">3 out of 5 Stars</div>
+        <div class="rating">
+          <svg class="star" viewBox="0 0 26 26">
+            <defs>
+              <filter id="star-shadow" x="-55.0%" y="-35.0%" width="210.0%" height="210.0%" filterUnits="objectBoundingBox">
+                <feOffset dx="0" dy="4" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                <feGaussianBlur stdDeviation="3" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.15 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+              </filter>
+            </defs>
+            <use fill="black" fill-opacity="1" filter="url(#star-shadow)" xlink:href="#star"></use>
+            <polygon id="star" points="10 14 4.12214748 18.0901699 6.19577393 11.236068 0.489434837 6.90983006 7.64885899 6.76393202 10 0 12.351141 6.76393202 19.5105652 6.90983006 13.8042261 11.236068 15.8778525 18.0901699"></polygon>
+          </svg>
+          <svg class="star" viewBox="0 0 26 26">
+            <use fill="black" fill-opacity="1" filter="url(#star-shadow)" xlink:href="#star"></use>
+            <polygon id="star" points="10 14 4.12214748 18.0901699 6.19577393 11.236068 0.489434837 6.90983006 7.64885899 6.76393202 10 0 12.351141 6.76393202 19.5105652 6.90983006 13.8042261 11.236068 15.8778525 18.0901699"></polygon>
+          </svg>
+          <svg class="star" viewBox="0 0 26 26">
+            <use fill="black" fill-opacity="1" filter="url(#star-shadow)" xlink:href="#star"></use>
+            <polygon id="star" points="10 14 4.12214748 18.0901699 6.19577393 11.236068 0.489434837 6.90983006 7.64885899 6.76393202 10 0 12.351141 6.76393202 19.5105652 6.90983006 13.8042261 11.236068 15.8778525 18.0901699"></polygon>
+          </svg>
+          <svg class="star no" viewBox="0 0 26 26">
+            <use fill="black" fill-opacity="1" filter="url(#star-shadow)" xlink:href="#star"></use>
+            <polygon id="star" points="10 14 4.12214748 18.0901699 6.19577393 11.236068 0.489434837 6.90983006 7.64885899 6.76393202 10 0 12.351141 6.76393202 19.5105652 6.90983006 13.8042261 11.236068 15.8778525 18.0901699"></polygon>
+          </svg>
+          <svg class="star no" viewBox="0 0 26 26">
+            <use fill="black" fill-opacity="1" filter="url(#star-shadow)" xlink:href="#star"></use>
+            <polygon id="star" points="10 14 4.12214748 18.0901699 6.19577393 11.236068 0.489434837 6.90983006 7.64885899 6.76393202 10 0 12.351141 6.76393202 19.5105652 6.90983006 13.8042261 11.236068 15.8778525 18.0901699"></polygon>
+          </svg>
+        </div>
         <div class="desc">
           <div class="content">
             <p>Collects JS modules (and script files) and mushes them all into a single app file. Often compared to requireJS.</p>
