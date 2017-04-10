@@ -19,7 +19,6 @@ import sourcemaps from 'gulp-sourcemaps'; // JS/CSS sourcemaps
 import uglify from 'gulp-uglify'; // Minify files
 import gutil from 'gulp-util'; // Various utilities like colors and noop
 import watch from 'gulp-watch'; // Watching files
-import rimraf from 'rimraf'; // Deletion module
 import buffer from 'vinyl-buffer'; // Use buffers on files
 import source from 'vinyl-source-stream'; // Text streams in pipeline
 import watchify from 'watchify'; // Watch mode for browserify builds
