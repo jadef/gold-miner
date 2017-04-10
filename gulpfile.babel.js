@@ -1,6 +1,8 @@
 // ------ Setup ------
 
 // -- Dependencies
+import babelify from 'babelify'; // Babel browserify transform
+import browserify from 'browserify'; // Build require environment
 import browserSync from 'browser-sync'; // Browser Sync
 import del from 'del'; // Delete
 import fs from 'fs'; // File System
@@ -10,42 +12,23 @@ import compass from 'gulp-compass'; // Compass - Compile Sass
 import imagemin from 'gulp-imagemin'; // Process Images
 import order from 'gulp-order'; // Order files
 import plumber from 'gulp-plumber'; // Pipe error patch
+import rename from 'gulp-rename'; // Rename files
 import sassLint from 'gulp-sass-lint'; // Linting of Sass
 import sequence from 'gulp-sequence'; // Order tasks
 import sourcemaps from 'gulp-sourcemaps'; // JS/CSS sourcemaps
+import uglify from 'gulp-uglify'; // Minify files
 import gutil from 'gulp-util'; // Various utilities like colors and noop
 import watch from 'gulp-watch'; // Watching files
-
-// import gulp from 'gulp';
-// import autoprefixer from 'autoprefixer';
-// import browserify from 'browserify';
-// import watchify from 'watchify';
-// import source from 'vinyl-source-stream';
-// import buffer from 'vinyl-buffer';
-// import eslint from 'gulp-eslint';
-// import babelify from 'babelify';
-// import uglify from 'gulp-uglify';
-// import rimraf from 'rimraf';
-// import notify from 'gulp-notify';
-// import browserSync, { reload } from 'browser-sync';
-// import sourcemaps from 'gulp-sourcemaps';
-// import postcss from 'gulp-postcss';
-// import rename from 'gulp-rename';
-// import nested from 'postcss-nested';
-// import vars from 'postcss-simple-vars';
-// import extend from 'postcss-simple-extend';
-// import cssnano from 'cssnano';
-// import htmlReplace from 'gulp-html-replace';
-// import imagemin from 'gulp-imagemin';
-// import pngquant from 'imagemin-pngquant';
-// import runSequence from 'run-sequence';
-// import ghPages from 'gulp-gh-pages';
+import rimraf from 'rimraf'; // Deletion module
+import buffer from 'vinyl-buffer'; // Use buffers on files
+import source from 'vinyl-source-stream'; // Text streams in pipeline
+import watchify from 'watchify'; // Watch mode for browserify builds
 
 
 // ------ Project Settings ------
 
 var
-  source          = './source/',
+  src          = './source/',
   dest            = './public/',
   isProduction    = false,
   browserlist     = ['last 2 versions'],
@@ -71,7 +54,7 @@ gulp.task('clean', function() {
 
 // -- Starter files
 gulp.task('start', function() {
-  return gulp.src([source + 'start/**/*'])
+  return gulp.src([src + 'start/**/*'])
     .pipe(gulp.dest(dest));
 });
 
@@ -83,7 +66,7 @@ gulp.task('images', function() {
 
   // TODO: don't rebuild if they exist
 
-  gulp.src(source + 'images/**/*')
+  gulp.src(src + 'images/**/*')
     .pipe(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true }))
     .pipe(gulp.dest(dest + 'images/'))
     .pipe(browserSync.reload({ stream: true }))
@@ -96,10 +79,10 @@ gulp.task('images', function() {
 gulp.task('sass', ['sass-lint'], function() {
   gutil.log('Building ' + gutil.colors.yellow(sassStyle) + ' Sass...');
 
-  return gulp.src(source + 'sass/styles.scss')
+  return gulp.src(src + 'sass/styles.scss')
     .pipe(compass({
       require: ['compass/import-once/activate'],
-      sass: source + 'sass/',
+      sass: src + 'sass/',
       css: dest,
       style: sassStyle,
       sourcemap: sourceMap,
@@ -131,7 +114,7 @@ gulp.task('css', ['sass'],  function() {
 // ------ Utilities ------
 
 gulp.task('sass-lint', function () {
-  return gulp.src(source + 'sass/**/*.s+(a|c)ss')
+  return gulp.src(src + 'sass/**/*.s+(a|c)ss')
     .pipe(sassLint({
       files: {
         ignore: '**/vendor/**/*.s@(a|c)ss'
@@ -159,9 +142,9 @@ gulp.task('watch', ['build'], function() {
   });
 
   // All the watches
-  gulp.watch(source + 'sass/**/*.scss', ['css']);
-  gulp.watch(source + 'images/**/*', ['images']);
-  gulp.watch(source + 'start/**/*', ['start', 'reload']);
+  gulp.watch(src + 'sass/**/*.scss', ['css']);
+  gulp.watch(src + 'images/**/*', ['images']);
+  gulp.watch(src + 'start/**/*', ['start', 'reload']);
 
 });
 
