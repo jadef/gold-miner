@@ -27,19 +27,23 @@ import watchify from 'watchify'; // Watch mode for browserify builds
 
 // ------ Project Settings ------
 
-var
-  src          = './source/',
-  dest            = './public/',
-  isProduction    = false,
-  browserlist     = ['last 2 versions'],
-  sassStyle       = 'expanded',
-  sourceMap       = true;
+const paths = {
+  source : './source/',
+  dest: './public/'
+};
+
+const opts = {
+  isProduction: false,
+  browserlist: ['last 2 versions'],
+  sassStyle: 'expanded',
+  sourceMap: true
+};
 
 // Allows gulp --prod to be run for the compressed output
 if (gutil.env.prod === true) {
-  isProduction    = true;
-  sassStyle       = 'compressed';
-  sourceMap       = false;
+  opts.isProduction    = true;
+  opts.sassStyle       = 'compressed';
+  opts.sourceMap       = false;
 }
 
 
@@ -47,15 +51,15 @@ if (gutil.env.prod === true) {
 
 // -- Clean up
 gulp.task('clean', function() {
-  del([dest + '**/*']).then( paths => {
+  del([paths.dest + '**/*']).then( paths => {
     gutil.log(gutil.colors.yellow.bold('Deleted compiled files/folders:\n'), paths.join('\n'));
   });
 });
 
 // -- Starter files
 gulp.task('start', function() {
-  return gulp.src([src + 'start/**/*'])
-    .pipe(gulp.dest(dest));
+  return gulp.src([paths.source + 'start/**/*'])
+    .pipe(gulp.dest(paths.dest));
 });
 
 // -- Build JS
@@ -66,9 +70,9 @@ gulp.task('images', function() {
 
   // TODO: don't rebuild if they exist
 
-  gulp.src(src + 'images/**/*')
+  gulp.src(paths.source + 'images/**/*')
     .pipe(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true }))
-    .pipe(gulp.dest(dest + 'images/'))
+    .pipe(gulp.dest(paths.dest + 'images/'))
     .pipe(browserSync.reload({ stream: true }))
     .on('error', function (error) {
       gutil.log(error);
@@ -77,17 +81,17 @@ gulp.task('images', function() {
 
 // -- Build CSS from Sass
 gulp.task('sass', ['sass-lint'], function() {
-  gutil.log('Building ' + gutil.colors.yellow(sassStyle) + ' Sass...');
+  gutil.log('Building ' + gutil.colors.yellow(opts.sassStyle) + ' Sass...');
 
-  return gulp.src(src + 'sass/styles.scss')
+  return gulp.src(paths.source + 'sass/styles.scss')
     .pipe(compass({
       require: ['compass/import-once/activate'],
-      sass: src + 'sass/',
-      css: dest,
-      style: sassStyle,
-      sourcemap: sourceMap,
-      comments: isProduction,
-      debug: isProduction
+      sass: paths.source + 'sass/',
+      css: paths.dest,
+      style: opts.sassStyle,
+      sourcemap: opts.sourceMap,
+      comments: opts.isProduction,
+      debug: opts.isProduction
     }))
     .on('error', function (error) {
       gutil.log(error);
@@ -96,15 +100,15 @@ gulp.task('sass', ['sass-lint'], function() {
 
 // -- Run processes on CSS
 gulp.task('css', ['sass'],  function() {
-  gutil.log('Formatting ' + gutil.colors.yellow(sassStyle) + ' CSS...');
+  gutil.log('Formatting ' + gutil.colors.yellow(opts.sassStyle) + ' CSS...');
 
-  return gulp.src(dest + 'styles.css')
-    .pipe(sourceMap ? sourcemaps.init() : gutil.noop())
+  return gulp.src(paths.dest + 'styles.css')
+    .pipe(opts.sourceMap ? sourcemaps.init() : gutil.noop())
     .pipe(autoprefixer({
-      browsers: browserlist
+      browsers: opts.browserlist
     }))
-    .pipe(sourceMap ? sourcemaps.write('.') : gutil.noop())
-    .pipe(gulp.dest(dest))
+    .pipe(opts.sourceMap ? sourcemaps.write('.') : gutil.noop())
+    .pipe(gulp.dest(paths.dest))
     .pipe(browserSync.reload({ stream: true }))
     .on('error', function (error) {
       gutil.log(error);
@@ -114,7 +118,7 @@ gulp.task('css', ['sass'],  function() {
 // ------ Utilities ------
 
 gulp.task('sass-lint', function () {
-  return gulp.src(src + 'sass/**/*.s+(a|c)ss')
+  return gulp.src(paths.source + 'sass/**/*.s+(a|c)ss')
     .pipe(sassLint({
       files: {
         ignore: '**/vendor/**/*.s@(a|c)ss'
@@ -137,14 +141,14 @@ gulp.task('watch', ['build'], function() {
     notify: false,
     port: 5060,
     server: {
-      baseDir: [dest]
+      baseDir: [paths.dest]
     }
   });
 
   // All the watches
-  gulp.watch(src + 'sass/**/*.scss', ['css']);
-  gulp.watch(src + 'images/**/*', ['images']);
-  gulp.watch(src + 'start/**/*', ['start', 'reload']);
+  gulp.watch(paths.source + 'sass/**/*.scss', ['css']);
+  gulp.watch(paths.source + 'images/**/*', ['images']);
+  gulp.watch(paths.source + 'start/**/*', ['start', 'reload']);
 
 });
 
