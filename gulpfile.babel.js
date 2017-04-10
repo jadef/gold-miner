@@ -27,8 +27,13 @@ import watchify from 'watchify'; // Watch mode for browserify builds
 // ------ Project Settings ------
 
 const paths = {
-  source : './source/',
-  dest: './public/'
+  source : 'source/',
+  dest: 'public/',
+
+  bundle: 'app.js',
+  entry: 'source/index.js',
+  destJs: 'public/js',
+  destDeploy: './public/**/*'
 };
 
 const opts = {
@@ -37,6 +42,15 @@ const opts = {
   sassStyle: 'expanded',
   sourceMap: true
 };
+
+const customOpts = {
+  entries: [paths.entry],
+  debug: true,
+  cache: {},
+  packageCache: {}
+};
+
+const buildOpts = Object.assign({}, watchify.args, customOpts);
 
 // Allows gulp --prod to be run for the compressed output
 if (gutil.env.prod === true) {
@@ -151,9 +165,41 @@ gulp.task('watch', ['build'],  () => {
 
 });
 
+gulp.task('watchify', () => {
+  const bundler = watchify(browserify(buildOpts));
+
+  function rebundle() {
+    return bundler.bundle()
+      .pipe(source(paths.bundle))
+      .pipe(buffer())
+      .pipe(sourcemaps.init({ loadMaps: true }))
+      .pipe(sourcemaps.write('.'))
+      .pipe(gulp.dest(paths.destJs))
+      .on('error', error => {
+        gutil.log(error);
+      });
+  }
+
+  bundler.transform(babelify)
+  .on('update', rebundle);
+  return rebundle();
+});
+
+gulp.task('browserify', () => {
+  browserify(paths.entry, { debug: true })
+  .transform(babelify)
+  .bundle()
+  .pipe(source(paths.bundle))
+  .pipe(buffer())
+  .pipe(sourcemaps.init({ loadMaps: true }))
+  .pipe(uglify())
+  .pipe(sourcemaps.write('.'))
+  .pipe(gulp.dest(paths.destJs));
+});
+
 
 // ------ Builders ------
 
 gulp.task('default', ['watch']);
 gulp.task('compile', sequence('clean', ['images', 'css'], 'start'));
-gulp.task('build', sequence('images', 'css'));
+gulp.task('build', sequence('watchify', 'images', 'css'));
