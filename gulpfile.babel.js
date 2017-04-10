@@ -1,24 +1,45 @@
 // ------ Setup ------
 
 // -- Dependencies
-var
-  browserSync = require('browser-sync'), // Browser Sync
-  del         = require('del'), // Delete
-  fs          = require('fs'), // File System
-  gulp        = require('gulp'), // Base Gulp
-  autoprefixer= require('gulp-autoprefixer'), // Autoprefix css
-  compass     = require('gulp-compass'), // Compass - Compile Sass
-  // concat      = require('gulp-concat'), // Concatinate files
-  // eslint      = require('gulp-eslint'), // Linting of JavaScript
-  imagemin    = require('gulp-imagemin'), // Process Images
-  order       = require('gulp-order'), // Order files
-  plumber     = require('gulp-plumber'), // Pipe error patch
-  sassLint    = require('gulp-sass-lint'), // Linting of Sass
-  sequence    = require('gulp-sequence'), // Order tasks
-  sourcemaps  = require('gulp-sourcemaps'), // JS/CSS sourcemaps
-  // uglify      = require('gulp-uglify'), // JS minification
-  gutil       = require('gulp-util'), // Various utilities like colors and noop
-  watch       = require('gulp-watch'); // Watching files
+import browserSync from 'browser-sync'; // Browser Sync
+import del from 'del'; // Delete
+import fs from 'fs'; // File System
+import gulp from 'gulp'; // Base Gulp
+import autoprefixer from 'gulp-autoprefixer'; // Autoprefix css
+import compass from 'gulp-compass'; // Compass - Compile Sass
+import imagemin from 'gulp-imagemin'; // Process Images
+import order from 'gulp-order'; // Order files
+import plumber from 'gulp-plumber'; // Pipe error patch
+import sassLint from 'gulp-sass-lint'; // Linting of Sass
+import sequence from 'gulp-sequence'; // Order tasks
+import sourcemaps from 'gulp-sourcemaps'; // JS/CSS sourcemaps
+import gutil from 'gulp-util'; // Various utilities like colors and noop
+import watch from 'gulp-watch'; // Watching files
+
+// import gulp from 'gulp';
+// import autoprefixer from 'autoprefixer';
+// import browserify from 'browserify';
+// import watchify from 'watchify';
+// import source from 'vinyl-source-stream';
+// import buffer from 'vinyl-buffer';
+// import eslint from 'gulp-eslint';
+// import babelify from 'babelify';
+// import uglify from 'gulp-uglify';
+// import rimraf from 'rimraf';
+// import notify from 'gulp-notify';
+// import browserSync, { reload } from 'browser-sync';
+// import sourcemaps from 'gulp-sourcemaps';
+// import postcss from 'gulp-postcss';
+// import rename from 'gulp-rename';
+// import nested from 'postcss-nested';
+// import vars from 'postcss-simple-vars';
+// import extend from 'postcss-simple-extend';
+// import cssnano from 'cssnano';
+// import htmlReplace from 'gulp-html-replace';
+// import imagemin from 'gulp-imagemin';
+// import pngquant from 'imagemin-pngquant';
+// import runSequence from 'run-sequence';
+// import ghPages from 'gulp-gh-pages';
 
 
 // ------ Project Settings ------
