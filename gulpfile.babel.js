@@ -40,23 +40,23 @@ const opts = {
 
 // Allows gulp --prod to be run for the compressed output
 if (gutil.env.prod === true) {
-  opts.isProduction    = true;
-  opts.sassStyle       = 'compressed';
-  opts.sourceMap       = false;
+  opts.isProduction  = true;
+  opts.sassStyle = 'compressed';
+  opts.sourceMap = false;
 }
 
 
 // ------ Tasks ------
 
 // -- Clean up
-gulp.task('clean', function() {
+gulp.task('clean', () => {
   del([paths.dest + '**/*']).then( paths => {
     gutil.log(gutil.colors.yellow.bold('Deleted compiled files/folders:\n'), paths.join('\n'));
   });
 });
 
 // -- Starter files
-gulp.task('start', function() {
+gulp.task('start', () => {
   return gulp.src([paths.source + 'start/**/*'])
     .pipe(gulp.dest(paths.dest));
 });
@@ -64,7 +64,7 @@ gulp.task('start', function() {
 // -- Build JS
 
 // -- Build Images
-gulp.task('images', function() {
+gulp.task('images',  () => {
   gutil.log('Building ' + gutil.colors.yellow('all') + ' Images...');
 
   // TODO: don't rebuild if they exist
@@ -73,13 +73,13 @@ gulp.task('images', function() {
     .pipe(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true }))
     .pipe(gulp.dest(paths.dest + 'images/'))
     .pipe(browserSync.reload({ stream: true }))
-    .on('error', function (error) {
+    .on('error', error => {
       gutil.log(error);
     });
 });
 
 // -- Build CSS from Sass
-gulp.task('sass', ['sass-lint'], function() {
+gulp.task('sass', ['sass-lint'], () => {
   gutil.log('Building ' + gutil.colors.yellow(opts.sassStyle) + ' Sass...');
 
   return gulp.src(paths.source + 'sass/styles.scss')
@@ -92,13 +92,13 @@ gulp.task('sass', ['sass-lint'], function() {
       comments: opts.isProduction,
       debug: opts.isProduction
     }))
-    .on('error', function (error) {
+    .on('error', (error) => {
       gutil.log(error);
     });
 });
 
 // -- Run processes on CSS
-gulp.task('css', ['sass'],  function() {
+gulp.task('css', ['sass'],   () => {
   gutil.log('Formatting ' + gutil.colors.yellow(opts.sassStyle) + ' CSS...');
 
   return gulp.src(paths.dest + 'styles.css')
@@ -109,14 +109,14 @@ gulp.task('css', ['sass'],  function() {
     .pipe(opts.sourceMap ? sourcemaps.write('.') : gutil.noop())
     .pipe(gulp.dest(paths.dest))
     .pipe(browserSync.reload({ stream: true }))
-    .on('error', function (error) {
+    .on('error', error => {
       gutil.log(error);
     });
 });
 
 // ------ Utilities ------
 
-gulp.task('sass-lint', function () {
+gulp.task('sass-lint',  () => {
   return gulp.src(paths.source + 'sass/**/*.s+(a|c)ss')
     .pipe(sassLint({
       files: {
@@ -128,14 +128,14 @@ gulp.task('sass-lint', function () {
     .pipe(sassLint.failOnError());
 });
 
-gulp.task('reload', function() {
+gulp.task('reload',  () => {
   browserSync.reload();
 })
 
 // ------ Watchers ------
 
 // -- Watch, Sync, Build... repeat
-gulp.task('watch', ['build'], function() {
+gulp.task('watch', ['build'],  () => {
   browserSync({
     notify: false,
     port: 5060,
