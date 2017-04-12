@@ -7,14 +7,14 @@ import Main from './Main';
 
 
 // ---- Build the Structure
-function App() {
-  return (
-    <div>
+class App extends React.Component {
+  render() {
+    return <div>
       <Header />
       <Main />
       <Footer />
-    </div>
-  );
+    </div>;
+  }
 }
 
 export default App;
