@@ -73,8 +73,6 @@ gulp.task('start', () => {
     .pipe(gulp.dest(paths.dest));
 });
 
-// -- Build JS
-
 // -- Build Images
 gulp.task('images',  () => {
   gutil.log('Building ' + gutil.colors.yellow('all') + ' Images...');
@@ -164,7 +162,7 @@ gulp.task('watch', ['build'],  () => {
 });
 
 gulp.task('watchify', () => {
-  const bundler = watchify(browserify(buildOpts));
+  const bundler = watchify(browserify(buildOpts), {poll: true});
 
   function rebundle() {
     return bundler.bundle()
@@ -173,6 +171,7 @@ gulp.task('watchify', () => {
       .pipe(sourcemaps.init({ loadMaps: true }))
       .pipe(sourcemaps.write('.'))
       .pipe(gulp.dest(paths.dest))
+      .pipe(browserSync.reload({ stream: true }))
       .on('error', error => {
         gutil.log(error);
       });
