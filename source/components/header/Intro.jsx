@@ -1,16 +1,19 @@
 import React from 'react';
 
+// -- Data
+import { projectName, intro  } from '../../data/app.json'
+
 /*
 TODO:
-- Move content out of here
-- Ohh, and write the content
+- [x] Move content out of here
+- [ ] Ohh, and write the content
 */
 
 class Intro extends React.Component {
   render() {
     return <section className="intro">
-          <h2>Picking Technologies</h2>
-          <p>Always keep learning. <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae gravida enim. Integer eget odio pellentesque, aliquam sapien quis, aliquam mauris. Etiam a volutpat magna.</span></p>
+          <h2>{ projectName }</h2>
+          <p>{ intro.callout } <span>{ intro.expanded }</span></p>
         </section>;
   }
 }
