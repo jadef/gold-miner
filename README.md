@@ -68,6 +68,7 @@ A fun and useful pet project to keep track of personal notes on various web tech
 * TODO List **
 
 - [ ] Get JS Linting implemented
+- [ ] Better component/sass matching
 - [ ] plan data Storage
 
 ** v1.1 **
