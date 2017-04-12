@@ -64,9 +64,18 @@ A fun and useful pet project to keep track of personal notes on various web tech
 ** v1.0 **
 
 - Introduce React
-- Data Storage
+
+* TODO List **
+
+- [ ] Get JS Linting implemented
+- [ ] Better component/sass matching
+- [ ] plan data Storage
 
 ** v1.1 **
+
+- Data Storage
+
+** v1.2 **
 
 - Frontend animations
 
