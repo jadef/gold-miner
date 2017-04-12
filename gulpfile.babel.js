@@ -31,9 +31,7 @@ const paths = {
   dest: 'public/',
 
   bundle: 'app.js',
-  entry: 'source/index.js',
-  destJs: 'public/js',
-  destDeploy: './public/**/*'
+  entry: 'source/index.js'
 };
 
 const opts = {
@@ -174,7 +172,7 @@ gulp.task('watchify', () => {
       .pipe(buffer())
       .pipe(sourcemaps.init({ loadMaps: true }))
       .pipe(sourcemaps.write('.'))
-      .pipe(gulp.dest(paths.destJs))
+      .pipe(gulp.dest(paths.dest))
       .on('error', error => {
         gutil.log(error);
       });
@@ -194,7 +192,7 @@ gulp.task('browserify', () => {
   .pipe(sourcemaps.init({ loadMaps: true }))
   .pipe(uglify())
   .pipe(sourcemaps.write('.'))
-  .pipe(gulp.dest(paths.destJs));
+  .pipe(gulp.dest(paths.dest));
 });
 
 
