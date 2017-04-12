@@ -7,17 +7,8 @@ import ControlsTags from './controls/Tags';
 import ControlsLetters from './controls/Letters';
 import Entries from './Entries';
 
-class Main extends React.Component {
-  render() {
-    return <main>
-    <ControlsTags />
-    <ControlsLetters />
-    <Entries />
-  </main>;
-  }
-}
 
-// -- Build it
+// ---- Build the Structure
 function App() {
   return (
     <div>
@@ -26,6 +17,17 @@ function App() {
       <Footer />
     </div>
   );
+}
+
+// -- Sub Structure
+class Main extends React.Component {
+  render() {
+    return <main>
+    <ControlsTags />
+    <ControlsLetters />
+    <Entries />
+  </main>;
+  }
 }
 
 export default App;

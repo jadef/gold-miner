@@ -1,5 +1,13 @@
 import React from 'react';
 
+/*
+TODO:
+- Iterate tags
+- Active tags
+- Filter entries
+- Tag Drawer
+*/
+
 class ControlsTags extends React.Component {
 	render() {
 		return <section className="tags controls">

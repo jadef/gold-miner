@@ -1,7 +1,7 @@
 import React from 'react';
 
+// -- Components
 import Entry from './Entry';
-
 
 class Entries extends React.Component {
   render() {

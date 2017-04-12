@@ -1,5 +1,13 @@
 import React from 'react';
 
+/*
+TODO:
+- Map jumps
+- Track location
+- Closest location
+- Update location
+*/
+
 class ControlsLetters extends React.Component {
   render() {
     return <section className="letters controls">
