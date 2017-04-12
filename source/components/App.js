@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import { version } from '../../package.json';
 
 const App = ({ children }) => (
