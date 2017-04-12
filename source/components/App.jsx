@@ -3,9 +3,7 @@ import React from 'react';
 // -- Components
 import Header from './Header';
 import Footer from './Footer';
-import ControlsTags from './controls/Tags';
-import ControlsLetters from './controls/Letters';
-import Entries from './Entries';
+import Main from './Main';
 
 
 // ---- Build the Structure
@@ -17,17 +15,6 @@ function App() {
       <Footer />
     </div>
   );
-}
-
-// -- Sub Structure
-class Main extends React.Component {
-  render() {
-    return <main>
-    <ControlsTags />
-    <ControlsLetters />
-    <Entries />
-  </main>;
-  }
 }
 
 export default App;

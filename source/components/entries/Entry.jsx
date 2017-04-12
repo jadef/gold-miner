@@ -1,5 +1,10 @@
 import React from 'react';
 
+/*
+TODO:
+- Break Components Down Further
+*/
+
 class Entry extends React.Component {
   render() {
     return <section className="entry">
