@@ -44,6 +44,7 @@ const opts = {
 const customOpts = {
   entries: [paths.entry],
   debug: true,
+  extensions: ['.jsx'],
   cache: {},
   packageCache: {}
 };
@@ -166,32 +167,32 @@ gulp.task('watchify', () => {
 
   function rebundle() {
     return bundler.bundle()
+      .on("error", function(err) {
+        gutil.log(gutil.colors.red("Browser error: "), err);
+      })
       .pipe(source(paths.bundle))
       .pipe(buffer())
       .pipe(sourcemaps.init({ loadMaps: true }))
       .pipe(sourcemaps.write('.'))
       .pipe(gulp.dest(paths.dest))
-      .pipe(browserSync.reload({ stream: true }))
-      .on('error', error => {
-        gutil.log(error);
-      });
+      .pipe(browserSync.reload({ stream: true }));
   }
 
   bundler.transform(babelify)
-  .on('update', rebundle);
+    .on('update', rebundle);
   return rebundle();
 });
 
 gulp.task('browserify', () => {
   browserify(paths.entry, { debug: true })
-  .transform(babelify)
-  .bundle()
-  .pipe(source(paths.bundle))
-  .pipe(buffer())
-  .pipe(sourcemaps.init({ loadMaps: true }))
-  .pipe(uglify())
-  .pipe(sourcemaps.write('.'))
-  .pipe(gulp.dest(paths.dest));
+    .transform(babelify)
+    .bundle()
+    .pipe(source(paths.bundle))
+    .pipe(buffer())
+    .pipe(sourcemaps.init({ loadMaps: true }))
+    .pipe(uglify())
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest(paths.dest));
 });
 
 
