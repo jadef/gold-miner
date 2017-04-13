@@ -1,5 +1,8 @@
 # Gold Miner
 
+![Mining for Gold](https://rawgithub.com/jadef/gold-miner/master/source/images/mining%20crest.svg "Mining for Gold")
+
+
 A fun (and useful) pet project to keep track of personal notes on various web technologies.
 
 # Table of Contents
@@ -75,3 +78,5 @@ A fun (and useful) pet project to keep track of personal notes on various web te
 ## Deployment
 
 `TODO`
+
+![Mining for Gold](https://rawgithub.com/jadef/gold-miner/master/source/images/small%20logo.svg "Mining for Gold")
