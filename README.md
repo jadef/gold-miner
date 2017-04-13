@@ -1,6 +1,6 @@
 # Gold Miner
 
-![Mining for Gold](https://rawgithub.com/jadef/gold-miner/master/source/images/mining%20crest.svg "Mining for Gold")
+![Mining for Gold](https://rawgithub.com/jadef/gold-miner/master/source/images/mining%20crest.svg)
 
 
 A fun (and useful) pet project to keep track of personal notes on various web technologies.
@@ -10,42 +10,75 @@ A fun (and useful) pet project to keep track of personal notes on various web te
 * [Setup](#setup)
   * [Install NPM dependencies](#install-npm-dependencies)
 * [Precompilation](#precompilation)
-  * [Gulp](#gulp---local)
-  * [Templates](#templates)
+  * [Gulp](#gulp)
   * [JavaScript](#javascript)
   * [Sass](#sass)
-* [Roadmap](#roadmap)
+* [Structure](#structure)
 * [Deployment](#deployment)
+* [Roadmap](#roadmap)
 
 ----
 
 ## Setup
 
-`TODO`
+- Local Dev Requirements
 
 ### Install NPM dependencies
 
-`TODO`
+- `NPM install`
 
 ## Precompilation
 
-`TODO`
-
 ### Gulp
 
-`TODO`
-
-### Templates
-
-`TODO`
+- Local
+- NPM scripts
+- Tasks
 
 ### JavaScript
 
-`TODO`
+- React
+- Babel
+- Browserify for the build
+
+#### JS Linting
+
+- `TODO`
+- ES-lint
 
 ### Sass
 
-`TODO`
+- Uses `.scss` file format
+- No compass, just sass builder
+- Autoprefixer runs
+- Uncompressed and sourcemaped when ran in dev mode (default)
+
+#### Sass Linting
+
+- Runs on sass compile
+- .sass-lint.yml for rules
+- Sublime Text inline linting
+
+## Structure
+
+![Mining for Gold](https://rawgithub.com/jadef/gold-miner/master/utils/docs/components.png)
+
+### 1. Builders
+
+- Entry files
+
+### 2. Components
+
+- Mirrored aspects of the app
+
+### 3. Sections
+
+- Structural organization
+
+## Deployment
+
+- `TODO`
+- Environment flag
 
 ## Roadmap
 
@@ -70,13 +103,14 @@ A fun (and useful) pet project to keep track of personal notes on various web te
 **v1.1**
 
 - Data Storage
+- Content build
 
 **v1.2**
 
-- Frontend animations
+- Controls functionality
 
-## Deployment
+**v1.3**
 
-`TODO`
+- Frontend animations/polish
 
-![Mining for Gold](https://rawgithub.com/jadef/gold-miner/master/source/images/small%20logo.svg "Mining for Gold")
+![Mining for Gold](https://rawgithub.com/jadef/gold-miner/master/source/images/small%20logo.svg)
