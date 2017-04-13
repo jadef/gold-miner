@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 
 window.React = React;
 
-import App from './components/App';
+import App from './js/App';
 
 render(
   <App />,

@@ -1,9 +1,9 @@
 import React from 'react';
 
 // -- Components
-import ControlsTags from './controls/Tags';
-import ControlsLetters from './controls/Letters';
-import Entries from './entries/Entries';
+import ControlsTags from '../components/controls/Tags';
+import ControlsLetters from '../components/controls/Letters';
+import Entries from './Entries';
 
 class Main extends React.Component {
   render() {

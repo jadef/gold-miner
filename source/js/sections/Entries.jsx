@@ -1,7 +1,7 @@
 import React from 'react';
 
 // -- Components
-import Entry from './Entry';
+import Entry from '../components/entries/Entry';
 
 /*
 TODO:

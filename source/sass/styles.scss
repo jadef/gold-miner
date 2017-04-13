@@ -18,7 +18,11 @@
 @import 'sections/footer';
 
 // Components
-@import 'components/tags';
-@import 'components/letters';
-@import 'components/totop';
-@import 'components/entries';
+@import 'components/controls/tags';
+@import 'components/controls/letters';
+@import 'components/header/intro';
+@import 'components/header/logo';
+@import 'components/header/totop';
+@import 'components/entries/entry';
+@import 'components/entries/rating';
+@import 'components/entries/tags';
