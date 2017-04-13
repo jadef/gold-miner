@@ -1,7 +1,6 @@
 # Gold Miner
-====
 
-A fun and useful pet project to keep track of personal notes on various web technologies.
+A fun (and useful) pet project to keep track of personal notes on various web technologies.
 
 # Table of Contents
 
@@ -47,35 +46,29 @@ A fun and useful pet project to keep track of personal notes on various web tech
 
 ## Roadmap
 
-** v0.0 **
+**v0.0**
 
 - Document
 - Architect
 
-** v0.1 **
+**v0.1**
 
 - Environment setup
 - Wireframes
 
-** v0.2 **
+**v0.2**
 
 -  Frontend statics
 
-** v1.0 **
+**v1.0**
 
 - Introduce React
 
-* TODO List **
-
-- [ ] Get JS Linting implemented
-- [ ] Better component/sass matching
-- [ ] plan data Storage
-
-** v1.1 **
+**v1.1**
 
 - Data Storage
 
-** v1.2 **
+**v1.2**
 
 - Frontend animations
 
