@@ -1,9 +1,8 @@
-# Gold Miner
+<p align="center"><img src="https://rawgithub.com/jadef/gold-miner/master/source/images/mining%20crest.svg" alt="Mining for Gold" /></p>
 
-![Mining for Gold](https://rawgithub.com/jadef/gold-miner/master/source/images/mining%20crest.svg)
+<h1 align="center">Gold Miner</h1>
 
-
-A fun (and useful) pet project to keep track of personal notes on various web technologies.
+<p align="center">A fun (and useful) pet project to keep track of personal notes on various web technologies.</p>
 
 # Table of Contents
 
