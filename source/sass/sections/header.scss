@@ -18,20 +18,6 @@ header {
     min-height: 72px;
   }
 
-  .intro {
-    padding: $gutter;
-    text-align: center;
-
-    p {
-      font-size: 18px;
-      line-height: 26px;
-    }
-
-    span {
-      display: none;
-    }
-  }
-
   // MQ Small
   @include breakpoint(small) {
     .wrapper {
@@ -49,11 +35,6 @@ header {
 
     .intro {
       @include columns(8);
-      text-align: left;
-
-      span {
-        display: inline;
-      }
     }
   }
 
