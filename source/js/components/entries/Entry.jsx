@@ -12,7 +12,7 @@ class Entry extends React.Component {
       <section className="entry">
         <div className="title" id={entry.id}>
           <h3>{entry.title}</h3>
-          <a className="external" href={entry.link} target="_blank"><img src="images/external.svg" alt="external link" /></a>
+          {entry.link ? <a className="external" href={entry.link} target="_blank"><img src="images/external.svg" alt="external link" /></a> : null}
         </div>
         <Rating rank={entry.rank} />
         <div className="desc">
@@ -21,7 +21,7 @@ class Entry extends React.Component {
             <hr />
             {entry.notes}
           </div>
-          <Tags tags={entry.tags} />
+          {/*<Tags tags={entry.tags} />*/}
         </div>
         <div className="stamp">edited: 2017/03/28</div>
       </section>
