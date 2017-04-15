@@ -6,23 +6,25 @@ import Entry from '../components/entries/Entry';
 // -- Data
 import { entries  } from '../data/entries.json'
 
-/*
-TODO:
-- Iterate Entries
-*/
-
 class Entries extends React.Component {
   render() {
 
-    const allEntries = entries.sort();
+    // Alphabetical sort of id
+    const sortEntries = entries.sort(function(a, b) {
+      return a.id.localeCompare(b.id);
+    });
 
+    // Fetch all entries
+    const allEntries = sortEntries.map((data, i) => (
+      <Entry entry={data} key={i} />
+    ));
+
+    // Return wrapped entries
     return (
-    <div className="entries">
-    {JSON.stringify({allEntries})}
-      {allEntries.map((data, i) => (
-        <Entry entry={data} key={i} />
-      ))}
-    </div>);
+      <div className="entries">
+        {allEntries}
+      </div>
+    );
   }
 }
 
