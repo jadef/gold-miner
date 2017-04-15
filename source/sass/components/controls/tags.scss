@@ -1,8 +1,15 @@
 // ----- Tags (controls)
 .controls.tags {
   .trigger {
-    @include wire;
+    align-items: center;
+    background-color: $c-w-lt-grey;
+    border: 1px solid $c-w-grey;
+    color: $c-w-dk-grey;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    margin-bottom: $gutter;
+    padding: 20px;
   }
 
   ul {

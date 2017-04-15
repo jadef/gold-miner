@@ -112,4 +112,4 @@
 
 - Frontend animations/polish
 
-![Mining for Gold](https://rawgithub.com/jadef/gold-miner/master/source/images/small%20logo.svg)
+<p align="center"><img src="https://rawgithub.com/jadef/gold-miner/master/source/images/small%20logo.svg" alt="Mining for Gold" /></p>
