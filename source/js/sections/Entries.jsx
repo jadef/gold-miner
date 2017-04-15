@@ -3,6 +3,9 @@ import React from 'react';
 // -- Components
 import Entry from '../components/entries/Entry';
 
+// -- Data
+import { entries  } from '../data/entries.json'
+
 /*
 TODO:
 - Iterate Entries
@@ -10,11 +13,16 @@ TODO:
 
 class Entries extends React.Component {
   render() {
-    return <div className="entries">
-      <Entry />
-      <Entry />
-      <Entry />
-    </div>;
+
+    const allEntries = entries.sort();
+
+    return (
+    <div className="entries">
+    {JSON.stringify({allEntries})}
+      {allEntries.map((data, i) => (
+        <Entry entry={data} key={i} />
+      ))}
+    </div>);
   }
 }
 

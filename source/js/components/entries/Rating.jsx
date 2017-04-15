@@ -9,6 +9,7 @@ TODO:
 class Rating extends React.Component {
   render() {
     return <div className="rating">
+      {this.props.rank}
           <svg className="star" viewBox="0 0 26 26">
             <defs>
               <filter id="star-shadow" x="-55.0%" y="-35.0%" width="210.0%" height="210.0%" filterUnits="objectBoundingBox">
