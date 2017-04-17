@@ -15,7 +15,8 @@ import { letters } from '../../data/app.json'
 
 function Letter (props) {
   let classes = "";
-  (props.disabled ? classes = "none" : null);
+  (props.disabled ? classes += "none" : null);
+  (props.first == 0 ? classes += " active" : null);
   return <li className={classes}>{props.letter} </li>;
 }
 
@@ -24,7 +25,7 @@ class ControlsLetters extends React.Component {
 
     // Build Letter List
     const allLetters = letters.map((data, i) => (
-      <Letter letter={data.letter} disabled={data.disabled} key={data.letter.toString()} />
+      <Letter letter={data.letter} disabled={data.disabled} first={i} key={data.letter.toString()} />
     ));
 
     // Return All Letters (and handle)
