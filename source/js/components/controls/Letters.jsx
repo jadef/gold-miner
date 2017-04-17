@@ -2,14 +2,32 @@ import React from 'react';
 
 /*
 TODO:
-- Map jumps
-- Track location
-- Closest location
-- Update location
+- [x] Data controlled letters
+- [ ] First one active
+- [ ] Map jumps
+- [ ] Track location
+- [ ] Closest location
+- [ ] Update location
 */
+
+// -- Data
+import { letters } from '../../data/app.json'
+
+function Letter (props) {
+  let classes = "";
+  (props.disabled ? classes = "none" : null);
+  return <li className={classes}>{props.letter} </li>;
+}
 
 class ControlsLetters extends React.Component {
   render() {
+
+    // Build Letter List
+    const allLetters = letters.map((data, i) => (
+      <Letter letter={data.letter} disabled={data.disabled} key={data.letter.toString()} />
+    ));
+
+    // Return All Letters (and handle)
     return <section className="letters controls">
       <div className="handle">
         <svg viewBox="0 0 32 32">
@@ -26,34 +44,7 @@ class ControlsLetters extends React.Component {
           </g>
         </svg>
       </div>
-      <ul>
-        <li className="active">A</li>
-        <li>B</li>
-        <li>C</li>
-        <li className="none">D</li>
-        <li>E</li>
-        <li className="none">F</li>
-        <li>G</li>
-        <li>H</li>
-        <li>I</li>
-        <li>J</li>
-        <li className="none">K</li>
-        <li>L</li>
-        <li>M</li>
-        <li>N</li>
-        <li className="none">O</li>
-        <li>P</li>
-        <li className="none">Q</li>
-        <li>R</li>
-        <li>S</li>
-        <li className="none">T</li>
-        <li>U</li>
-        <li className="none">V</li>
-        <li className="none">W</li>
-        <li className="none">X</li>
-        <li className="none">Y</li>
-        <li className="none">Z</li>
-      </ul>
+      <ul>{allLetters}</ul>
     </section>;
   }
 }

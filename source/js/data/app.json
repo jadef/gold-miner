@@ -19,5 +19,33 @@
     "Single Page",
     "Template",
     "Testing"
+  ],
+  "letters": [
+    { "letter": "A", "disabled": false},
+    { "letter": "B" },
+    { "letter": "C" },
+    { "letter": "D", "disabled": true },
+    { "letter": "E" },
+    { "letter": "F", "disabled": true },
+    { "letter": "G" },
+    { "letter": "H" },
+    { "letter": "I" },
+    { "letter": "J" },
+    { "letter": "K" },
+    { "letter": "L" },
+    { "letter": "M" },
+    { "letter": "N" },
+    { "letter": "O", "disabled": true },
+    { "letter": "P" },
+    { "letter": "Q", "disabled": true },
+    { "letter": "R" },
+    { "letter": "S" },
+    { "letter": "T", "disabled": true },
+    { "letter": "U" },
+    { "letter": "V", "disabled": true },
+    { "letter": "W", "disabled": true },
+    { "letter": "X", "disabled": true },
+    { "letter": "Y", "disabled": true },
+    { "letter": "Z", "disabled": true }
   ]
 }
