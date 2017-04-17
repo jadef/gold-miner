@@ -30,29 +30,29 @@ class ControlsLetters extends React.Component {
         <li className="active">A</li>
         <li>B</li>
         <li>C</li>
-        <li>D</li>
+        <li className="none">D</li>
         <li>E</li>
-        <li>F</li>
+        <li className="none">F</li>
         <li>G</li>
         <li>H</li>
         <li>I</li>
         <li>J</li>
-        <li>K</li>
+        <li className="none">K</li>
         <li>L</li>
         <li>M</li>
         <li>N</li>
-        <li>O</li>
+        <li className="none">O</li>
         <li>P</li>
-        <li>Q</li>
+        <li className="none">Q</li>
         <li>R</li>
         <li>S</li>
-        <li>T</li>
+        <li className="none">T</li>
         <li>U</li>
-        <li>V</li>
-        <li>W</li>
-        <li>X</li>
-        <li>Y</li>
-        <li>Z</li>
+        <li className="none">V</li>
+        <li className="none">W</li>
+        <li className="none">X</li>
+        <li className="none">Y</li>
+        <li className="none">Z</li>
       </ul>
     </section>;
   }

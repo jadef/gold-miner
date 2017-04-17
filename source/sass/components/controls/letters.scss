@@ -25,6 +25,11 @@
           // text-shadow: 0 4px 6px rgba($c-black, 0.75);
           font-weight: bold;
         }
+
+        &.none {
+          cursor: default;
+          opacity: 0.25;
+        }
       }
     }
 
