@@ -1,39 +1,24 @@
 import React from 'react';
 
-
-/*
-TODO:
--
-*/
+// Single tag builder
 function Tag (props) {
-  return <span>{props.value}</span>;
+  return <span>{props.tag}</span>;
 }
-
-// function Tags(props) {
-//   const listTags = props.tags;
-//   return (
-//     <div className="btns tags">
-//       {listTags.map((tag) =>
-//         <Tag value={tag} key={tag.toString()} />
-//       )}
-//     </div>
-//   );
-// }
-
 
 class Tags extends React.Component {
   render() {
+
+    // Build Tag List
     const tagList = this.props.tags;
+    const allTags = tagList.map((tag, i) => (
+      <Tag tag={tag} key={tag.toString()} />
+    ));
+
+    // Return All Taggs
     return (
-      <div className="btns tags">
-      {JSON.stringify(this.props)}
-      {tagList.map((tag) => (
-        <Tag entry={tag} key={tag.toString()} />
-      ))}
-      </div>
+      <div className="btns tags">{allTags}</div>
     );
   }
 }
-
 
 export default Tags;

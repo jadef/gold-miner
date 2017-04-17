@@ -7,8 +7,9 @@
     color: $c-primary;
     display: inline-block;
     font-size: 10px;
+    line-height: 1em;
     margin: 0 10px 10px 0;
-    padding: 3px 10px;
+    padding: 6px 10px;
 
     &.active {
       background: rgba($c-accent, 0.75);
