@@ -14,7 +14,7 @@ class Tags extends React.Component {
       <Tag tag={tag} key={tag.toString()} />
     ));
 
-    // Return All Taggs
+    // Return All Tags
     return (
       <div className="btns tags">{allTags}</div>
     );

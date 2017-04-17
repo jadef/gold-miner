@@ -3,5 +3,21 @@
   "intro": {
     "callout": "Always keep learning.",
     "expanded": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae gravida enim. Integer eget odio pellentesque, aliquam sapien quis, aliquam mauris. Etiam a volutpat magna."
-  }
+  },
+  "tags": [
+    "Abstraction",
+    "Automated",
+    "Command Line",
+    "CSS",
+    "Framework",
+    "Grid",
+    "JavaScript",
+    "Node",
+    "PHP",
+    "Preprocessor",
+    "Ruby",
+    "Single Page",
+    "Template",
+    "Testing"
+  ]
 }
