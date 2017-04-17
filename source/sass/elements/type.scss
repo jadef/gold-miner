@@ -40,7 +40,9 @@ body {
 // }
 
 h1,
-h2 {
+h2,
+h3,
+h4 {
   font-family: 'Cabin', 'Helvetica Neue', Helvetica, sans-serif;
   font-weight: 600;
   line-height: 1.1em;
@@ -61,27 +63,15 @@ h3 {
   letter-spacing: 0.02em;
 }
 
-// ul {
-//   list-style: none;
-//   list-style-position: outside;
-//   margin: 0 0 1em 1.5em;
-// }
+ul,
+ol {
+  list-style-position: outside;
+  margin: 0 0 0.5em 1.5em;
 
-// ul li {
-//   text-indent: -0.8em;
-// }
-
-// ul li::before {
-//   content: '\f105';
-//   font-family: FontAwesome;
-//   font-size: 0.85em;
-//   padding-right: 10px;
-// }
-
-// ul li:hover::before {
-//   padding-left: 2px;
-//   padding-right: 8px;
-// }
+  li {
+    padding-bottom: 0.5em;
+  }
+}
 
 p {
   padding-bottom: 1em;

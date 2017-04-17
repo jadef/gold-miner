@@ -17,13 +17,12 @@ class Entry extends React.Component {
         <Rating rank={entry.rank} />
         <div className="desc">
           <div className="content">
-            {entry.content}
-            <hr />
-            {entry.notes}
+            <div className="notes">{entry.notes}</div>
+            <div dangerouslySetInnerHTML={ {__html: entry.content} } />
           </div>
           {/*<Tags tags={entry.tags} />*/}
         </div>
-        <div className="stamp">edited: 2017/03/28</div>
+        <div className="stamp">edited: {entry.stamp}</div>
       </section>
     );
   }

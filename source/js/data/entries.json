@@ -7,7 +7,8 @@
       "content": "<p></p>",
       "rank": 1,
       "notes": "Considering looking into it, but put it third of the three in priority.",
-      "tags": ["JavaScript", "single page"]
+      "tags": ["JavaScript", "single page"],
+      "stamp": "2017/03/28"
     } , {
       "id": "backbone",
       "title": "Backbone",
@@ -15,7 +16,8 @@
       "content": "<p></p>",
       "rank": 2,
       "notes": "",
-      "tags": ["JavaScript", "single page"]
+      "tags": ["JavaScript", "single page"],
+      "stamp": "2017/03/28"
     } , {
       "id": "browserify",
       "title": "Browserify",
@@ -23,7 +25,8 @@
       "content": "<p>Collects JS modules (and script files) and mushes them all into a single app file. Often compared to requireJS.</p><p>I guess it's similar to the way Node.js <em>requires</em> dependencies, but for compiling to the front end.</p>",
       "rank": 3,
       "notes": "",
-      "tags": ["JavaScript", "automated", "node"]
+      "tags": ["JavaScript", "automated", "node"],
+      "stamp": "2017/03/28"
     } , {
       "id": "burbon",
       "title": "Burbon",
@@ -31,7 +34,8 @@
       "content": "<p>Another CSS Framework (in Sass). Not clear on this vs compass.</p>",
       "rank": 4,
       "notes": "Might be the framework that I finally accept",
-      "tags": ["css", "framework"]
+      "tags": ["css", "framework"],
+      "stamp": "2017/03/28"
     } , {
       "id": "capybara",
       "title": "Capybara",
@@ -39,7 +43,8 @@
       "content": "<p></p>",
       "rank": 3,
       "notes": "",
-      "tags": ["testing", "ruby"]
+      "tags": ["testing", "ruby"],
+      "stamp": "2017/03/28"
     } , {
       "id": "coffescript",
       "title": "CoffeeScript",
@@ -47,7 +52,8 @@
       "content": "<p>Haven't gone too deep, but essentially CoffeeScript just \"cleans up\" JavaScript. It's all still just javaScript, but cuts out some of the extra semicolons, var declarations, etc.</p>",
       "rank": 4,
       "notes": "Will need to spend time, but looking forward to second nature",
-      "tags": ["JavaScript", "preprocessor", "abstraction"]
+      "tags": ["JavaScript", "preprocessor", "abstraction"],
+      "stamp": "2017/03/28"
     } , {
       "id": "compass",
       "title": "compass",
@@ -55,7 +61,8 @@
       "content": "<p>CSS framework (in Sass). It has prebuilt stuff like a reset, some layout stuff, and other mixins.</p><p>It's also the preprocessor (gulp node) that does the compiling of Sass.",
       "rank": 4,
       "notes": "",
-      "tags": ["css", "preprocessor", "framework"]
+      "tags": ["css", "preprocessor", "framework"],
+      "stamp": "2017/03/28"
     } , {
       "id": "cucumber",
       "title": "Cucumber",
@@ -63,7 +70,8 @@
       "content": "<p></p>",
       "rank": 2,
       "notes": "",
-      "tags": ["testing", "ruby"]
+      "tags": ["testing", "ruby"],
+      "stamp": "2017/03/28"
     } , {
       "id": "ember",
       "title": "Ember",
@@ -71,7 +79,8 @@
       "content": "<p></p>",
       "rank": 3,
       "notes": "",
-      "tags": ["JavaScript", "single page"]
+      "tags": ["JavaScript", "single page"],
+      "stamp": "2017/03/28"
     } , {
       "id": "expression",
       "title": "Expression Engine",
@@ -79,7 +88,8 @@
       "content": "<p></p>",
       "rank": 4,
       "notes": "",
-      "tags": ["php"]
+      "tags": ["php"],
+      "stamp": "2017/03/28"
     } , {
       "id": "git",
       "title": "Git",
@@ -87,7 +97,8 @@
       "content": "<p></p>",
       "rank": 4,
       "notes": "",
-      "tags": ["command line"]
+      "tags": ["command line"],
+      "stamp": "2017/03/28"
     } , {
       "id": "gulp",
       "title": "Gulp",
@@ -95,7 +106,8 @@
       "content": "<p>Where to start, well, it's like <a href=\"http://gruntjs.com/\" target=\"_blank\">Grunt</a>, but <em>cooler</em>. It's essentially a task manager that runs stuffs. (Alternative to CodeKit too)</p><p>Currently using a starting kit from <a href=\"http://viget.com/extend/gulp-browserify-starter-faq\">viget.com</a> that breaks it up a bit. But here's how it's working:</p><ol><li>Once I've got the project setup, I fire up gulp by <code>cd</code> to project folder and typing <code>gulp</code>.</li><li>This fires gulpfile.js, which in turn finds the gulp/index.js file, which in turn looks in the tasks folder for the compartmentalized tasks that gulp runs.</li></ol>",
       "rank": 4,
       "notes": "Getting the hang of it. Excited to integrate",
-      "tags": ["JavaScript", "preprocessor", "command line"]
+      "tags": ["JavaScript", "preprocessor", "command line"],
+      "stamp": "2017/03/28"
     } , {
       "id": "haml",
       "title": "Haml",
@@ -103,7 +115,8 @@
       "content": "<p>Mostly for Ruby</p>",
       "rank": 3,
       "notes": "",
-      "tags": ["ruby", "abstraction"]
+      "tags": ["ruby", "abstraction"],
+      "stamp": "2017/03/28"
     } , {
       "id": "handlebars",
       "title": "Handlebars",
@@ -111,14 +124,16 @@
       "content": "<p>similar to html, but has <code>{{bracket includes}}</code> stuff going on.</p><p> Similar to <a href=\"#haml\">haml</a> or <a href=\"#jade\">jade</a> (I think). Something to do with Mustache templates.</p><p>Ember mentions something about handlebar integration.</p><p>I installed the handlebar package to sublime so it looks more like html, may do other stuff.</p>",
       "rank": 4,
       "notes": "Excited to integrate",
-      "tags": ["template", "JavaScript", "abstraction"]
+      "tags": ["template", "JavaScript", "abstraction"],
+      "stamp": "2017/03/28"
     } , {
       "id": "imagemin",
       "title": "Imagemin",
       "content": "<p>haven't looked too deep in to the node module, but once the gulp task is up and running it seems to <em>just work</em>. Ohh yeah, it optimizes images, that's it's job.</p>",
       "rank": 4,
       "notes": "Just works = good",
-      "tags": ["automated", "node", "command line"]
+      "tags": ["automated", "node", "command line"],
+      "stamp": "2017/03/28"
     } , {
       "id": "jade",
       "title": "Jade",
@@ -126,7 +141,8 @@
       "content": "<p>Mostly for JavaScript</p>",
       "rank": 2,
       "notes": "",
-      "tags": ["JavaScript", "abstraction"]
+      "tags": ["JavaScript", "abstraction"],
+      "stamp": "2017/03/28"
     } , {
       "id": "jquery",
       "title": "jQuery",
@@ -134,14 +150,16 @@
       "content": "<p>Hello jQuery my old friend.</p>",
       "rank": 5,
       "notes": "jQuery 4 life, not really, but you know.",
-      "tags": ["JavaScript", "framework"]
+      "tags": ["JavaScript", "framework"],
+      "stamp": "2017/03/28"
     } , {
       "id": "livereload",
       "title": "LiveReload",
       "content": "<p>If you hook up both ends it creates auto-refresh of a browser on save of files.</p><ul><li>Need the browser plugin (chrome) and the little icon clicked to \"listen\"</li><li>Gulp is kicking this off on it's end with gulp-livereload (on  port 35729).</li></ul><p>This is very similar to what's being done in CodeKit</p>",
       "rank": 5,
       "notes": "get it running and just expect",
-      "tags": ["automated", "node", "command line"]
+      "tags": ["automated", "node", "command line"],
+      "stamp": "2017/03/28"
     } , {
       "id": "magento",
       "title": "Magento",
@@ -149,7 +167,8 @@
       "content": "<p></p>",
       "rank": 3,
       "notes": "",
-      "tags": ["php"]
+      "tags": ["php"],
+      "stamp": "2017/03/28"
     } , {
       "id": "modernizr",
       "title": "Modernizr",
@@ -157,7 +176,8 @@
       "content": "<p></p>",
       "rank": 4,
       "notes": "",
-      "tags": ["JavaScript"]
+      "tags": ["JavaScript"],
+      "stamp": "2017/03/28"
     } , {
       "id": "neat",
       "title": "Burbon Neat",
@@ -165,7 +185,8 @@
       "content": "<p>Neat is a grid framework on top of Burbon. This is the cleanest looking grid system I've come across lately. <em>Potential</em>.</p>",
       "rank": 3,
       "notes": "might be the <em>grid system</em> I finally accept, but still hesitant",
-      "tags": ["css", "framework", "template", "grid"]
+      "tags": ["css", "framework", "template", "grid"],
+      "stamp": "2017/03/28"
     } , {
       "id": "nodejs",
       "title": "Node.js",
@@ -173,7 +194,8 @@
       "content": "<p></p>",
       "rank": 2,
       "notes": "",
-      "tags": ["JavaScript", "command line"]
+      "tags": ["JavaScript", "command line"],
+      "stamp": "2017/03/28"
     } , {
       "id": "npm",
       "title": "NPM",
@@ -181,7 +203,8 @@
       "content": "<p>Node Packaged Modules. Ships with nodejs, so I've got it. It's a package manager (like Brew) but just for JavaScript stuff (both back end like nodejs stuff and client side like browserify.)</p>",
       "rank": 2,
       "notes": "",
-      "tags": ["JavaScript", "command line"]
+      "tags": ["JavaScript", "command line"],
+      "stamp": "2017/03/28"
     } , {
       "id": "php",
       "title": "PHP",
@@ -189,7 +212,8 @@
       "content": "<p>You know, that little language called php.</p>",
       "rank": 3,
       "notes": "",
-      "tags": ["php"]
+      "tags": ["php"],
+      "stamp": "2017/03/28"
     } , {
       "id": "prototype",
       "title": "prototype",
@@ -197,7 +221,8 @@
       "content": "<p></p>",
       "rank": 1,
       "notes": "",
-      "tags": ["JavaScript", "framework"]
+      "tags": ["JavaScript", "framework"],
+      "stamp": "2017/03/28"
     } , {
       "id": "rails",
       "title": "Ruby on Rails",
@@ -205,7 +230,8 @@
       "content": "<p></p>",
       "rank": 3,
       "notes": "",
-      "tags": ["ruby", "framework"]
+      "tags": ["ruby", "framework"],
+      "stamp": "2017/03/28"
     } , {
       "id": "ruby",
       "title": "Ruby",
@@ -213,7 +239,8 @@
       "content": "<p>Another lil' ol' thing</p>",
       "rank": 2,
       "notes": "",
-      "tags": ["ruby"]
+      "tags": ["ruby"],
+      "stamp": "2017/03/28"
     } , {
       "id": "sass",
       "title": "Sass",
@@ -221,14 +248,16 @@
       "content": "<p>This is almost second nature now. I'm very comfortable with \"full\" sass (rather than scss or less), but it all falls back to css pretty easily.</p><p>Mixins, functions, variables, includes. Getting it done.</p>",
       "rank": 5,
       "notes": "Must have forevers",
-      "tags": ["css", "preprocessor", "abstraction"]
+      "tags": ["css", "preprocessor", "abstraction"],
+      "stamp": "2017/03/28"
     } , {
       "id": "underscore",
       "title": "Underscore",
       "link": "http://underscorejs.org/",
       "content": "<p></p>",
       "rank": 1,
-      "notes": "Not sure why, but I'm really not excited about looking into this"
+      "notes": "Not sure why, but I'm really not excited about looking into this",
+      "stamp": "2017/03/28"
     }
   ]
 }

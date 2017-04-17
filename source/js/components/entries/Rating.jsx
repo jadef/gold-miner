@@ -52,7 +52,7 @@ class Rating extends React.Component {
     }
 
     return (
-      <div className="rating">
+      <div className="rating" title="Star Rating">
         {stars}
       </div>
     );

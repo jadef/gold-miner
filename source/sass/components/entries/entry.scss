@@ -32,6 +32,13 @@
 
   .desc {
     padding: 10px;
+
+    .notes {
+      color: $c-burnt-tan;
+      font-size: 11px;
+      font-style: italic;
+      padding-bottom: 1em;
+    }
   }
 
   .stamp {
