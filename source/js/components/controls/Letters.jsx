@@ -17,7 +17,7 @@ function Letter (props) {
   let classes = "";
   (props.disabled ? classes += "none" : null);
   (props.first == 0 ? classes += " active" : null);
-  return <li className={classes}>{props.letter} </li>;
+  return <li className={classes}><a href={"#jump" + props.letter}>{props.letter}</a></li>;
 }
 
 class ControlsLetters extends React.Component {

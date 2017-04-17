@@ -32,6 +32,15 @@
           opacity: 0.25;
         }
       }
+
+      a {
+        color: $c-dark;
+      }
+
+      a:hover,
+      a:focus {
+        color: $c-accent;
+      }
     }
 
     .handle {

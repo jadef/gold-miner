@@ -93,16 +93,16 @@ strong {
 //   vertical-align: middle;
 // }
 
-// a:link,
-// a:active,
-// a:visited {
-//   color: $c-secondary;
-//   text-decoration: underline;
-//   transition: all 0.2s ease;
-// }
+a:link,
+a:active,
+a:visited {
+  color: $c-primary;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
 
-// a:hover,
-// a:focus {
-//   color: $c-accent;
-//   outline: 0;
-// }
+a:hover,
+a:focus {
+  color: $c-accent;
+  outline: 0;
+}
