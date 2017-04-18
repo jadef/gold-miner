@@ -1,0 +1,13 @@
+// ---- Entries
+.entries {
+  .fade {
+    // background: linear-gradient(to bottom, rgba($c-light, 0.95) 50%, rgba($c-light, 0) 100%);
+    background-color: $c-light;
+    box-shadow: 0 0 35px 35px $c-light;
+    height: 5px;
+    position: fixed;
+    top: 72px;
+    width: 100%;
+    z-index: 100;
+  }
+}

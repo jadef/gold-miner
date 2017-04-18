@@ -22,6 +22,7 @@ class Entries extends React.Component {
     // Return wrapped entries
     return (
       <div className="entries">
+        <div className="fade" />
         <br className="jump" id="jumpA" />
         {allEntries}
       </div>
