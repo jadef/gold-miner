@@ -8,9 +8,9 @@ TODO:
 
 class ToTop extends React.Component {
   render() {
-    return <div className="totop">
+    return <a className="totop" href="#pageTop">
           To Top
-        </div>;
+        </a>;
   }
 }
 
