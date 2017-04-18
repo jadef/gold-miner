@@ -2,6 +2,7 @@
 .controls.letters {
   @include breakpoint(small) {
     padding-left: 10px;
+    position: relative;
 
     ul {
       background-color: $c-light;
@@ -47,13 +48,12 @@
       height: 20px;
       position: absolute;
       top: 0;
-      transform: rotate(180deg);
       width: 100%;
 
       svg {
         height: 20px;
         position: absolute;
-        right: -15px;
+        right: -5px;
         top: 4px;
         width: 20px;
 
@@ -75,13 +75,5 @@
   @include breakpoint(medium) {
     padding-left: 0;
     padding-right: 10px;
-
-    .handle {
-      transform: none;
-
-      svg {
-        right: -5px;
-      }
-    }
   }
 }
