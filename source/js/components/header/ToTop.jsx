@@ -28,7 +28,7 @@ class ToTop extends React.Component {
       if (speed >= 20) speed = 20;
       let step = Math.round(distance / 25);
       let leapY = stopY > startY ? startY + step : startY - step;
-      const timer = 0;
+      let timer = 0;
       if (stopY > startY) {
         for ( let i=startY; i<stopY; i+=step ) {
           setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
