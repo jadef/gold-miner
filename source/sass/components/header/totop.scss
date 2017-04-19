@@ -1,4 +1,20 @@
 // ----- To Top
-.totop {
+a.totop {
+  background-image: $c-gr-accent;
+  // box-shadow: 0 2px 4px 0 rgba($c-dark, 0.35);
+  color: $c-light;
   display: none;
+  height: 72px;
+  position: fixed;
+  right: 0;
+
+  text-align: center;
+  top: 0;
+  width: 72px;
+
+  &::before {
+    content: '▲';
+    display: block;
+    margin-top: 14px;
+  }
 }
