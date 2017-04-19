@@ -38,36 +38,63 @@ class Logo extends React.Component {
   //   Snap("#site-logo").append( data );
   // }
 
-  // Do Stuff
+  // -- Do Animations
   animations = (event) => {
-    let logo = Snap.select("#mining-crest"),
+    // Set variables
+    const logo = Snap.select("#mining-crest"),
         left = logo.select("#pick-l"),
         right = logo.select("#pick-r"),
-        stars = logo.select("#stars"),
-        star1 = stars.select("#star1"),
-        star2 = stars.select("#star2"),
-        star3 = stars.select("#star3"),
-        star4 = stars.select("#star4"),
-        star5 = stars.select("#star5"),
+        stars = logo.selectAll("#star1, #star2, #star3, #star4, #star5"),
+        starA = logo.selectAll("#star1, #star5"),
+        starB = logo.selectAll("#star2, #star4"),
+        starC = logo.select("#star3"),
         crest = logo.select("#crest"),
-        timer,
-        prevEvent = null,
         speed = 700,
-        transition = mina.elastic,
-        pivots = [
-          [0, 0], // Left
-          [248, 0] // Right
-        ];
+        transition = mina.elastic;
 
+    let timer,
+        prevEvent = null;
+
+    // Event handling
     if (event != prevEvent) {
-      console.log(event);
       (event == "shrink") ? shrink() : null;
       (event == "grow") ? grow() : null;
       prevEvent = event;
     }
 
+    // "Translate" function for small logo
+    function shrink() {
+      clearTimeout(timer);
 
+      crest.animate({
+        opacity:"0"
+      }, 100);
 
+      timer = setTimeout(function () {
+        // Left Pick
+        left.animate({
+          transform: "t-25,18r-30, 0, 0"
+        }, speed, transition);
+        // Right Pick
+        right.animate({
+          transform: "t25,18r30, 248, 0"
+        }, speed, transition);
+        // Stars 1 & 5
+        starA.animate({
+          transform: "t0,-20"
+        }, speed, transition);
+        // Stars 2 & 4
+        starB.animate({
+          transform: "t0,-10"
+        }, speed, transition);
+        // Star 3
+        starC.animate({
+          transform: "t0,-5"
+        }, speed, transition);
+      }, 200);
+    }
+
+    // "Reset" function for large logo
     function grow() {
       clearTimeout(timer);
 
@@ -84,68 +111,11 @@ class Logo extends React.Component {
           transform: "t0, 0r0, 248, 0"
         }, 500, transition);
 
-        star1.animate({
-          transform: "t0,0"
-        }, speed, transition);
-
-        star2.animate({
-          transform: "t0,0"
-        }, speed, transition);
-
-        star3.animate({
-          transform: "t0,0"
-        }, speed, transition);
-
-        star4.animate({
-          transform: "t0,0"
-        }, speed, transition);
-
-        star5.animate({
+        stars.animate({
           transform: "t0,0"
         }, speed, transition);
       }, 200);
     }
-
-    function shrink() {
-      clearTimeout(timer);
-
-      crest.animate({
-        opacity:"0"
-      }, 100);
-
-      timer = setTimeout(function () {
-        left.animate({
-          transform: "t-25,18r-30, 0, 0"
-        }, speed, transition);
-
-        right.animate({
-          transform: "t25,18r30, 248, 0"
-        }, speed, transition);
-
-        star1.animate({
-          transform: "t0,-20"
-        }, speed, transition);
-
-        star2.animate({
-          transform: "t0,-10"
-        }, speed, transition);
-
-        star3.animate({
-          transform: "t0,-5"
-        }, speed, transition);
-
-        star4.animate({
-          transform: "t0,-10"
-        }, speed, transition);
-
-        star5.animate({
-          transform: "t0,-20"
-        }, speed, transition);
-      }, 200);
-
-    }
-
-    // timer = setTimeout(grow, 50);
   }
 
   render() {
