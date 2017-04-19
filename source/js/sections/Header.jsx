@@ -8,7 +8,11 @@ import ToTop from '../components/header/ToTop';
 class Header extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {topHeight: ""};
+    this.state = {
+      topHeight: "",
+      scrollClass: "",
+      transitionPoint: ""
+    };
   }
 
   componentDidMount() {
@@ -22,12 +26,25 @@ class Header extends React.Component {
   handleScroll = (event) => {
     let scrollTop = event.srcElement.body.scrollTop;
     let heightCheck = Math.max(72, 250 - scrollTop);
+    const compactPoint = 200;
+    const transitionPoint = 150;
+
+    // Set the various states
     this.setState({topHeight: heightCheck});
+    if (heightCheck <= compactPoint) {
+      if (heightCheck <= transitionPoint) {
+        this.setState({scrollClass: "compact transition"});
+      } else {
+        this.setState({scrollClass: "compact"});
+      }
+    } else {
+      this.setState({scrollClass: ""});
+    }
   }
 
   render() {
     return (
-      <header id="pageTop" style={{height: this.state.topHeight + "px"}}>
+      <header style={{height: this.state.topHeight + "px"}} className={this.state.scrollClass}>
         <div className="wrapper">
           <Logo />
           <Intro />

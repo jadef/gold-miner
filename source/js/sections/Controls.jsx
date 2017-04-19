@@ -27,8 +27,6 @@ class Controls extends React.Component {
     let scrollTop = event.srcElement.body.scrollTop;
     let heightCheck = Math.max(72, 250 - scrollTop);
 
-    console.log("top: "+heightCheck+"px, height: calc(100vh - "+heightCheck+"px)");
-     // style={{top: 50+"px", height: 100+"vh"}}
     this.setState({topHeight: heightCheck});
   }
 
