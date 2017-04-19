@@ -1,4 +1,5 @@
 import React from 'react';
+import Snap from 'snapsvg';
 
 // -- Components
 import Header from './sections/Header';
