@@ -26,7 +26,7 @@ class ControlsTags extends React.Component {
     // Return All Tags
     return <section className="tags controls">
       <ul className="list">{allTags}</ul>
-      <div className="trigger">Tags Filter</div>
+      <div className="trigger">Tags</div>
     </section>;
   }
 }

@@ -1,10 +1,20 @@
 // ----- Main Content
 main {
-  margin: 250px auto auto auto;
+  margin: ($s-header + 72px) auto auto auto;
   max-width: $xlarge;
+
+  .control-wrapper {
+    display: flex;
+    height: calc(100vh - #{$s-header});
+    position: fixed;
+    top: $s-header;
+    width: 100%;
+    z-index: 900;
+  }
 
   .controls.tags {
     min-height: 72px;
+    width: 100%;
   }
 
   .controls.letters {
@@ -19,14 +29,10 @@ main {
   // MQ Small
   @include breakpoint(small) {
     display: flex;
+    margin-top: $s-header;
 
     .control-wrapper {
       @include columns(4);
-      display: flex;
-      height: calc(100vh - #{$s-header});
-      position: fixed;
-      top: $s-header;
-      z-index: 900;
 
       .controls.tags {
         @include columns(9);

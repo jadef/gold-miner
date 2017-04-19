@@ -49,7 +49,7 @@ class Logo extends React.Component {
         starB = logo.selectAll("#star2, #star4"),
         starC = logo.select("#star3"),
         crest = logo.select("#crest"),
-        speed = 700,
+        speed = 900,
         transition = mina.elastic;
 
     let timer,
@@ -73,23 +73,23 @@ class Logo extends React.Component {
       timer = setTimeout(function () {
         // Left Pick
         left.animate({
-          transform: "t-25,18r-30, 0, 0"
+          transform: "t-25,10r-30, 0, 0"
         }, speed, transition);
         // Right Pick
         right.animate({
-          transform: "t25,18r30, 248, 0"
+          transform: "t25,10r30, 248, 0"
         }, speed, transition);
         // Stars 1 & 5
         starA.animate({
-          transform: "t0,-20"
+          transform: "t0,-30"
         }, speed, transition);
         // Stars 2 & 4
         starB.animate({
-          transform: "t0,-10"
+          transform: "t0,-20"
         }, speed, transition);
         // Star 3
         starC.animate({
-          transform: "t0,-5"
+          transform: "t0,-15"
         }, speed, transition);
       }, 200);
     }

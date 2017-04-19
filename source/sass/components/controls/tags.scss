@@ -2,14 +2,21 @@
 .controls.tags {
   .trigger {
     align-items: center;
-    background-color: $c-w-lt-grey;
-    border: 1px solid $c-w-grey;
-    color: $c-w-dk-grey;
+    background-color: $c-primary;
+    box-shadow: 0 0 6px 0 rgba($c-dark, 0.45);
+    color: $c-light;
     cursor: pointer;
     display: flex;
+    font-size: 20px;
     justify-content: center;
     margin-bottom: $gutter;
     padding: 20px;
+
+    &::after {
+      content: '▼';
+      display: inline-block;
+      padding-left: 20px;
+    }
   }
 
   ul {
