@@ -1,4 +1,4 @@
-<p align="center"><img src="https://rawgithub.com/jadef/gold-miner/master/source/images/mining%20crest.svg" alt="Mining for Gold" /></p>
+<p align="center"><img src="https://rawgithub.com/jadef/gold-miner/master/source/images/logo-crest.svg" alt="Mining for Gold" /></p>
 
 <h1 align="center">Gold Miner</h1>
 
@@ -112,4 +112,4 @@
 
 - Frontend animations/polish
 
-<p align="center"><img src="https://rawgithub.com/jadef/gold-miner/master/source/images/small%20logo.svg" alt="Mining for Gold" /></p>
+<p align="center"><img src="https://rawgithub.com/jadef/gold-miner/master/source/images/logo-sm.svg" alt="Mining for Gold" /></p>
