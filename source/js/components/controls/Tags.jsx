@@ -11,20 +11,37 @@ TODO:
 // -- Data
 import { tags } from '../../data/app.json'
 
-function Tag (props) {
-  return <li>{props.tag}</li>;
+class Tag extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      active: false
+    };
+  }
+
+  toggleClass = () => {
+    const currentState = this.state.active;
+    this.setState({
+      active: !currentState
+    });
+  }
+
+  render() {
+    return (
+      <li
+        className={this.state.active ? 'active': null}
+        onClick={this.toggleClass}
+      >{this.props.tag}</li>
+    );
+  }
 }
 
 class ControlsTags extends React.Component {
 
-  handleClick = () => {
-
-  }
-
   // Build Tag List
   BuildTags = (props) => {
     const allTags = tags.map((tag, i) => (
-      <Tag tag={tag} key={tag.toString()} onClick={this.handleClick} />
+      <Tag tag={tag} key={tag.toString()} />
     ));
 
     return ( allTags );
