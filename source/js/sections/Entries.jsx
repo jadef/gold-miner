@@ -26,11 +26,9 @@ class Entries extends React.Component {
 
   handleClick = () => {
     this.setState({
-      activeEntries: entries
+      activeEntries: entries.splice(0, Math.floor(Math.random() * (20 - 5 + 1) + 5))
+      // TEMP randomizer
     });
-
-    // console.log(this.state.activeEntries);
-    this.BuildEntries();
   }
 
   BuildEntries = (props) => {

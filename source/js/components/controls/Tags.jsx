@@ -16,18 +16,27 @@ function Tag (props) {
 }
 
 class ControlsTags extends React.Component {
-  render() {
 
-    // Build Tag List
+  handleClick = () => {
+
+  }
+
+  // Build Tag List
+  BuildTags = (props) => {
     const allTags = tags.map((tag, i) => (
-      <Tag tag={tag} key={tag.toString()} />
+      <Tag tag={tag} key={tag.toString()} onClick={this.handleClick} />
     ));
 
-    // Return All Tags
-    return <section className="tags controls">
-      <ul className="list">{allTags}</ul>
-      <div className="trigger">Tags</div>
-    </section>;
+    return ( allTags );
+  }
+
+  render() {
+    return (
+      <section className="tags controls">
+        <ul className="list">{this.BuildTags()}</ul>
+        <div className="trigger">Tags</div>
+      </section>
+    );
   }
 }
 
