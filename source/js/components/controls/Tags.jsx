@@ -28,8 +28,7 @@ class Tag extends React.Component {
     });
 
     // Add to active tags in main component
-    // Sanitized to lower case
-    this.props.addTag(this.props.tag.toLowerCase());
+    this.props.addTag(this.props.tag);
   }
 
   render() {

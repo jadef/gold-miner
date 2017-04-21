@@ -11,7 +11,7 @@ class Tag extends React.Component {
 
 class Tags extends React.Component {
   checkActiveTags = (tag, props) => {
-    if (this.props.activeTags.includes(tag.toLowerCase())) {
+    if (this.props.activeTags.includes(tag)) {
       return true;
     }
   }
