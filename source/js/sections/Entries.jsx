@@ -24,7 +24,6 @@ class Entries extends React.Component {
       <Entry entry={data} key={data.id} activeTags={this.props.activeTags} />
     ))
 
-    console.log( allEntries );
     return ( allEntries );
 
   }

@@ -7,6 +7,7 @@ import Entries from './Entries';
 // -- Data
 import { entries } from '../data/entries.json'
 
+// -- Main body component
 class Main extends React.Component {
   constructor(props) {
     super(props);
@@ -16,6 +17,7 @@ class Main extends React.Component {
     };
   }
 
+  // build active tags and disseminate
   addActiveTag = (tag) => {
     let tags = this.state.activeTags;
 
@@ -30,6 +32,32 @@ class Main extends React.Component {
     }
 
     this.setState({activeTags: tags});
+    this.checkActiveTags();
+  }
+
+  // Build a new list of entries from active tags
+  checkActiveTags = (props) => {
+    const activeTags = this.state.activeTags;
+
+    // Empty activeTags escapes with original entries list
+    if (!activeTags.length) {
+      this.setState({activeEntries: entries});
+      return null;
+    }
+
+    // Loop through and build a filtered list of entries
+    let activeTempList = [];
+    activeTags.forEach(function(singleActiveTag) {
+      entries.forEach(function(entry) {
+        if (entry.tags && entry.tags.includes(singleActiveTag)) {
+          // Check if already added to entries
+          (activeTempList.indexOf(entry) === -1) ? activeTempList.push(entry) : null;
+        }
+      });
+
+    });
+    // Update the state for current activeEntries
+    this.setState({activeEntries: activeTempList});
   }
 
   render() {
