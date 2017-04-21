@@ -23,6 +23,11 @@ class Controls extends React.Component {
     window.removeEventListener('scroll', this.handleScroll);
   }
 
+  // Pass through of the active tag(s)
+  passActiveTag = (tag) => {
+    this.props.addTag(tag);
+  }
+
   handleScroll = (event) => {
     let scrollTop = event.srcElement.body.scrollTop;
     let heightCheck = Math.max(72, 250 - scrollTop);
@@ -33,7 +38,7 @@ class Controls extends React.Component {
   render() {
     return (
       <div className="control-wrapper" style={{top: this.state.topHeight + "px", height: "calc(100vh - " + this.state.topHeight + "px"}}>
-        <ControlsTags />
+        <ControlsTags addTag={this.passActiveTag} />
         <ControlsLetters />
       </div>
     );

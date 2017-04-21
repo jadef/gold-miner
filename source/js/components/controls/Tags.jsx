@@ -11,6 +11,7 @@ TODO:
 // -- Data
 import { tags } from '../../data/app.json'
 
+// --- Single Tag Component
 class Tag extends React.Component {
   constructor(props) {
     super(props);
@@ -19,23 +20,28 @@ class Tag extends React.Component {
     };
   }
 
-  toggleClass = () => {
+  handleClick = (event) => {
+    // Toggle Class
     const currentState = this.state.active;
     this.setState({
       active: !currentState
     });
+
+    // Add to active tags in main component
+    this.props.addTag(this.props.tag);
   }
 
   render() {
     return (
       <li
         className={this.state.active ? 'active': null}
-        onClick={this.toggleClass}
+        onClick={this.handleClick}
       >{this.props.tag}</li>
     );
   }
 }
 
+// ---- All Tags Control Component
 class ControlsTags extends React.Component {
   constructor(props) {
     super(props);
@@ -44,30 +50,34 @@ class ControlsTags extends React.Component {
     };
   }
 
+  // Pass through of the active tag(s)
+  passActiveTag = (tag) => {
+    this.props.addTag(tag);
+  }
+
   // Build Tag List
   BuildTags = (props) => {
     const allTags = tags.map((tag, i) => (
-      <Tag tag={tag} key={tag.toString()} />
+      <Tag tag={tag} key={tag.toString()} addTag={this.passActiveTag} />
     ));
 
     return ( allTags );
   }
 
-  handleClick = (event) => {
+  // For the mobile drawer
+  handleTriggerClick = (event) => {
     event.preventDefault();
     const currentState = this.state.open;
     this.setState({
       open: !currentState
     });
-
-    // TODO add .open to section
   }
 
   render() {
     return (
       <section className={`tags controls ${this.state.open ? 'open': null}`}>
         <ul className="list">{this.BuildTags()}</ul>
-        <div className="trigger"><a href="#" className={this.state.open ? 'active': null} onClick={this.handleClick}>Tags</a></div>
+        <div className="trigger"><a href="#" className={this.state.open ? 'active': null} onClick={this.handleTriggerClick}>Tags</a></div>
       </section>
     );
   }
