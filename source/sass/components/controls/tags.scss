@@ -8,14 +8,14 @@
       align-items: center;
       color: $c-light;
       display: flex;
-      font-size: 20px;
+      font-size: 16px;
       justify-content: center;
-      padding: 20px 20px 20px 40px;
+      padding: 10px 20px 10px 30px;
 
       &::after {
         content: '▼';
         display: inline-block;
-        padding: 0 20px;
+        padding: 0 10px;
         transition: transform 0.5s ease;
       }
 
@@ -35,18 +35,23 @@
     li {
       align-items: center;
       cursor: pointer;
-      display: none;
-      font-size: 18px;
+      display: flex;
+      font-size: 16px;
+      height: 0;
       justify-content: center;
-      margin-bottom: 1px;
-      padding: 10px 15px;
+      opacity: 0;
+      overflow: hidden;
+      padding: 0;
+      transition: all 0.5s ease;
       width: 100%;
 
       &.active {
         background: $c-gr-accent;
         color: $c-light;
         display: flex;
-        padding-right: 30px;
+        height: 2em;
+        margin-bottom: 1px;
+        opacity: 1;
         position: relative;
 
         &::after {
@@ -66,10 +71,13 @@
     }
 
     ul {
-      padding-bottom: 72px;
+      padding-bottom: 50px;
+      padding-top: 10px;
 
       li {
-        display: flex;
+        height: 2em;
+        margin-bottom: 1px;
+        opacity: 1;
       }
     }
   }

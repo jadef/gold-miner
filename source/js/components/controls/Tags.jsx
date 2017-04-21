@@ -65,7 +65,7 @@ class ControlsTags extends React.Component {
 
   render() {
     return (
-      <section className="tags controls">
+      <section className={`tags controls ${this.state.open ? 'open': null}`}>
         <ul className="list">{this.BuildTags()}</ul>
         <div className="trigger"><a href="#" className={this.state.open ? 'active': null} onClick={this.handleClick}>Tags</a></div>
       </section>
