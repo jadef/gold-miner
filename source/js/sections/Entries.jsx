@@ -11,30 +11,12 @@ import Entry from '../components/entries/Entry';
   - active entry tag
 */
 
-// -- Data
-import { entries } from '../data/entries.json'
-
-
-
 class Entries extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      activeEntries: entries
-    };
-  }
-
-  handleClick = () => {
-    this.setState({
-      activeEntries: entries.splice(0, Math.floor(Math.random() * (20 - 5 + 1) + 5))
-      // TEMP randomizer
-    });
-  }
 
   BuildEntries = (props) => {
 
     // Alphabetical sort of id
-    const sortEntries = this.state.activeEntries.sort(function(a, b) {
+    const sortEntries = this.props.entries.sort(function(a, b) {
       return a.id.localeCompare(b.id);
     })
 
@@ -50,7 +32,6 @@ class Entries extends React.Component {
   render() {
     return (
       <div className="entries">
-        <button onClick={this.handleClick}>Ping</button>
         <div className="fade" />
         <br className="jump" id="jumpA" />
         {this.BuildEntries()}
