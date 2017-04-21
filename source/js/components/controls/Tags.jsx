@@ -37,6 +37,12 @@ class Tag extends React.Component {
 }
 
 class ControlsTags extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      open: false
+    };
+  }
 
   // Build Tag List
   BuildTags = (props) => {
@@ -47,11 +53,21 @@ class ControlsTags extends React.Component {
     return ( allTags );
   }
 
+  handleClick = (event) => {
+    event.preventDefault();
+    const currentState = this.state.open;
+    this.setState({
+      open: !currentState
+    });
+
+    // TODO add .open to section
+  }
+
   render() {
     return (
       <section className="tags controls">
         <ul className="list">{this.BuildTags()}</ul>
-        <div className="trigger">Tags</div>
+        <div className="trigger"><a href="#" className={this.state.open ? 'active': null} onClick={this.handleClick}>Tags</a></div>
       </section>
     );
   }

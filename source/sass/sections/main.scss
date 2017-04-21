@@ -14,6 +14,7 @@ main {
 
   .controls.tags {
     min-height: 72px;
+    overflow-y: scroll;
     width: 100%;
   }
 

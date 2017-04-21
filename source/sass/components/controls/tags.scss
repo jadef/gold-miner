@@ -1,41 +1,51 @@
 // ----- Tags (controls)
 .controls.tags {
   .trigger {
-    align-items: center;
     background-color: $c-primary;
     box-shadow: 0 0 6px 0 rgba($c-dark, 0.45);
-    color: $c-light;
-    cursor: pointer;
-    display: flex;
-    font-size: 20px;
-    justify-content: center;
-    margin-bottom: $gutter;
-    padding: 20px;
 
-    &::after {
-      content: '▼';
-      display: inline-block;
-      padding-left: 20px;
+    a {
+      align-items: center;
+      color: $c-light;
+      display: flex;
+      font-size: 20px;
+      justify-content: center;
+      padding: 20px 20px 20px 40px;
+
+      &::after {
+        content: '▼';
+        display: inline-block;
+        padding: 0 20px;
+        transition: transform 0.5s ease;
+      }
+
+      &.active::after {
+        transform: rotate(180deg);
+      }
     }
   }
 
   ul {
+    background: $c-gr-light2;
+    // box-shadow: inset 0 2px 6px rgba($c-dark, 0.35);
     font-size: 12px;
     list-style: none;
-    margin: 0;
+    margin: 0 0 -1px 0;
 
     li {
       align-items: center;
       cursor: pointer;
       display: none;
+      font-size: 18px;
+      justify-content: center;
       margin-bottom: 1px;
-      padding: 3px 15px;
+      padding: 10px 15px;
       width: 100%;
 
       &.active {
         background: $c-gr-accent;
-        background-color: $c-accent;
         color: $c-light;
+        display: flex;
         padding-right: 30px;
         position: relative;
 
@@ -44,6 +54,22 @@
           position: absolute;
           right: 10px;
         }
+      }
+    }
+  }
+
+  &.open {
+    .trigger {
+      bottom: 0;
+      position: fixed;
+      width: 100%;
+    }
+
+    ul {
+      padding-bottom: 72px;
+
+      li {
+        display: flex;
       }
     }
   }
@@ -57,6 +83,7 @@
 
     ul {
       align-items: stretch;
+      background: transparent;
       border-left: 1px solid $c-primary;
       display: flex;
       flex-direction: row;
@@ -67,6 +94,9 @@
 
       li {
         display: flex;
+        font-size: 12px;
+        justify-content: flex-start;
+        padding: 3px 15px;
       }
     }
   }
