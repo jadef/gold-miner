@@ -21,7 +21,7 @@ class Entries extends React.Component {
     })
 
     const allEntries = sortEntries.map((data) => (
-      <Entry entry={data} key={data.id} />
+      <Entry entry={data} key={data.id} activeTags={this.props.activeTags} />
     ))
 
     console.log( allEntries );

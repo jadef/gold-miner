@@ -20,7 +20,7 @@ class Entry extends React.Component {
             <div className="notes">{entry.notes}</div>
             <div dangerouslySetInnerHTML={ {__html: entry.content} } />
           </div>
-          {entry.tags ? <Tags tags={entry.tags} /> : null}
+          {entry.tags ? <Tags tags={entry.tags} activeTags={this.props.activeTags} /> : null}
         </div>
         <div className="stamp">edited: {entry.stamp}</div>
       </section>

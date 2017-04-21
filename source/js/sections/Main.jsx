@@ -30,14 +30,13 @@ class Main extends React.Component {
     }
 
     this.setState({activeTags: tags});
-    console.log(this.state.activeTags);
   }
 
   render() {
     return (
       <main>
         <Controls addTag={this.addActiveTag} />
-        <Entries entries={this.state.activeEntries} />
+        <Entries entries={this.state.activeEntries} activeTags={this.state.activeTags} />
       </main>
     );
   }
