@@ -103,8 +103,15 @@
       li {
         display: flex;
         font-size: 12px;
+        height: auto;
         justify-content: flex-start;
-        padding: 3px 15px;
+        margin-bottom: 1px;
+        opacity: 1;
+        padding: 0 15px;
+
+        &.active {
+          height: auto;
+        }
       }
     }
   }
