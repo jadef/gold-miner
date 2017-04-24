@@ -1,13 +1,356 @@
 {
   "entries": [
     {
+      "id": "foundation",
+      "title": "Foundation",
+      "link": "//foundation.zurb.com/",
+      "content": "<p></p>",
+      "rank": 0,
+      "notes": "",
+      "tags": [
+        "CSS",
+        "Framework"
+      ],
+      "stamp": "2017/04/24"
+    },
+    {
+      "id": "webpack",
+      "title": "Web Pack",
+      "link": "//webpack.js.org/",
+      "content": "<p></p>",
+      "rank": 0,
+      "notes": "",
+      "tags": [
+        "JavaScript",
+        "Manager",
+        "Node",
+        "Single Page"
+      ],
+      "stamp": "2017/04/24"
+    },
+    {
+      "id": "browsersync",
+      "title": "Browsersync",
+      "link": "//www.browsersync.io/",
+      "content": "<p></p>",
+      "rank": 0,
+      "notes": "",
+      "tags": [
+        "Automation",
+        "Node",
+        "Preprocessor"
+      ],
+      "stamp": "2017/04/24"
+    },
+    {
+      "id": "babel",
+      "title": "Babel",
+      "link": "//babeljs.io/",
+      "content": "<p></p>",
+      "rank": 0,
+      "notes": "",
+      "tags": [
+        "Abstraction",
+        "JavaScript",
+        "Preprocessor"
+      ],
+      "stamp": "2017/04/24"
+    },
+    {
+      "id": "cssnano",
+      "title": "cssnano",
+      "link": "//cssnano.co/",
+      "content": "<p></p>",
+      "rank": 0,
+      "notes": "",
+      "tags": [
+        "Automation",
+        "CSS",
+        "Preprocessor"
+      ],
+      "stamp": "2017/04/24"
+    },
+    {
+      "id": "ava",
+      "title": "Ava",
+      "link": "//github.com/avajs/ava",
+      "content": "<p></p>",
+      "rank": 0,
+      "notes": "",
+      "tags": [
+        "JavaScript",
+        "Node",
+        "Testing"
+      ],
+      "stamp": "2017/04/24"
+    },
+    {
+      "id": "autoprefixer",
+      "title": "Autoprefixer",
+      "link": "//github.com/postcss/autoprefixer",
+      "content": "<p></p>",
+      "rank": 0,
+      "notes": "",
+      "tags": [
+        "Automation",
+        "CSS",
+        "Preprocessor"
+      ],
+      "stamp": "2017/04/24"
+    },
+    {
+      "id": "eslint",
+      "title": "ESLint",
+      "link": "//eslint.org/",
+      "content": "<p></p>",
+      "rank": 0,
+      "notes": "",
+      "tags": [
+        "JavaScript",
+        "Node",
+        "Testing"
+      ],
+      "stamp": "2017/04/24"
+    },
+    {
+      "id": "lodash",
+      "title": "Lodash",
+      "link": "//lodash.com/",
+      "content": "<p></p>",
+      "rank": 0,
+      "notes": "",
+      "tags": [
+        "JavaScript",
+        "Library"
+      ],
+      "stamp": "2017/04/24"
+    },
+    {
+      "id": "jsx",
+      "title": "JSX",
+      "link": "//jsx.github.io",
+      "content": "<p></p>",
+      "rank": 0,
+      "notes": "",
+      "tags": [
+        "Abstraction",
+        "JavaScript",
+        "Single Page",
+        "Templating"
+      ],
+      "stamp": "2017/04/24"
+    },
+    {
+      "id": "sinatra",
+      "title": "Sinatra",
+      "link": "//www.sinatrarb.com/",
+      "content": "<p></p>",
+      "rank": 0,
+      "notes": "",
+      "tags": [
+        "Ruby"
+      ],
+      "stamp": "2017/04/24"
+    },
+    {
+      "id": "rake",
+      "title": "Rake",
+      "link": "//ruby.github.io/rake/",
+      "content": "<p></p>",
+      "rank": 0,
+      "notes": "",
+      "tags": [
+        "Automation",
+        "Ruby"
+      ],
+      "stamp": "2017/04/24"
+    },
+    {
+      "id": "bootstrap",
+      "title": "Bootstrap",
+      "link": "//getbootstrap.com/",
+      "content": "<p></p>",
+      "rank": 0,
+      "notes": "",
+      "tags": [
+        "CSS",
+        "Framework"
+      ],
+      "stamp": "2017/04/24"
+    },
+    {
+      "id": "thin",
+      "title": "Thin",
+      "link": "//code.macournoyer.com/thin/",
+      "content": "<p></p>",
+      "rank": 0,
+      "notes": "",
+      "tags": [
+        "Automation",
+        "Ruby"
+      ],
+      "stamp": "2017/04/24"
+    },
+    {
+      "id": "sprockets",
+      "title": "Sprockets",
+      "link": "//github.com/rails/sprockets",
+      "content": "<p></p>",
+      "rank": 0,
+      "notes": "",
+      "tags": [
+        "Automation",
+        "Preprocessor",
+        "Ruby"
+      ],
+      "stamp": "2017/04/24"
+    },
+    {
+      "id": "bundler",
+      "title": "Bundler",
+      "link": "//bundler.io/",
+      "content": "<p></p>",
+      "rank": 0,
+      "notes": "",
+      "tags": [
+        "Manager",
+        "Ruby"
+      ],
+      "stamp": "2017/04/24"
+    },
+    {
+      "id": "yarn",
+      "title": "Yarn",
+      "link": "//yarnpkg.com/en/",
+      "content": "<p></p>",
+      "rank": 0,
+      "notes": "",
+      "tags": [
+        "Manager",
+        "Node"
+      ],
+      "stamp": "2017/04/24"
+    },
+    {
+      "id": "react",
+      "title": "React",
+      "link": "//facebook.github.io/react/",
+      "content": "<p></p>",
+      "rank": 0,
+      "notes": "",
+      "tags": [
+        "JavaScript",
+        "Library",
+        "Single Page"
+      ],
+      "stamp": "2017/04/24"
+    },
+    {
+      "id": "vuejs",
+      "title": "Vue.js",
+      "link": "//vuejs.org",
+      "content": "<p></p>",
+      "rank": 0,
+      "notes": "",
+      "tags": [
+        "Framework",
+        "JavaScript",
+        "Single Page"
+      ],
+      "stamp": "2017/04/24"
+    },
+    {
+      "id": "yeoman",
+      "title": "Yeoman",
+      "link": "//yeoman.io/",
+      "content": "<p></p>",
+      "rank": 0,
+      "notes": "",
+      "tags": [
+        "Automation",
+        "Node"
+      ],
+      "stamp": "2017/04/24"
+    },
+    {
+      "id": "snapsvg",
+      "title": "Snap.svg",
+      "link": "//snapsvg.io/",
+      "content": "<p></p>",
+      "rank": 0,
+      "notes": "",
+      "tags": [
+        "Animation",
+        "JavaScript",
+        "Library"
+      ],
+      "stamp": "2017/04/24"
+    },
+    {
+      "id": "web-animations-api",
+      "title": "Web Animations API",
+      "link": "//developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API",
+      "content": "<p></p>",
+      "rank": 0,
+      "notes": "",
+      "tags": [
+        "Animation"
+      ],
+      "stamp": "2017/04/24"
+    },
+    {
+      "id": "polymer",
+      "title": "Polymer",
+      "link": "//www.polymer-project.org/",
+      "content": "<p></p>",
+      "rank": 0,
+      "notes": "",
+      "tags": [
+        "JavaScript",
+        "Library",
+        "Templating"
+      ],
+      "stamp": "2017/04/24"
+    },
+    {
+      "id": "velocityjs",
+      "title": "Velocity.js",
+      "link": "//velocityjs.org/",
+      "content": "<p></p>",
+      "rank": 0,
+      "notes": "",
+      "tags": [
+        "Animation",
+        "JavaScript",
+        "Library"
+      ],
+      "stamp": "2017/04/24"
+    },
+    {
+      "id": "requirejs",
+      "title": "Require.js",
+      "link": "//requirejs.org/",
+      "content": "<p></p>",
+      "rank": 0,
+      "notes": "",
+      "tags": [
+        "JavaScript",
+        "Preprocessor"
+      ],
+      "stamp": "2017/04/24"
+    },
+    {
       "id": "angular",
       "title": "Angular",
-      "link": "https://angularjs.org/",
+      "link": "https://angular.io",
       "content": "<p></p>",
       "rank": 1,
       "notes": "Considering looking into it, but put it third of the three in priority.",
-      "tags": ["JavaScript", "Single Page"],
+      "tags": [
+        "Framework",
+        "JavaScript",
+        "Single Page"
+      ],
       "stamp": "2017/03/28"
     } , {
       "id": "backbone",
@@ -16,7 +359,11 @@
       "content": "<p></p>",
       "rank": 2,
       "notes": "",
-      "tags": ["JavaScript", "Single Page"],
+      "tags": [
+        "Framework",
+        "JavaScript",
+        "Single Page"
+      ],
       "stamp": "2017/03/28"
     } , {
       "id": "browserify",
@@ -25,7 +372,11 @@
       "content": "<p>Collects JS modules (and script files) and mushes them all into a single app file. Often compared to requireJS.</p><p>I guess it's similar to the way Node.js <em>requires</em> dependencies, but for compiling to the front end.</p>",
       "rank": 3,
       "notes": "",
-      "tags": ["JavaScript", "Automated", "Node"],
+      "tags": [
+        "JavaScript",
+        "Automation",
+        "Node"
+      ],
       "stamp": "2017/03/28"
     } , {
       "id": "burbon",
@@ -34,7 +385,10 @@
       "content": "<p>Another CSS Framework (in Sass). Not clear on this vs compass.</p>",
       "rank": 4,
       "notes": "Might be the framework that I finally accept",
-      "tags": ["CSS", "Framework"],
+      "tags": [
+        "CSS",
+        "Framework"
+      ],
       "stamp": "2017/03/28"
     } , {
       "id": "capybara",
@@ -43,7 +397,10 @@
       "content": "<p></p>",
       "rank": 3,
       "notes": "",
-      "tags": ["Testing", "Ruby"],
+      "tags": [
+        "Ruby",
+        "Testing"
+      ],
       "stamp": "2017/03/28"
     } , {
       "id": "coffescript",
@@ -52,7 +409,11 @@
       "content": "<p>Haven't gone too deep, but essentially CoffeeScript just \"cleans up\" JavaScript. It's all still just javaScript, but cuts out some of the extra semicolons, var declarations, etc.</p>",
       "rank": 4,
       "notes": "Will need to spend time, but looking forward to second nature",
-      "tags": ["JavaScript", "Preprocessor", "Abstraction"],
+      "tags": [
+        "Abstraction",
+        "JavaScript",
+        "Preprocessor"
+      ],
       "stamp": "2017/03/28"
     } , {
       "id": "compass",
@@ -61,7 +422,11 @@
       "content": "<p>CSS framework (in Sass). It has prebuilt stuff like a reset, some layout stuff, and other mixins.</p><p>It's also the preprocessor (gulp node) that does the compiling of Sass.",
       "rank": 4,
       "notes": "",
-      "tags": ["CSS", "Preprocessor", "Framework"],
+      "tags": [
+        "CSS",
+        "Framework",
+        "Preprocessor"
+      ],
       "stamp": "2017/03/28"
     } , {
       "id": "cucumber",
@@ -70,7 +435,10 @@
       "content": "<p></p>",
       "rank": 2,
       "notes": "",
-      "tags": ["Testing", "Ruby"],
+      "tags": [
+        "Ruby",
+        "Testing"
+      ],
       "stamp": "2017/03/28"
     } , {
       "id": "ember",
@@ -79,16 +447,37 @@
       "content": "<p></p>",
       "rank": 3,
       "notes": "",
-      "tags": ["JavaScript", "Single Page"],
+      "tags": [
+        "Framework",
+        "JavaScript",
+        "Single Page"
+      ],
       "stamp": "2017/03/28"
-    } , {
+    },
+    {
+      "id": "wordpress",
+      "title": "WordPress",
+      "link": "http://wordpress.org/",
+      "content": "<p></p>",
+      "rank": 0,
+      "notes": "",
+      "tags": [
+        "CMS",
+        "PHP"
+      ],
+      "stamp": "2017/03/28"
+    },
+    {
       "id": "expression",
       "title": "Expression Engine",
       "link": "http://ellislab.com/expressionengine",
       "content": "<p></p>",
       "rank": 4,
       "notes": "",
-      "tags": ["PHP"],
+      "tags": [
+        "CMS",
+        "PHP"
+      ],
       "stamp": "2017/03/28"
     } , {
       "id": "git",
@@ -97,7 +486,9 @@
       "content": "<p></p>",
       "rank": 4,
       "notes": "",
-      "tags": ["Command Line"],
+      "tags": [
+        "Manager"
+      ],
       "stamp": "2017/03/28"
     } , {
       "id": "gulp",
@@ -106,7 +497,10 @@
       "content": "<p>Where to start, well, it's like <a href=\"http://gruntjs.com/\" target=\"_blank\">Grunt</a>, but <em>cooler</em>. It's essentially a task manager that runs stuffs. (Alternative to CodeKit too)</p><p>Currently using a starting kit from <a href=\"http://viget.com/extend/gulp-browserify-starter-faq\">viget.com</a> that breaks it up a bit. But here's how it's working:</p><ol><li>Once I've got the project setup, I fire up gulp by <code>cd</code> to project folder and typing <code>gulp</code>.</li><li>This fires gulpfile.js, which in turn finds the gulp/index.js file, which in turn looks in the tasks folder for the compartmentalized tasks that gulp runs.</li></ol>",
       "rank": 4,
       "notes": "Getting the hang of it. Excited to integrate",
-      "tags": ["JavaScript", "Preprocessor", "Command Line"],
+      "tags": [
+        "JavaScript",
+        "Preprocessor"
+      ],
       "stamp": "2017/03/28"
     } , {
       "id": "haml",
@@ -115,16 +509,22 @@
       "content": "<p>Mostly for Ruby</p>",
       "rank": 3,
       "notes": "",
-      "tags": ["Ruby", "Abstraction"],
+      "tags": [
+        "Abstraction",
+        "Ruby"
+      ],
       "stamp": "2017/03/28"
     } , {
       "id": "handlebars",
       "title": "Handlebars",
       "link": "http://handlebarsjs.com/",
-      "content": "<p>similar to html, but has <code>{{bracket includes}}</code> stuff going on.</p><p> Similar to <a href=\"#haml\">haml</a> or <a href=\"#jade\">jade</a> (I think). Something to do with Mustache templates.</p><p>Ember mentions something about handlebar integration.</p><p>I installed the handlebar package to sublime so it looks more like html, may do other stuff.</p>",
+      "content": "<p>similar to html, but has <code>{{bracket includes}}</code> stuff going on.</p><p> Similar to <a href=\"#haml\">haml</a> or <a href=\"#pug\">Pug</a> (I think). Something to do with Mustache templates.</p><p>Ember mentions something about handlebar integration.</p><p>I installed the handlebar package to sublime so it looks more like html, may do other stuff.</p>",
       "rank": 4,
       "notes": "Excited to integrate",
-      "tags": ["Template", "JavaScript", "Abstraction"],
+      "tags": [
+        "JavaScript",
+        "Templating"
+      ],
       "stamp": "2017/03/28"
     } , {
       "id": "imagemin",
@@ -132,16 +532,22 @@
       "content": "<p>haven't looked too deep in to the node module, but once the gulp task is up and running it seems to <em>just work</em>. Ohh yeah, it optimizes images, that's it's job.</p>",
       "rank": 4,
       "notes": "Just works = good",
-      "tags": ["Automated", "Node", "Command Line"],
+      "tags": [
+        "Automation",
+        "Node"
+      ],
       "stamp": "2017/03/28"
     } , {
-      "id": "jade",
-      "title": "Jade",
-      "link": "http://jade-lang.com/",
+      "id": "pug",
+      "title": "Pug",
+      "link": "https://pugjs.org/",
       "content": "<p>Mostly for JavaScript</p>",
       "rank": 2,
       "notes": "",
-      "tags": ["JavaScript", "Abstraction"],
+      "tags": [
+        "JavaScript",
+        "Templating"
+      ],
       "stamp": "2017/03/28"
     } , {
       "id": "jquery",
@@ -150,7 +556,10 @@
       "content": "<p>Hello jQuery my old friend.</p>",
       "rank": 5,
       "notes": "jQuery 4 life, not really, but you know.",
-      "tags": ["JavaScript", "Framework"],
+      "tags": [
+        "JavaScript",
+        "Library"
+      ],
       "stamp": "2017/03/28"
     } , {
       "id": "livereload",
@@ -158,7 +567,9 @@
       "content": "<p>If you hook up both ends it creates auto-refresh of a browser on save of files.</p><ul><li>Need the browser plugin (chrome) and the little icon clicked to \"listen\"</li><li>Gulp is kicking this off on it's end with gulp-livereload (on  port 35729).</li></ul><p>This is very similar to what's being done in CodeKit</p>",
       "rank": 5,
       "notes": "get it running and just expect",
-      "tags": ["Automated", "Node", "Command Line"],
+      "tags": [
+        "Automation"
+      ],
       "stamp": "2017/03/28"
     } , {
       "id": "magento",
@@ -167,7 +578,9 @@
       "content": "<p></p>",
       "rank": 3,
       "notes": "",
-      "tags": ["PHP"],
+      "tags": [
+        "PHP"
+      ],
       "stamp": "2017/03/28"
     } , {
       "id": "modernizr",
@@ -176,7 +589,9 @@
       "content": "<p></p>",
       "rank": 4,
       "notes": "",
-      "tags": ["JavaScript"],
+      "tags": [
+        "JavaScript"
+      ],
       "stamp": "2017/03/28"
     } , {
       "id": "neat",
@@ -185,7 +600,10 @@
       "content": "<p>Neat is a grid framework on top of Burbon. This is the cleanest looking grid system I've come across lately. <em>Potential</em>.</p>",
       "rank": 3,
       "notes": "might be the <em>grid system</em> I finally accept, but still hesitant",
-      "tags": ["CSS", "Framework", "Template", "Grid"],
+      "tags": [
+        "CSS",
+        "Framework"
+      ],
       "stamp": "2017/03/28"
     } , {
       "id": "nodejs",
@@ -194,7 +612,10 @@
       "content": "<p></p>",
       "rank": 2,
       "notes": "",
-      "tags": ["JavaScript", "Command Line"],
+      "tags": [
+        "JavaScript",
+        "Node"
+      ],
       "stamp": "2017/03/28"
     } , {
       "id": "npm",
@@ -203,7 +624,10 @@
       "content": "<p>Node Packaged Modules. Ships with nodejs, so I've got it. It's a package manager (like Brew) but just for JavaScript stuff (both back end like nodejs stuff and client side like browserify.)</p>",
       "rank": 2,
       "notes": "",
-      "tags": ["JavaScript", "Command Line"],
+      "tags": [
+        "Manager",
+        "JavaScript"
+      ],
       "stamp": "2017/03/28"
     } , {
       "id": "PHP",
@@ -212,7 +636,9 @@
       "content": "<p>You know, that little language called php.</p>",
       "rank": 3,
       "notes": "",
-      "tags": ["PHP"],
+      "tags": [
+        "PHP"
+      ],
       "stamp": "2017/03/28"
     } , {
       "id": "prototype",
@@ -221,7 +647,10 @@
       "content": "<p></p>",
       "rank": 1,
       "notes": "",
-      "tags": ["JavaScript", "Framework"],
+      "tags": [
+        "JavaScript",
+        "Library"
+      ],
       "stamp": "2017/03/28"
     } , {
       "id": "rails",
@@ -230,7 +659,10 @@
       "content": "<p></p>",
       "rank": 3,
       "notes": "",
-      "tags": ["Ruby", "Framework"],
+      "tags": [
+        "Ruby",
+         "Framework"
+      ],
       "stamp": "2017/03/28"
     } , {
       "id": "Ruby",
@@ -239,7 +671,9 @@
       "content": "<p>Another lil' ol' thing</p>",
       "rank": 2,
       "notes": "",
-      "tags": ["Ruby"],
+      "tags": [
+        "Ruby"
+      ],
       "stamp": "2017/03/28"
     } , {
       "id": "sass",
@@ -248,7 +682,11 @@
       "content": "<p>This is almost second nature now. I'm very comfortable with \"full\" sass (rather than scss or less), but it all falls back to css pretty easily.</p><p>Mixins, functions, variables, includes. Getting it done.</p>",
       "rank": 5,
       "notes": "Must have forevers",
-      "tags": ["CSS", "Preprocessor", "Abstraction"],
+      "tags": [
+        "Abstraction",
+        "CSS",
+        "Preprocessor"
+      ],
       "stamp": "2017/03/28"
     } , {
       "id": "underscore",
@@ -257,6 +695,10 @@
       "content": "<p></p>",
       "rank": 1,
       "notes": "Not sure why, but I'm really not excited about looking into this",
+      "tags": [
+        "Library",
+        "JavaScript"
+      ],
       "stamp": "2017/03/28"
     }
   ]
