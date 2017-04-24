@@ -32,6 +32,7 @@ class Entries extends React.Component {
     return (
       <div className="entries">
         <div className="fade" />
+        <p className="results">Results: {this.props.entries.length}</p>
         <br className="jump" id="jumpA" />
         {this.BuildEntries()}
       </div>
