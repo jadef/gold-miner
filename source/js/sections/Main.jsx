@@ -47,13 +47,15 @@ class Main extends React.Component {
 
     // Loop through and build a filtered list of entries
     let activeTempList = [];
-    activeTags.forEach(function(singleActiveTag) {
-      entries.forEach(function(entry) {
-        if (entry.tags && entry.tags.includes(singleActiveTag)) {
-          // Check if already added to entries
-          (activeTempList.indexOf(entry) === -1) ? activeTempList.push(entry) : null;
-        }
-      });
+    entries.forEach(function(entry) {
+
+      // Check ALL active Tags against entries tags for match
+      let checkTags = activeTags.every(function (val) { return entry.tags.indexOf(val) >= 0; });
+
+      if (entry.tags && checkTags) {
+        // Check if already added to entries
+        (activeTempList.indexOf(entry) === -1) ? activeTempList.push(entry) : null;
+      }
 
     });
     // Update the state for current activeEntries
