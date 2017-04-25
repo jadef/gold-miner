@@ -7,7 +7,7 @@
 # Table of Contents
 
 * [Setup](#setup)
-  * [Install NPM dependencies](#install-npm-dependencies)
+  * [Install dependencies](#install-dependencies)
 * [Precompilation](#precompilation)
   * [Gulp](#gulp)
   * [JavaScript](#javascript)
@@ -22,9 +22,12 @@
 
 - Local Dev Requirements
 
-### Install NPM dependencies
+### Install dependencies
 
-- `NPM install`
+NPM works, but I've moved to Yarn for package dependencies. If you haven't already installed yarn on the machine (but do have homebrew): `brew install yarn`
+
+Then it's as simple as: `yarn install` (package and lockfile already exist)
+
 
 ## Precompilation
 
