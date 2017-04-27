@@ -24,15 +24,16 @@ import webpackHotMiddleware from 'webpack-hot-middleware'; // webpack add on for
 
 
 // ------ Project Settings ------
+const pkg = {};
 
-const paths = {
+pkg.paths = {
   source : path.join(__dirname, 'source/'),
   dest: path.join(__dirname, 'public/'),
   bundle: 'app.js',
   entry: path.join(__dirname, 'source/index.js')
 };
 
-const opts = {
+pkg.opts = {
   isProduction: false,
   browserlist: ['last 2 versions'],
   sassStyle: 'expanded',
@@ -41,22 +42,22 @@ const opts = {
 
 // Allows gulp --prod to be run for the compressed output
 if (gutil.env.prod === true) {
-  opts.isProduction  = true;
-  opts.sassStyle = 'compressed';
-  opts.sourceMap = false;
+  pkg.opts.isProduction  = true;
+  pkg.opts.sassStyle = 'compressed';
+  pkg.opts.sourceMap = false;
 }
 
-const webpackSettings = {
-  context: paths.source,
+pkg.webpackSettings = {
+  context: pkg.paths.source,
   entry: [
     'webpack/hot/dev-server',
     'webpack-hot-middleware/client',
-    paths.entry
+    pkg.paths.entry
   ],
   output: {
-    path: paths.dest,
-    publicPath: paths.dest,
-    filename: paths.bundle
+    path: pkg.paths.dest,
+    publicPath: pkg.paths.dest,
+    filename: pkg.paths.bundle
   },
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),
@@ -88,15 +89,15 @@ const webpackSettings = {
 
 // -- Clean up
 gulp.task('clean', () => {
-  del([paths.dest + '**/*']).then( paths => {
-    gutil.log(gutil.colors.yellow.bold('Deleted compiled files/folders:\n'), paths.join('\n'));
+  del([pkg.paths.dest + '**/*']).then( paths => {
+    gutil.log(gutil.colors.yellow.bold('Deleted compiled files/folders:\n'), pkg.paths.join('\n'));
   });
 });
 
-// -- Starter files
+// -- Static files
 gulp.task('static', () => {
-  return gulp.src([paths.source + 'static/**/*'])
-    .pipe(gulp.dest(paths.dest));
+  return gulp.src([pkg.paths.source + 'static/**/*'])
+    .pipe(gulp.dest(pkg.paths.dest));
 });
 
 // -- Build Images
@@ -105,9 +106,9 @@ gulp.task('images',  () => {
 
   // TODO: don't rebuild if they exist
 
-  gulp.src(paths.source + 'images/**/*')
+  gulp.src(pkg.paths.source + 'images/**/*')
     .pipe(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true }))
-    .pipe(gulp.dest(paths.dest + 'images/'))
+    .pipe(gulp.dest(pkg.paths.dest + 'images/'))
     .pipe(browserSync.reload({ stream: true }))
     .on('error', error => {
       gutil.log(error);
@@ -116,17 +117,17 @@ gulp.task('images',  () => {
 
 // -- Build CSS from Sass
 gulp.task('sass', ['sass-lint'], () => {
-  gutil.log('Building ' + gutil.colors.yellow(opts.sassStyle) + ' Sass...');
+  gutil.log('Building ' + gutil.colors.yellow(pkg.opts.sassStyle) + ' Sass...');
 
-  return gulp.src(paths.source + 'sass/styles.scss')
+  return gulp.src(pkg.paths.source + 'sass/styles.scss')
     .pipe(compass({
       require: ['compass/import-once/activate'],
-      sass: paths.source + 'sass/',
-      css: paths.dest,
-      style: opts.sassStyle,
-      sourcemap: opts.sourceMap,
-      comments: opts.isProduction,
-      debug: opts.isProduction
+      sass: pkg.paths.source + 'sass/',
+      css: pkg.paths.dest,
+      style: pkg.opts.sassStyle,
+      sourcemap: pkg.opts.sourceMap,
+      comments: pkg.opts.isProduction,
+      debug: pkg.opts.isProduction
     }))
     .on('error', (error) => {
       gutil.log(error);
@@ -135,15 +136,15 @@ gulp.task('sass', ['sass-lint'], () => {
 
 // -- Run processes on CSS
 gulp.task('css', ['sass'],   () => {
-  gutil.log('Formatting ' + gutil.colors.yellow(opts.sassStyle) + ' CSS...');
+  gutil.log('Formatting ' + gutil.colors.yellow(pkg.opts.sassStyle) + ' CSS...');
 
-  return gulp.src(paths.dest + 'styles.css')
-    .pipe(opts.sourceMap ? sourcemaps.init() : gutil.noop())
+  return gulp.src(pkg.paths.dest + 'styles.css')
+    .pipe(pkg.opts.sourceMap ? sourcemaps.init() : gutil.noop())
     .pipe(autoprefixer({
-      browsers: opts.browserlist
+      browsers: pkg.opts.browserlist
     }))
-    .pipe(opts.sourceMap ? sourcemaps.write('.') : gutil.noop())
-    .pipe(gulp.dest(paths.dest))
+    .pipe(pkg.opts.sourceMap ? sourcemaps.write('.') : gutil.noop())
+    .pipe(gulp.dest(pkg.paths.dest))
     .pipe(browserSync.reload({ stream: true }))
     .on('error', error => {
       gutil.log(error);
@@ -153,7 +154,7 @@ gulp.task('css', ['sass'],   () => {
 // ------ Utilities ------
 
 gulp.task('sass-lint',  () => {
-  return gulp.src(paths.source + 'sass/**/*.s+(a|c)ss')
+  return gulp.src(pkg.paths.source + 'sass/**/*.s+(a|c)ss')
     .pipe(sassLint({
       files: {
         ignore: '**/vendor/**/*.s@(a|c)ss'
@@ -170,7 +171,7 @@ gulp.task('reload',  () => {
 
 // ------ Watchers ------
 
-const bundler = webpack(webpackSettings);
+const bundler = webpack(pkg.webpackSettings);
 
 // -- Watch, Sync, Build... repeat
 gulp.task('watch', ['build'],  () => {
@@ -178,10 +179,11 @@ gulp.task('watch', ['build'],  () => {
     notify: false,
     port: 5060,
     server: {
-      baseDir: [paths.dest],
+      baseDir: [pkg.paths.dest],
       middleware: [
         webpackDevMiddleware(bundler, {
-          publicPath: webpackSettings.output.publicPath,
+          publicPath: pkg.webpackSettings.output.publicPath,
+          noInfo: true,
           stats: {
             colors: true,
             // modules: true,
@@ -193,14 +195,14 @@ gulp.task('watch', ['build'],  () => {
       ]
     },
     files: [
-      paths.dest + 'styles.css'
+      pkg.paths.dest + 'styles.css'
     ]
  });
 
   // All the watches
-  gulp.watch(paths.source + 'sass/**/*.scss', ['css']);
-  gulp.watch(paths.source + 'images/**/*', ['images']);
-  gulp.watch(paths.source + 'static/**/*', ['static', 'reload']);
+  gulp.watch(pkg.paths.source + 'sass/**/*.scss', ['css']);
+  gulp.watch(pkg.paths.source + 'images/**/*', ['images']);
+  gulp.watch(pkg.paths.source + 'static/**/*', ['static', 'reload']);
 })
 
 // ------ Builders ------
