@@ -42,6 +42,12 @@ module.exports = {
       }, {
         test: require.resolve('snapsvg'),
         loader: 'imports-loader?this=>window,fix=>module.exports=0'
+      }, {
+        test: /\.scss$/,
+        loaders: [
+          'style-loader',
+          'css-loader',
+          'sass-loader']
       }
     ]
   }
