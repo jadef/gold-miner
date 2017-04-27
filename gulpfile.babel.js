@@ -1,8 +1,6 @@
 // ------ Setup ------
 
 // -- Dependencies
-import babelify from 'babelify'; // Babel browserify transform
-import browserify from 'browserify'; // Build require environment
 import browserSync from 'browser-sync'; // Browser Sync
 import del from 'del'; // Delete
 import fs from 'fs'; // File System
@@ -11,6 +9,7 @@ import autoprefixer from 'gulp-autoprefixer'; // Autoprefix css
 import compass from 'gulp-compass'; // Compass - Compile Sass
 import imagemin from 'gulp-imagemin'; // Process Images
 import order from 'gulp-order'; // Order files
+import path from 'path'; // Node standard path (not needed to define in package.json)
 import plumber from 'gulp-plumber'; // Pipe error patch
 import rename from 'gulp-rename'; // Rename files
 import sassLint from 'gulp-sass-lint'; // Linting of Sass
@@ -19,19 +18,18 @@ import sourcemaps from 'gulp-sourcemaps'; // JS/CSS sourcemaps
 import uglify from 'gulp-uglify'; // Minify files
 import gutil from 'gulp-util'; // Various utilities like colors and noop
 import watch from 'gulp-watch'; // Watching files
-import buffer from 'vinyl-buffer'; // Use buffers on files
-import source from 'vinyl-source-stream'; // Text streams in pipeline
-import watchify from 'watchify'; // Watch mode for browserify builds
+import webpack from 'webpack'; // Webpack - js builder
+import webpackDevMiddleware from 'webpack-dev-middleware'; // webpack add on for browsersync middleware
+import webpackHotMiddleware from 'webpack-hot-middleware'; // webpack add on for hot reloading
 
 
 // ------ Project Settings ------
 
 const paths = {
-  source : 'source/',
-  dest: 'public/',
-
+  source : path.join(__dirname, 'source/'),
+  dest: path.join(__dirname, 'public/'),
   bundle: 'app.js',
-  entry: 'source/index.js'
+  entry: path.join(__dirname, 'source/index.js')
 };
 
 const opts = {
@@ -41,16 +39,6 @@ const opts = {
   sourceMap: true
 };
 
-const customOpts = {
-  entries: [paths.entry],
-  debug: true,
-  extensions: ['.jsx'],
-  cache: {},
-  packageCache: {}
-};
-
-const buildOpts = Object.assign({}, watchify.args, customOpts);
-
 // Allows gulp --prod to be run for the compressed output
 if (gutil.env.prod === true) {
   opts.isProduction  = true;
@@ -58,6 +46,43 @@ if (gutil.env.prod === true) {
   opts.sourceMap = false;
 }
 
+const webpackSettings = {
+  context: paths.source,
+  entry: [
+    'webpack/hot/dev-server',
+    'webpack-hot-middleware/client',
+    paths.entry
+  ],
+  output: {
+    path: paths.dest,
+    publicPath: paths.dest,
+    filename: paths.bundle
+  },
+  plugins: [
+    new webpack.optimize.OccurrenceOrderPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
+    // new webpack.LoaderOptionsPlugin({
+    //   debug: true
+    // })
+
+  ],
+  resolve: {
+      extensions: ['.js', '.json', '.jsx'],
+  },
+  // devtool : 'source-map',
+  module: {
+    loaders: [{
+      test: /\.js[x]?$/,
+      loaders: [
+        'react-hot-loader',
+        'babel-loader',
+        'webpack-module-hot-accept'
+      ],
+      exclude: /node_modules/
+    }]
+  }
+};
 
 // ------ Tasks ------
 
@@ -145,15 +170,32 @@ gulp.task('reload',  () => {
 
 // ------ Watchers ------
 
+const bundler = webpack(webpackSettings);
+
 // -- Watch, Sync, Build... repeat
 gulp.task('watch', ['build'],  () => {
   browserSync({
     notify: false,
     port: 5060,
     server: {
-      baseDir: [paths.dest]
-    }
-  });
+      baseDir: [paths.dest],
+      middleware: [
+        webpackDevMiddleware(bundler, {
+          publicPath: webpackSettings.output.publicPath,
+          stats: {
+            colors: true,
+            // modules: true,
+            // reasons: true,
+            // errorDetails: true
+          }
+        }),
+        webpackHotMiddleware(bundler)
+      ]
+    },
+    files: [
+      paths.dest + 'styles.css'
+    ]
+ });
 
   // All the watches
   gulp.watch(paths.source + 'sass/**/*.scss', ['css']);
@@ -161,42 +203,8 @@ gulp.task('watch', ['build'],  () => {
   gulp.watch(paths.source + 'static/**/*', ['static', 'reload']);
 })
 
-gulp.task('watchify', () => {
-  const bundler = watchify(browserify(buildOpts), {poll: true});
-
-  function rebundle() {
-    return bundler.bundle()
-      .on("error", function(err) {
-        gutil.log(gutil.colors.red("Browser error: "), err);
-      })
-      .pipe(source(paths.bundle))
-      .pipe(buffer())
-      .pipe(sourcemaps.init({ loadMaps: true }))
-      .pipe(sourcemaps.write('.'))
-      .pipe(gulp.dest(paths.dest))
-      .pipe(browserSync.reload({ stream: true }));
-  }
-
-  bundler.transform(babelify)
-    .on('update', rebundle);
-  return rebundle();
-});
-
-gulp.task('browserify', () => {
-  browserify(paths.entry, { debug: true })
-    .transform(babelify)
-    .bundle()
-    .pipe(source(paths.bundle))
-    .pipe(buffer())
-    .pipe(sourcemaps.init({ loadMaps: true }))
-    .pipe(uglify())
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(paths.dest));
-});
-
-
 // ------ Builders ------
 
 gulp.task('compile', sequence('clean', ['images', 'css'], 'static'));
+gulp.task('build', sequence('css', 'images'));
 gulp.task('default', ['watch']);
-gulp.task('build', sequence('watchify', 'images', 'css'));
