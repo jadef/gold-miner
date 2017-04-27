@@ -15,12 +15,12 @@ browserSync({
       webpackDevMiddleware(bundler, {
         publicPath: webpackConfig.output.publicPath,
         noInfo: true,
-        // stats: {
-        //   colors: true,
+        stats: {
+          colors: true,
         //   modules: true,
         //   reasons: true,
         //   errorDetails: true
-        // }
+        }
       }),
       webpackHotMiddleware(bundler)
     ]

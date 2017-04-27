@@ -1,5 +1,6 @@
 var webpack = require('webpack');
 var path = require('path');
+var StyleLintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
   // devtool: '#eval-source-map',
@@ -18,6 +19,9 @@ module.exports = {
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
+    new StyleLintPlugin({
+      configFile: 'stylelint.config.js'
+    }),
     new webpack.LoaderOptionsPlugin({
       debug: true
     })
