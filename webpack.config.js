@@ -39,6 +39,9 @@ module.exports = {
           'babel-loader',
           'webpack-module-hot-accept'
         ]
+      }, {
+        test: require.resolve('snapsvg'),
+        loader: 'imports-loader?this=>window,fix=>module.exports=0'
       }
     ]
   }
