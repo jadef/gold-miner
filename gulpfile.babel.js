@@ -69,8 +69,8 @@ gulp.task('clean', () => {
 });
 
 // -- Starter files
-gulp.task('start', () => {
-  return gulp.src([paths.source + 'start/**/*'])
+gulp.task('static', () => {
+  return gulp.src([paths.source + 'static/**/*'])
     .pipe(gulp.dest(paths.dest));
 });
 
@@ -158,9 +158,8 @@ gulp.task('watch', ['build'],  () => {
   // All the watches
   gulp.watch(paths.source + 'sass/**/*.scss', ['css']);
   gulp.watch(paths.source + 'images/**/*', ['images']);
-  gulp.watch(paths.source + 'start/**/*', ['start', 'reload']);
-
-});
+  gulp.watch(paths.source + 'static/**/*', ['static', 'reload']);
+})
 
 gulp.task('watchify', () => {
   const bundler = watchify(browserify(buildOpts), {poll: true});
@@ -198,6 +197,6 @@ gulp.task('browserify', () => {
 
 // ------ Builders ------
 
+gulp.task('compile', sequence('clean', ['images', 'css'], 'static'));
 gulp.task('default', ['watch']);
-gulp.task('compile', sequence('clean', ['images', 'css'], 'start'));
 gulp.task('build', sequence('watchify', 'images', 'css'));
