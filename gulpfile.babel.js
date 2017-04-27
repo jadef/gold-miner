@@ -40,13 +40,6 @@ pkg.opts = {
   sourceMap: true
 };
 
-// Allows gulp --prod to be run for the compressed output
-if (gutil.env.prod === true) {
-  pkg.opts.isProduction  = true;
-  pkg.opts.sassStyle = 'compressed';
-  pkg.opts.sourceMap = false;
-}
-
 pkg.webpackSettings = {
   context: pkg.paths.source,
   entry: [
@@ -71,7 +64,7 @@ pkg.webpackSettings = {
   resolve: {
       extensions: ['.js', '.json', '.jsx'],
   },
-  // devtool : 'source-map',
+  devtool : 'source-map',
   module: {
     loaders: [{
       test: /\.js[x]?$/,
@@ -85,12 +78,20 @@ pkg.webpackSettings = {
   }
 };
 
+// Allows gulp --prod to be run for the compressed output
+if (gutil.env.prod === true) {
+  pkg.opts.isProduction  = true;
+  pkg.opts.sassStyle = 'compressed';
+  pkg.opts.sourceMap = false;
+  pkg.webpackSettings.devtool = false;
+}
+
 // ------ Tasks ------
 
 // -- Clean up
 gulp.task('clean', () => {
   del([pkg.paths.dest + '**/*']).then( paths => {
-    gutil.log(gutil.colors.yellow.bold('Deleted compiled files/folders:\n'), pkg.paths.join('\n'));
+    gutil.log(gutil.colors.yellow.bold('Deleted compiled files/folders\n'));
   });
 });
 
