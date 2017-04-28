@@ -45,10 +45,17 @@ module.exports = {
         loader: 'imports-loader?this=>window,fix=>module.exports=0'
       }, {
         test: /\.scss$/,
-        loaders: [
-          'style-loader',
-          'css-loader',
-          'sass-loader']
+        use: [{
+          loader: "style-loader"
+        }, {
+          loader: "css-loader", options: {
+            sourceMap: true
+          }
+        }, {
+          loader: "sass-loader", options: {
+            sourceMap: true
+          }
+        }]
       }
     ]
   }
