@@ -38,6 +38,7 @@ module.exports = {
         loaders: [
           'react-hot-loader',
           'babel-loader',
+          'eslint-loader',
           'webpack-module-hot-accept'
         ]
       }, {
