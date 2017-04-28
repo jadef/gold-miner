@@ -6,6 +6,7 @@ module.exports = {
     "at-rule-empty-line-before": [ "always", {
       except: [
         "blockless-after-same-name-blockless",
+        "blockless-after-blockless",
         "first-nested",
       ],
       ignore: ["after-comment"],
@@ -55,16 +56,7 @@ module.exports = {
     "declaration-colon-newline-after": "always-multi-line",
     "declaration-colon-space-after": "always-single-line",
     "declaration-colon-space-before": "never",
-    "declaration-empty-line-before": [ "always", {
-      except: [
-        "after-declaration",
-        "first-nested",
-      ],
-      ignore: [
-        "after-comment",
-        "inside-single-line-block",
-      ],
-    } ],
+    "declaration-empty-line-before": "never",
     "font-family-no-duplicate-names": true,
     "function-calc-no-unspaced-operator": true,
     "function-comma-newline-after": "always-multi-line",
@@ -120,7 +112,7 @@ module.exports = {
     "selector-pseudo-element-no-unknown": true,
     "selector-type-case": "lower",
     "selector-type-no-unknown": true,
-    "shorthand-property-no-redundant-values": true,
+    // "shorthand-property-no-redundant-values": true,
     "string-no-newline": true,
     "unit-case": "lower",
     "unit-no-unknown": true,

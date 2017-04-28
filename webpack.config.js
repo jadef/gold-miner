@@ -21,9 +21,6 @@ module.exports = {
     new webpack.NoEmitOnErrorsPlugin(),
     new StyleLintPlugin({
       configFile: 'stylelint.config.js'
-    }),
-    new webpack.LoaderOptionsPlugin({
-      debug: true
     })
   ],
   resolve: {
