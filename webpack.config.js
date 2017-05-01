@@ -18,7 +18,7 @@ module.exports = {
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoEmitOnErrorsPlugin(),
+    // new webpack.NoEmitOnErrorsPlugin(),
     new StyleLintPlugin({
       configFile: 'stylelint.config.js'
     })
@@ -33,12 +33,19 @@ module.exports = {
   module: {
     loaders: [
       {
+        enforce: "pre",
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        loader: "eslint-loader",
+        options: {
+          failOnError: false,
+        }
+      }, {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         loaders: [
           'react-hot-loader',
           'babel-loader',
-          'eslint-loader',
           'webpack-module-hot-accept'
         ]
       }, {
