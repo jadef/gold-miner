@@ -1,0 +1,41 @@
+@import '../variables/variables';
+
+// ---- Entries
+.entries {
+  .fade {
+    // background: linear-gradient(to bottom, rgba($c-light, 0.95) 50%, rgba($c-light, 0) 100%);
+    background-color: $c-light;
+    box-shadow: 0 0 35px 35px $c-light;
+    height: 5px;
+    position: fixed;
+    top: 72px;
+    width: 100%;
+    z-index: 100;
+  }
+
+  .results {
+    color: $c-burnt-tan;
+    font-size: 12px;
+    font-style: italic;
+    padding: 10px 0 0 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .results-none {
+    position: relative;
+
+    .oops {
+      align-items: center;
+      color: $c-background;
+      display: flex;
+      font-size: 2.5vw;
+      height: 100%;
+      line-height: 1.2em;
+      padding: 0 0 0 20px;
+      position: absolute;
+      top: 0;
+      width: 40%;
+    }
+  }
+}

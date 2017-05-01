@@ -1,0 +1,91 @@
+@import '../variables/variables';
+
+// ----- Header
+header {
+  background-color: $c-tan;
+  // box-shadow: inset 0 -4px 20px 0 rgba($c-black, 0.25);
+  background-image: linear-gradient($c-tan 80%, $c-burnt-tan 100%);
+  height: $s-header;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 1000;
+
+  .wrapper {
+    height: 100%;
+    margin: auto;
+    max-width: $xlarge;
+    padding-bottom: 20px;
+  }
+
+  .logo {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    min-height: 72px;
+  }
+
+  .intro {
+    display: none;
+  }
+
+  .intro,
+  .intro h2,
+  .intro span,
+  .totop {
+    transition: all 0.5s ease-out;
+  }
+
+  &.compact {
+    h2,
+    .intro span {
+      opacity: 0;
+    }
+
+    .totop {
+      display: block;
+      opacity: 0;
+    }
+  }
+
+  &.transition {
+    .intro {
+      margin-top: -30px;
+    }
+
+    .totop {
+      opacity: 1;
+    }
+  }
+
+  // MQ Small
+  @include breakpoint(small) {
+    .wrapper {
+      align-items: center;
+      display: flex;
+      padding-bottom: 0;
+    }
+
+    .logo {
+      @include columns(4);
+      max-height: $s-header;
+    }
+
+    .intro {
+      @include columns(8);
+      display: block;
+    }
+  }
+
+  // MQ Medium
+  @include breakpoint(medium) {
+    .logo {
+      @include columns(3);
+    }
+
+    .intro {
+      @include columns(9);
+    }
+  }
+}

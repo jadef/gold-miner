@@ -1,0 +1,15 @@
+@import '../variables/variables';
+
+// ----- Footer
+footer {
+  align-items: center;
+  background-color: $c-w-lt-grey;
+  border: 1px solid $c-w-grey;
+  color: $c-w-dk-grey;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto $gutter;
+  max-width: $xlarge;
+  min-height: 72px;
+  padding: 20px;
+}

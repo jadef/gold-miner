@@ -1,0 +1,24 @@
+@import '../../variables/variables';
+
+// ----- Intro
+.intro {
+  padding: $gutter;
+  text-align: center;
+
+  p {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  span {
+    display: none;
+  }
+
+  @include breakpoint(small) {
+    text-align: left;
+
+    span {
+      display: inline;
+    }
+  }
+}

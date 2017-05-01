@@ -1,0 +1,53 @@
+{
+  "projectName": "Picking Technologies",
+  "intro": {
+    "callout": "Always keep learning.",
+    "expanded": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae gravida enim. Integer eget odio pellentesque, aliquam sapien quis, aliquam mauris. Etiam a volutpat magna."
+  },
+  "tags": [
+    "Animation",
+    "Abstraction",
+    "Automation",
+    "CMS",
+    "CSS",
+    "Framework",
+    "JavaScript",
+    "Library",
+    "Manager",
+    "Node",
+    "PHP",
+    "Preprocessor",
+    "Ruby",
+    "Single Page",
+    "Templating",
+    "Testing"
+  ],
+  "letters": [
+    { "letter": "A" },
+    { "letter": "B" },
+    { "letter": "C" },
+    { "letter": "D", "disabled": true },
+    { "letter": "E" },
+    { "letter": "F" },
+    { "letter": "G" },
+    { "letter": "H" },
+    { "letter": "I" },
+    { "letter": "J" },
+    { "letter": "K", "disabled": true },
+    { "letter": "L" },
+    { "letter": "M" },
+    { "letter": "N" },
+    { "letter": "O", "disabled": true },
+    { "letter": "P" },
+    { "letter": "Q", "disabled": true },
+    { "letter": "R" },
+    { "letter": "S" },
+    { "letter": "T" },
+    { "letter": "U" },
+    { "letter": "V" },
+    { "letter": "W" },
+    { "letter": "X", "disabled": true },
+    { "letter": "Y" },
+    { "letter": "Z", "disabled": true }
+  ]
+}

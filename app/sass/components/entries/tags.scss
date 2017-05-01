@@ -1,0 +1,27 @@
+@import '../../variables/variables';
+
+// ----- Tags
+.btns.tags {
+  span {
+    border: 1px solid $c-primary;
+    border-radius: 4px;
+    color: $c-primary;
+    display: inline-block;
+    font-size: 10px;
+    line-height: 1em;
+    margin: 0 10px 10px 0;
+    padding: 6px 10px;
+
+    &.active {
+      background: rgba($c-accent, 0.75);
+      border-color: $c-accent;
+      box-shadow: inset 1px 2px 3px 0 rgba($c-dark, 0.15);
+      color: $c-light;
+    }
+  }
+
+  @include breakpoint(small) {
+    text-align: right;
+    width: 30%;
+  }
+}
