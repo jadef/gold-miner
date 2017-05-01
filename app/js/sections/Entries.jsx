@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Snap from 'snapsvg';
 
 // -- Components
@@ -14,7 +15,7 @@ import Entry from '../components/entries/Entry';
 
 class Entries extends React.Component {
 
-  BuildEntries = (props) => {
+  BuildEntries = () => {
 
     // Alphabetical sort of id
     const sortEntries = this.props.entries.sort(function(a, b) {
@@ -30,11 +31,11 @@ class Entries extends React.Component {
   }
 
   // -- Do Animations
-  Animations = (event) => {
+  Animations = () => {
     // Set variables
     const miner = Snap.select("#mining-brain").attr({ 'opacity': 0 }),
         brain = miner.select("#brain"),
-        hat = miner.select("#hardhat"),
+        // hat = miner.select("#hardhat"),
         light = miner.select("#brain-light").attr({ 'opacity': 0 }),
         speed = 1000,
         transition = mina.bounce;
@@ -68,7 +69,7 @@ class Entries extends React.Component {
     (this.props.entries.length === 0) ? this.Animations() : null;
   }
 
-  Results = (props) => {
+  Results = () => {
     const count = this.props.entries.length;
     if (count > 0) {
       return (
@@ -148,5 +149,11 @@ class Entries extends React.Component {
     );
   }
 }
+
+// -- Props
+Entries.propTypes = {
+  entries: PropTypes.array,
+  activeTags: PropTypes.array,
+};
 
 export default Entries;

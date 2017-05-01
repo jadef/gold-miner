@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 /*
 TODO:
@@ -21,6 +22,7 @@ class Tag extends React.Component {
   }
 
   handleClick = (event) => {
+    event.preventDefault();
     // Toggle Class
     const currentState = this.state.active;
     this.setState({
@@ -41,6 +43,12 @@ class Tag extends React.Component {
   }
 }
 
+// -- Props
+Tag.propTypes = {
+  tag: PropTypes.string.isRequired,
+  addTag: PropTypes.func
+};
+
 // ---- All Tags Control Component
 class ControlsTags extends React.Component {
   constructor(props) {
@@ -56,8 +64,8 @@ class ControlsTags extends React.Component {
   }
 
   // Build Tag List
-  BuildTags = (props) => {
-    const allTags = tags.map((tag, i) => (
+  BuildTags = () => {
+    const allTags = tags.map((tag) => (
       <Tag tag={tag} key={tag.toString()} addTag={this.passActiveTag} />
     ));
 
@@ -82,5 +90,10 @@ class ControlsTags extends React.Component {
     );
   }
 }
+
+// -- Props
+ControlsTags.propTypes = {
+  addTag: PropTypes.func
+};
 
 export default ControlsTags;

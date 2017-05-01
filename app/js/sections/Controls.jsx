@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 /*
 Grouped Controls into one component so that we can
@@ -10,6 +11,7 @@ import ControlsTags from '../components/controls/Tags';
 import ControlsLetters from '../components/controls/Letters';
 
 class Controls extends React.Component {
+
   constructor(props) {
     super(props);
     this.state = {topHeight: ""};
@@ -44,5 +46,10 @@ class Controls extends React.Component {
     );
   }
 }
+
+// -- Props
+Controls.propTypes = {
+  addTag: PropTypes.func
+};
 
 export default Controls;

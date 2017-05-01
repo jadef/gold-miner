@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // -- Components
 import Rating from './Rating';
@@ -27,5 +28,11 @@ class Entry extends React.Component {
     );
   }
 }
+
+// -- Props
+Entry.propTypes = {
+  entry: PropTypes.object,
+  activeTags: PropTypes.array
+};
 
 export default Entry;

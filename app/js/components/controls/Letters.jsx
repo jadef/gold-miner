@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 /*
 TODO:
@@ -48,6 +49,13 @@ class Letter extends React.Component {
     );
   }
 }
+
+// -- Props
+Letter.propTypes = {
+  letter: PropTypes.string.isRequired,
+  disabled: PropTypes.bool,
+  first: PropTypes.number,
+};
 
 class ControlsLetters extends React.Component {
   render() {

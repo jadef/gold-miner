@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function Star (props) {
   // Define classes (boolean)
@@ -29,6 +30,12 @@ function Star (props) {
   )
 }
 
+// -- Props
+Star.propTypes = {
+  active: PropTypes.bool,
+  first: PropTypes.bool
+};
+
 class Rating extends React.Component {
   render() {
 
@@ -58,5 +65,10 @@ class Rating extends React.Component {
     );
   }
 }
+
+// -- Props
+Rating.propTypes = {
+  rank: PropTypes.number
+};
 
 export default Rating;

@@ -36,7 +36,7 @@ class Main extends React.Component {
   }
 
   // Build a new list of entries from active tags
-  checkActiveTags = (props) => {
+  checkActiveTags = () => {
     const activeTags = this.state.activeTags;
 
     // Empty activeTags escapes with original entries list

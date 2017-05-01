@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // Single tag builder
 class Tag extends React.Component {
@@ -9,19 +10,24 @@ class Tag extends React.Component {
   }
 }
 
+// -- Props
+Tag.propTypes = {
+  active: PropTypes.bool,
+  tag: PropTypes.string
+};
+
 class Tags extends React.Component {
-  checkActiveTags = (tag, props) => {
+  checkActiveTags = (tag) => {
     if (this.props.activeTags.includes(tag)) {
       return true;
     }
   }
 
-  BuildTagList = (props) => {
-
+  BuildTagList = () => {
     // Build Tag List
     const tagList = this.props.tags;
 
-    const allTags = tagList.map((tag, i) => (
+    const allTags = tagList.map((tag) => (
       <Tag tag={tag} key={tag.toString()} active={this.checkActiveTags(tag)} />
     ));
 
@@ -35,5 +41,11 @@ class Tags extends React.Component {
     );
   }
 }
+
+// -- Props
+Tags.propTypes = {
+  activeTags: PropTypes.array,
+  tags: PropTypes.array
+};
 
 export default Tags;

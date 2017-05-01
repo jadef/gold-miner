@@ -23,12 +23,12 @@
     "Testing"
   ],
   "letters": [
-    { "letter": "A"},
+    { "letter": "A" },
     { "letter": "B" },
     { "letter": "C" },
     { "letter": "D", "disabled": true },
     { "letter": "E" },
-    { "letter": "F"},
+    { "letter": "F" },
     { "letter": "G" },
     { "letter": "H" },
     { "letter": "I" },
