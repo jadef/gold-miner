@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// -- Styles
+import '../../../sass/components/entries/rating.scss';
+
 function Star (props) {
   // Define classes (boolean)
   let classes = "star no";

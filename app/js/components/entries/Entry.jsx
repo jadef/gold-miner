@@ -5,6 +5,9 @@ import PropTypes from 'prop-types';
 import Rating from './Rating';
 import Tags from './Tags';
 
+// -- Styles
+import '../../../sass/components/entries/entry.scss';
+
 class Entry extends React.Component {
   render() {
     const entry = this.props.entry;

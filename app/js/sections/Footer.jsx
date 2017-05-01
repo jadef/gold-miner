@@ -1,5 +1,8 @@
 import React from 'react';
 
+// -- Styles
+import '../../sass/sections/footer.scss';
+
 /*
 TODO:
 - Build footer

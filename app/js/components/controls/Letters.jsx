@@ -11,6 +11,9 @@ TODO:
 - [ ] Update location
 */
 
+// -- Styles
+import '../../../sass/components/controls/letters.scss';
+
 // -- Data
 import { letters } from '../../data/app.json'
 

@@ -5,6 +5,9 @@ import Logo from '../components/header/Logo';
 import Intro from '../components/header/Intro';
 import ToTop from '../components/header/ToTop';
 
+// -- Styles
+import '../../sass/sections/header.scss';
+
 class Header extends React.Component {
   constructor(props) {
     super(props);

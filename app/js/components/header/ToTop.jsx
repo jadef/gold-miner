@@ -6,6 +6,9 @@ TODO:
 - Display at right time
 */
 
+// -- Styles
+import '../../../sass/components/header/totop.scss';
+
 class ToTop extends React.Component {
   handleClick = (event) => {
     event.preventDefault();

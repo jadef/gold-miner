@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// -- Styles
+import '../../../sass/components/entries/tags.scss';
+
 // Single tag builder
 class Tag extends React.Component {
   render() {

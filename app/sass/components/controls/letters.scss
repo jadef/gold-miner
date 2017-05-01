@@ -1,3 +1,5 @@
+@import '../../variables/variables';
+
 // ----- Letters
 .controls.letters {
   @include breakpoint(small) {

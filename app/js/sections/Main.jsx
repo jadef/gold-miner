@@ -4,6 +4,9 @@ import React from 'react';
 import Controls from './Controls';
 import Entries from './Entries';
 
+// -- Styles
+import '../../sass/sections/main.scss';
+
 // -- Data
 import { entries } from '../data/entries.json'
 

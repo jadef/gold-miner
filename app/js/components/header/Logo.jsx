@@ -1,6 +1,9 @@
 import React from 'react';
 import Snap from 'snapsvg';
 
+// -- Styles
+import '../../../sass/components/header/logo.scss';
+
 class Logo extends React.Component {
   constructor(props) {
     super(props);

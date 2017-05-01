@@ -9,6 +9,9 @@ TODO:
 - [ ] Tag Drawer
 */
 
+// -- Styles
+import '../../../sass/components/controls/tags.scss';
+
 // -- Data
 import { tags } from '../../data/app.json'
 

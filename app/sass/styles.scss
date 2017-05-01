@@ -1,7 +1,6 @@
 
 // Variables
-@import 'variables/colors';
-@import 'variables/structure';
+@import 'variables/variables';
 
 // Vendor
 @import 'vendor/normalize';
@@ -11,18 +10,4 @@
 @import 'elements/utilities';
 @import 'elements/type';
 
-// Sections
-@import 'sections/header';
-@import 'sections/main';
-@import 'sections/entries';
-@import 'sections/footer';
-
-// Components
-@import 'components/controls/tags';
-@import 'components/controls/letters';
-@import 'components/header/intro';
-@import 'components/header/logo';
-@import 'components/header/totop';
-@import 'components/entries/entry';
-@import 'components/entries/rating';
-@import 'components/entries/tags';
+// Sections and Components have individual imports in the JS

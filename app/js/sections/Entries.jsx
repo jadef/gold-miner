@@ -5,6 +5,9 @@ import Snap from 'snapsvg';
 // -- Components
 import Entry from '../components/entries/Entry';
 
+// -- Styles
+import '../../sass/sections/entries.scss';
+
 /*
 - state array of entry IDs visible
 - update state from tags child component events

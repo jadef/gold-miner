@@ -1,5 +1,8 @@
 import React from 'react';
 
+// -- Styles
+import '../../../sass/components/header/intro.scss';
+
 // -- Data
 import { projectName, intro  } from '../../data/app.json'
 
