@@ -8,8 +8,7 @@
 
 * [Setup](#setup)
   * [Install dependencies](#install-dependencies)
-* [Precompilation](#precompilation)
-  * [Gulp](#gulp)
+* [Development](#development)
   * [JavaScript](#javascript)
   * [Sass](#sass)
 * [Structure](#structure)
@@ -28,38 +27,37 @@ NPM works, but I've moved to Yarn for package dependencies. If you haven't alrea
 
 Then it's as simple as: `yarn install` (package and lockfile already exist)
 
+## Development
 
-## Precompilation
-
-### Gulp
-
-- Local
-- NPM scripts
-- Tasks
+The absolute basic: `yarn start`
 
 ### JavaScript
 
-- React
-- Babel
-- Browserify for the build
+This is a [React](https://facebook.github.io/react/) project, so obviously JS heavy. It has [babel](http://babeljs.io/), notably with `"presets": ["es2015", "react", "stage-2"]`.
+
+The (dev) build itself is using [Webpack](https://webpack.js.org/). The local dev uses a combination of [Browsersync](https://www.browsersync.io/) and webpack dev middlewhare. Since it runs in middlewhere there is no "compilation" to a public folder, it's created in memory. This also has a layer of "hot reloading" so that during dev the whole page doesn't need refreshing, saving a `.jsx` file will just reload affected components.
+
+All of that said, it should **just work**, but the files to pay most attention to in relation, more or less in this order:
+
+- `package.json`
+- `webpack.config.js`
+- `.babelrc`
+- `app.js`
+
 
 #### JS Linting
 
-- `TODO`
-- ES-lint
+[Eslint](http://eslint.org/) is integrated into the dev build (as well as being independently triggered.) The rules are part of the configuration file found at `.eslintrc.json`. However, it's notable just `"extends": ["eslint:recommended", "plugin:react/recommended"]`
+
+If you want to use the linting independent of the build, `yarn run lint` will do a single run.
 
 ### Sass
 
-- Uses `.scss` file format
-- No compass, just sass builder
-- Autoprefixer runs
-- Uncompressed and sourcemaped when ran in dev mode (default)
+Sass is also compiled by webpack in the dev environment. Notably, the `.scss` files (note: don't mix `.sass` files in) are directly included in the corresponding JSX file. See the [Structure](#structure) section below for a visual representation of this relationship.
 
 #### Sass Linting
 
-- Runs on sass compile
-- .sass-lint.yml for rules
-- Sublime Text inline linting
+Similar to JS linting, [Stylelint](https://stylelint.io/) is integrated into webpack, and runs every time the Sass is first compiled or modified. To see the rules (based on [stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard)) can be found at `stylelint.config.js`
 
 ## Structure
 
@@ -67,20 +65,19 @@ Then it's as simple as: `yarn install` (package and lockfile already exist)
 
 ### 1. Builders
 
-- Entry files
+Entry files for general building of application (and genaral sass files). Mostly shouldn't need to interact with this scope unless a large change happens.
 
 ### 2. Components
 
-- Mirrored aspects of the app
+Where all the "features" live. This is where most of the work goes in that changes or additions to the application (or it's mirrored styles) should be broken down into this level.
 
 ### 3. Sections
 
-- Structural organization
+Technically also components, these are isolated into more "mid-level" structural components responsible for sections of the application.
 
 ## Deployment
 
-- `TODO`
-- Environment flag
+`TODO` Currently only dev environment. Will need Environment flags and a deploy process once production is definied and architected.
 
 ## Roadmap
 
