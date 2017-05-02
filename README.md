@@ -1,4 +1,4 @@
-<p align="center"><img src="https://rawgithub.com/jadef/gold-miner/master/app/images/logo-crest.svg" alt="Mining for Gold" /></p>
+<p align="center"><img src="https://rawgithub.com/jadef/gold-miner/master/docs/images/logo-crest.svg" alt="Mining for Gold" /></p>
 
 <h1 align="center">Gold Miner</h1>
 
@@ -61,7 +61,7 @@ Similar to JS linting, [Stylelint](https://stylelint.io/) is integrated into web
 
 ## Structure
 
-![Mining for Gold](https://rawgithub.com/jadef/gold-miner/master/utils/docs/components.png)
+![Mining for Gold](https://rawgithub.com/jadef/gold-miner/master/docs/images/component-structure.png)
 
 ### 1. Builders
 
@@ -112,4 +112,4 @@ Technically also components, these are isolated into more "mid-level" structural
 
 - Frontend animations/polish
 
-<p align="center"><img src="https://rawgithub.com/jadef/gold-miner/master/app/images/logo-sm.svg" alt="Mining for Gold" /></p>
+<p align="center"><img src="https://rawgithub.com/jadef/gold-miner/master/docs/images/logo-sm.svg" alt="Mining for Gold" /></p>
