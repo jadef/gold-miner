@@ -1,6 +1,32 @@
 {
   "entries": [
     {
+      "id": "liquid",
+      "title": "Liquid",
+      "link": "//shopify.github.io/liquid/",
+      "content": "<p></p>",
+      "rank": 0,
+      "notes": "",
+      "tags": [
+        "Ruby",
+        "Templating"
+      ],
+      "stamps": "2017/05/02"
+    },
+    {
+      "id": "jekyll",
+      "title": "Jekyll",
+      "link": "//jekyllrb.com/",
+      "content": "<p></p>",
+      "rank": 0,
+      "notes": "",
+      "tags": [
+        "CMS",
+        "Templating"
+      ],
+      "stamps": "2017/05/02"
+    },
+    {
       "id": "foundation",
       "title": "Foundation",
       "link": "//foundation.zurb.com/",
@@ -345,7 +371,7 @@
       "link": "https://angular.io",
       "content": "<p></p>",
       "rank": 1,
-      "notes": "Considering looking into it, but put it third of the three in priority.",
+      "notes": "Considering looking into it, but put it lower in priority.",
       "tags": [
         "Framework",
         "JavaScript",
@@ -369,7 +395,7 @@
       "id": "browserify",
       "title": "Browserify",
       "link": "http://browserify.org/",
-      "content": "<p>Collects JS modules (and script files) and mushes them all into a single app file. Often compared to requireJS.</p><p>I guess it's similar to the way Node.js <em>requires</em> dependencies, but for compiling to the front end.</p>",
+      "content": "<p>Collects JS modules (and script files) and mushes them all into a single app file. Often compared to requireJS, now webpack is taking over.</p><p>I guess it's similar to the way Node.js <em>requires</em> dependencies, but for compiling to the front end.</p>",
       "rank": 3,
       "notes": "",
       "tags": [
@@ -382,7 +408,7 @@
       "id": "burbon",
       "title": "Burbon",
       "link": "http://bourbon.io/",
-      "content": "<p>Another CSS Framework (in Sass). Not clear on this vs compass.</p>",
+      "content": "<p>Another CSS Framework (in Sass). Should look deeper on where this is at these days.</p>",
       "rank": 4,
       "notes": "Might be the framework that I finally accept",
       "tags": [
@@ -406,9 +432,9 @@
       "id": "coffescript",
       "title": "CoffeeScript",
       "link": "http://coffeescript.org/",
-      "content": "<p>Haven't gone too deep, but essentially CoffeeScript just \"cleans up\" JavaScript. It's all still just javaScript, but cuts out some of the extra semicolons, var declarations, etc.</p>",
+      "content": "<p>An abstraction of JavaScript, could say it \"cleans it up\". It's all still just javaScript, but cuts out some of the extra semicolons, var declarations, etc.</p>",
       "rank": 4,
-      "notes": "Will need to spend time, but looking forward to second nature",
+      "notes": "",
       "tags": [
         "Abstraction",
         "JavaScript",
@@ -419,7 +445,7 @@
       "id": "compass",
       "title": "compass",
       "link": "http://compass-style.org/",
-      "content": "<p>CSS framework (in Sass). It has prebuilt stuff like a reset, some layout stuff, and other mixins.</p><p>It's also the preprocessor (gulp node) that does the compiling of Sass.",
+      "content": "<p>CSS framework (in Sass). It has prebuilt stuff like a reset, some layout stuff, and other mixins.</p><p>It's also a preprocessor that can do the compiling of Sass.",
       "rank": 4,
       "notes": "",
       "tags": [
@@ -494,9 +520,9 @@
       "id": "gulp",
       "title": "Gulp",
       "link": "http://gulpjs.com/",
-      "content": "<p>Where to start, well, it's like <a href=\"http://gruntjs.com/\" target=\"_blank\">Grunt</a>, but <em>cooler</em>. It's essentially a task manager that runs stuffs. (Alternative to CodeKit too)</p><p>Currently using a starting kit from <a href=\"http://viget.com/extend/gulp-browserify-starter-faq\">viget.com</a> that breaks it up a bit. But here's how it's working:</p><ol><li>Once I've got the project setup, I fire up gulp by <code>cd</code> to project folder and typing <code>gulp</code>.</li><li>This fires gulpfile.js, which in turn finds the gulp/index.js file, which in turn looks in the tasks folder for the compartmentalized tasks that gulp runs.</li></ol>",
+      "content": "<p>Where to start, well, it's like <a href=\"http://gruntjs.com/\" target=\"_blank\">Grunt</a>, but <em>cooler</em>. It's essentially a task manager that runs stuffs for dev or prod environments.</p><p>Should note, now in the webpack world these task runners aren't quite as pertinent for dev, but still has it's place.</p>",
       "rank": 4,
-      "notes": "Getting the hang of it. Excited to integrate",
+      "notes": "",
       "tags": [
         "JavaScript",
         "Preprocessor"
@@ -518,9 +544,9 @@
       "id": "handlebars",
       "title": "Handlebars",
       "link": "http://handlebarsjs.com/",
-      "content": "<p>similar to html, but has <code>{{bracket includes}}</code> stuff going on.</p><p> Similar to <a href=\"#haml\">haml</a> or <a href=\"#pug\">Pug</a> (I think). Something to do with Mustache templates.</p><p>Ember mentions something about handlebar integration.</p><p>I installed the handlebar package to sublime so it looks more like html, may do other stuff.</p>",
+      "content": "<p>similar to html, but has <code>{{bracket includes}}</code> stuff going on.</p><p> Similar to <a href=\"#haml\">haml</a>, <a href=\"#pug\">Pug</a>, etc. An extension to Mustache templates.</p><p>Ember mentions something about handlebar integration, but also useful for standalone.</p>",
       "rank": 4,
-      "notes": "Excited to integrate",
+      "notes": "",
       "tags": [
         "JavaScript",
         "Templating"
@@ -529,9 +555,9 @@
     } , {
       "id": "imagemin",
       "title": "Imagemin",
-      "content": "<p>haven't looked too deep in to the node module, but once the gulp task is up and running it seems to <em>just work</em>. Ohh yeah, it optimizes images, that's it's job.</p>",
+      "content": "<p>haven't looked too deep in to the node module, but once the task (gulp) is up and running it seems to <em>just work</em>. Ohh yeah, it optimizes images, that's it's job.</p>",
       "rank": 4,
-      "notes": "Just works = good",
+      "notes": "",
       "tags": [
         "Automation",
         "Node"
@@ -541,7 +567,7 @@
       "id": "pug",
       "title": "Pug",
       "link": "https://pugjs.org/",
-      "content": "<p>Mostly for JavaScript</p>",
+      "content": "<p>JavaScript templating formerly known as Jade. Not sure when/if I'll dip into this again now with JSX and what not.</p>",
       "rank": 2,
       "notes": "",
       "tags": [
@@ -553,9 +579,9 @@
       "id": "jquery",
       "title": "jQuery",
       "link": "http://jquery.com/",
-      "content": "<p>Hello jQuery my old friend.</p>",
+      "content": "<p></p>",
       "rank": 5,
-      "notes": "jQuery 4 life, not really, but you know.",
+      "notes": "The ol' jQuery. Still has it's place, but nice when I see a project without it.",
       "tags": [
         "JavaScript",
         "Library"
@@ -564,8 +590,8 @@
     } , {
       "id": "livereload",
       "title": "LiveReload",
-      "content": "<p>If you hook up both ends it creates auto-refresh of a browser on save of files.</p><ul><li>Need the browser plugin (chrome) and the little icon clicked to \"listen\"</li><li>Gulp is kicking this off on it's end with gulp-livereload (on  port 35729).</li></ul><p>This is very similar to what's being done in CodeKit</p>",
-      "rank": 5,
+      "content": "<p>If you hook up both ends it creates auto-refresh of a browser on save of files.</p><ul><li>Need the browser plugin (chrome) and the little icon clicked to \"listen\"</li><li>Gulp is kicking this off on it's end with gulp-livereload (on  port 35729).</li></ul><p>This is potentially no more since Browsersync does so much more if integrated.</p>",
+      "rank": 2,
       "notes": "get it running and just expect",
       "tags": [
         "Automation"
@@ -597,9 +623,9 @@
       "id": "neat",
       "title": "Burbon Neat",
       "link": "http://neat.bourbon.io/",
-      "content": "<p>Neat is a grid framework on top of Burbon. This is the cleanest looking grid system I've come across lately. <em>Potential</em>.</p>",
+      "content": "<p>Neat is a grid framework on top of Burbon. A decently clean grid system, but honestly flexbox/css grids are endangering things like this.</p>",
       "rank": 3,
-      "notes": "might be the <em>grid system</em> I finally accept, but still hesitant",
+      "notes": "",
       "tags": [
         "CSS",
         "Framework"
@@ -621,7 +647,7 @@
       "id": "npm",
       "title": "NPM",
       "link": "https://www.npmjs.org/",
-      "content": "<p>Node Packaged Modules. Ships with nodejs, so I've got it. It's a package manager (like Brew) but just for JavaScript stuff (both back end like nodejs stuff and client side like browserify.)</p>",
+      "content": "<p>Node Packaged Modules. Ships with nodejs, so I've got it. It's a package manager (like Brew) but just for Node stuff. Seems redundant, but <a href=\"#yarn\">yarn</a> is the new version of this that I'm currently interested in.</p>",
       "rank": 2,
       "notes": "",
       "tags": [
@@ -679,7 +705,7 @@
       "id": "sass",
       "title": "Sass",
       "link": "http://sass-lang.com/",
-      "content": "<p>This is almost second nature now. I'm very comfortable with \"full\" sass (rather than scss or less), but it all falls back to css pretty easily.</p><p>Mixins, functions, variables, includes. Getting it done.</p>",
+      "content": "<p>This is almost second nature now. Comfortable with either \"full\" .sass or .scss, but it all falls back to css pretty easily.</p><p>Mixins, functions, variables, includes. Getting it done.</p>",
       "rank": 5,
       "notes": "Must have forevers",
       "tags": [
