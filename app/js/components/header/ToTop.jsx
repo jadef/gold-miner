@@ -1,19 +1,19 @@
 import React from 'react';
 
-/*
-TODO:
-- Functional back to top
-- Display at right time
-*/
-
 // -- Styles
 import '../../../sass/components/header/totop.scss';
+
+/* -- Hierarchy
+  - App
+    - Header
+      - Logo
+      - Intro
+      - *ToTop*
+*/
 
 class ToTop extends React.Component {
   handleClick = (event) => {
     event.preventDefault();
-    // window.scrollTo(0, 0);
-
 
     function currentYPosition() {
       if (self.pageYOffset) return self.pageYOffset;
@@ -45,7 +45,6 @@ class ToTop extends React.Component {
     }
 
     smoothScroll();
-
   }
 
   render() {

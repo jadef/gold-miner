@@ -8,6 +8,17 @@ import Tags from './Tags';
 // -- Styles
 import '../../../sass/components/entries/entry.scss';
 
+/* -- Hierarchy
+  - App
+    - Main
+      - Entries
+        - *Entry*
+          - Rating
+            - Star
+          - Tags
+            - Tag
+*/
+
 class Entry extends React.Component {
   render() {
     const entry = this.props.entry;

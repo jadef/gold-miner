@@ -4,6 +4,14 @@ import Snap from 'snapsvg';
 // -- Styles
 import '../../../sass/components/header/logo.scss';
 
+/* -- Hierarchy
+  - App
+    - Header
+      - *Logo*
+      - Intro
+      - ToTop
+*/
+
 class Logo extends React.Component {
   constructor(props) {
     super(props);

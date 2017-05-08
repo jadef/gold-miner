@@ -3,6 +3,11 @@ import React from 'react';
 // -- Styles
 import '../../sass/sections/footer.scss';
 
+/* -- Hierarchy
+  - App
+    - *Footer*
+*/
+
 /*
 TODO:
 - Build footer

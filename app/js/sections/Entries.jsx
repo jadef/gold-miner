@@ -8,12 +8,13 @@ import Entry from '../components/entries/Entry';
 // -- Styles
 import '../../sass/sections/entries.scss';
 
-/*
-- state array of entry IDs visible
-- update state from tags child component events
-  - hide IDs that aren't in array (unmount?)
-  - active control tag
-  - active entry tag
+/* -- Hierarchy
+  - App
+    - Main
+      - *Entries*
+        - Entry
+          - Rating
+          - Tags
 */
 
 class Entries extends React.Component {

@@ -10,6 +10,16 @@ import '../../sass/sections/main.scss';
 // -- Data
 import { entries } from '../data/entries.json'
 
+/* -- Hierarchy
+  - App
+    - *Main*
+      - Controls
+        - ControlsTags
+        - ControlsLetters
+      - Entries
+        - Entry
+*/
+
 // -- Main body component
 class Main extends React.Component {
   constructor(props) {

@@ -6,10 +6,12 @@ import '../../../sass/components/header/intro.scss';
 // -- Data
 import { projectName, intro  } from '../../data/app.json'
 
-/*
-TODO:
-- [x] Move content out of here
-- [ ] Ohh, and write the content
+/* -- Hierarchy
+  - App
+    - Header
+      - Logo
+      - *Intro*
+      - ToTop
 */
 
 class Intro extends React.Component {

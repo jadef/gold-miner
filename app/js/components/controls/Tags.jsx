@@ -1,58 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-/*
-TODO:
-- [x] Iterate tags
-- [ ] Active tags
-- [ ] Filter entries
-- [ ] Tag Drawer
-*/
-
 // -- Styles
 import '../../../sass/components/controls/tags.scss';
 
 // -- Data
 import { tags } from '../../data/app.json'
 
-// --- Single Tag Component
-class Tag extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      active: false
-    };
-  }
+/* -- Hierarchy
+  - App
+    - Main
+      - Controls
+        - *ControlsTags*
+          - *Tag*
+*/
 
-  handleClick = (event) => {
-    event.preventDefault();
-    // Toggle Class
-    const currentState = this.state.active;
-    this.setState({
-      active: !currentState
-    });
-
-    // Add to active tags in main component
-    this.props.addTag(this.props.tag);
-  }
-
-  render() {
-    return (
-      <li
-        className={this.state.active ? 'active': null}
-        onClick={this.handleClick}
-      >{this.props.tag}</li>
-    );
-  }
-}
-
-// -- Props
-Tag.propTypes = {
-  tag: PropTypes.string.isRequired,
-  addTag: PropTypes.func
-};
-
-// ---- All Tags Control Component
+// ---- All Tags Control
 class ControlsTags extends React.Component {
   constructor(props) {
     super(props);
@@ -96,6 +59,43 @@ class ControlsTags extends React.Component {
 
 // -- Props
 ControlsTags.propTypes = {
+  addTag: PropTypes.func
+};
+
+// --- Single Tag Component
+class Tag extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      active: false
+    };
+  }
+
+  handleClick = (event) => {
+    event.preventDefault();
+    // Toggle Class
+    const currentState = this.state.active;
+    this.setState({
+      active: !currentState
+    });
+
+    // Add to active tags in main component
+    this.props.addTag(this.props.tag);
+  }
+
+  render() {
+    return (
+      <li
+        className={this.state.active ? 'active': null}
+        onClick={this.handleClick}
+      >{this.props.tag}</li>
+    );
+  }
+}
+
+// -- Props
+Tag.propTypes = {
+  tag: PropTypes.string.isRequired,
   addTag: PropTypes.func
 };
 

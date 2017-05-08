@@ -4,20 +4,14 @@ import PropTypes from 'prop-types';
 // -- Styles
 import '../../../sass/components/entries/tags.scss';
 
-// Single tag builder
-class Tag extends React.Component {
-  render() {
-    return (
-      <span className={this.props.active ? 'active': null}>{this.props.tag}</span>
-    );
-  }
-}
-
-// -- Props
-Tag.propTypes = {
-  active: PropTypes.bool,
-  tag: PropTypes.string
-};
+/* -- Hierarchy
+  - App
+    - Main
+      - Entries
+        - Entry
+          - *Tags*
+            - *Tag*
+*/
 
 class Tags extends React.Component {
   checkActiveTags = (tag) => {
@@ -49,6 +43,21 @@ class Tags extends React.Component {
 Tags.propTypes = {
   activeTags: PropTypes.array,
   tags: PropTypes.array
+};
+
+// -- Single Tag
+class Tag extends React.Component {
+  render() {
+    return (
+      <span className={this.props.active ? 'active': null}>{this.props.tag}</span>
+    );
+  }
+}
+
+// -- Props
+Tag.propTypes = {
+  active: PropTypes.bool,
+  tag: PropTypes.string
 };
 
 export default Tags;

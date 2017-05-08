@@ -8,6 +8,14 @@ import ToTop from '../components/header/ToTop';
 // -- Styles
 import '../../sass/sections/header.scss';
 
+/* -- Hierarchy
+  - App
+    - *Header*
+      - Logo
+      - Intro
+      - ToTop
+*/
+
 class Header extends React.Component {
   constructor(props) {
     super(props);
