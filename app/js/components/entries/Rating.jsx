@@ -14,8 +14,7 @@ import '../../../sass/components/entries/rating.scss';
 */
 
 class Rating extends React.Component {
-  render() {
-
+  BuildStarList = () => {
     // Count out the stars
     const stars = [];
     const totalStars = 5;
@@ -35,9 +34,13 @@ class Rating extends React.Component {
       stars.push(<Star first={first} active={active} key={i.toString()} />);
     }
 
+    return ( stars );
+  }
+
+  render() {
     return (
       <div className="rating" title="Star Rating">
-        {stars}
+        {this.BuildStarList()}
       </div>
     );
   }
