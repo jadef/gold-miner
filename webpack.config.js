@@ -53,17 +53,12 @@ module.exports = {
         loader: 'imports-loader?this=>window,fix=>module.exports=0'
       }, {
         test: /\.scss$/,
-        use: [{
-          loader: "style-loader"
-        }, {
-          loader: "css-loader", options: {
-            sourceMap: true
-          }
-        }, {
-          loader: "sass-loader", options: {
-            sourceMap: true
-          }
-        }]
+        use: [
+          { loader: "style-loader" },
+          { loader: "css-loader", options: { sourceMap: true } },
+          { loader: "postcss-loader", options: { sourceMap: true } },
+          { loader: "sass-loader", options: { sourceMap: true } }
+        ]
       }
     ]
   }
