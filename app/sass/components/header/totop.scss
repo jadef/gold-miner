@@ -2,7 +2,6 @@
 
 // ----- To Top
 a.totop {
-  color: $c-light;
   display: none;
   height: 72px;
   position: fixed;
@@ -11,6 +10,17 @@ a.totop {
   text-shadow: 0 2px 4px rgba($c-dark, 0.45);
   top: 0;
   width: 72px;
+
+  &:link,
+  &:active,
+  &:visited {
+    color: $c-light;
+  }
+
+  &:hover,
+  &:focus {
+    color: $c-secondary;
+  }
 
   &::before {
     content: '▲';
