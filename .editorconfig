@@ -1,5 +1,4 @@
 # http://editorconfig.org
-
 root = true
 
 [*]
@@ -9,9 +8,6 @@ indent_size = 2
 end_of_line = lf
 insert_final_newline = true
 trim_trailing_whitespace = true
-
-[*.{php,xml,conf}]
-indent_size = 2
 
 [*.md]
 insert_final_newline = false
