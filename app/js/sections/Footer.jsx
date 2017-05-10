@@ -15,7 +15,11 @@ TODO:
 
 class Footer extends React.Component {
   render() {
-    return <footer>Footer</footer>;
+    return (
+      <footer>
+        <div className="footer-content">Footer</div>
+      </footer>
+    );
   }
 }
 
