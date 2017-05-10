@@ -42,7 +42,7 @@ All of that said, it should **just work**, but the files to pay most attention t
 - `package.json`
 - `webpack.config.js`
 - `.babelrc`
-- `app.js`
+- `serve.js`
 
 
 #### JS Linting
