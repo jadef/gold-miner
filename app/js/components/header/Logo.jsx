@@ -29,8 +29,8 @@ class Logo extends React.Component {
     window.removeEventListener('scroll', this.handleScroll);
   }
 
-  handleScroll = (event) => {
-    let scrollTop = event.srcElement.body.scrollTop;
+  handleScroll = () => {
+    let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
     let heightCheck = Math.max(72, 250 - scrollTop);
     const compactPoint = 200;
 

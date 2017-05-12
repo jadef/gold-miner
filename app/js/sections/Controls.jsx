@@ -39,8 +39,8 @@ class Controls extends React.Component {
     this.props.addTag(tag);
   }
 
-  handleScroll = (event) => {
-    let scrollTop = event.srcElement.body.scrollTop;
+  handleScroll = () => {
+    let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
     let heightCheck = Math.max(72, 250 - scrollTop);
 
     this.setState({topHeight: heightCheck});
