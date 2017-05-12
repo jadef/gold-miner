@@ -16,7 +16,8 @@ class Logo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      scrollClass: ""
+      scrollClass: "",
+      triggerEvent: null
     };
   }
 
@@ -32,22 +33,22 @@ class Logo extends React.Component {
   handleScroll = () => {
     let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
     let heightCheck = Math.max(72, 250 - scrollTop);
+    let newEvent = null;
     const compactPoint = 200;
 
+    // Event handling
     if (heightCheck <= compactPoint) {
-      this.animations("shrink");
+      newEvent = "shrink";
     } else {
-      this.animations("grow");
-    //   this.setState({scrollClass: "compact"});
-    // } else {
-    //   this.setState({scrollClass: ""});
+      newEvent = "grow";
+    }
+
+    if (newEvent != this.state.triggerEvent) {
+      // trigger an animation
+      this.animations(newEvent);
+      this.setState({triggerEvent: newEvent});
     }
   }
-
-  // // Add svg file to page
-  // onSVGLoaded = (data) => {
-  //   Snap("#site-logo").append( data );
-  // }
 
   // -- Do Animations
   animations = (event) => {
@@ -63,15 +64,11 @@ class Logo extends React.Component {
         speed = 900,
         transition = mina.elastic;
 
-    let timer,
-        prevEvent = null;
+    let timer;
 
     // Event handling
-    if (event != prevEvent) {
-      (event == "shrink") ? shrink() : null;
-      (event == "grow") ? grow() : null;
-      prevEvent = event;
-    }
+    (event == "shrink") ? shrink() : null;
+    (event == "grow") ? grow() : null;
 
     // "Translate" function for small logo
     function shrink() {
