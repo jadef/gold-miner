@@ -76,7 +76,7 @@ class Star extends React.Component {
     return (
         <svg className={classes} viewBox="0 0 26 26">
           {filters}
-          <use fill="black" fillOpacity="1" filter="url(#star-shadow)" xlinkHref="#star"></use>
+          <use className="c-bg-dark" fillOpacity="1" filter="url(#star-shadow)" xlinkHref="#star"></use>
           <polygon id="star" points="10 14 4.12214748 18.0901699 6.19577393 11.236068 0.489434837 6.90983006 7.64885899 6.76393202 10 0 12.351141 6.76393202 19.5105652 6.90983006 13.8042261 11.236068 15.8778525 18.0901699"></polygon>
         </svg>
     )
