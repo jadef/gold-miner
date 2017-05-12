@@ -7,6 +7,7 @@ $c-tan:           #f8e4b5;
 $c-tan2:          #fdf9f0;
 $c-burnt-tan:     #d7c69d;
 $c-teal:          #20948b;
+$c-teal2:         #086059;
 $c-black:         #4a4a4a;
 
 // ----- Pallette
@@ -22,3 +23,8 @@ $c-gr-light:   linear-gradient($c-white 0%, $c-background 50%);
 $c-gr-light2:  linear-gradient($c-white 0%, $c-secondary 100%);
 $c-gr-primary: linear-gradient($c-primary 0%, $c-secondary 100%);
 $c-gr-accent:  linear-gradient(90deg, #47b8af 0%, $c-teal 100%);
+
+// ---- SVG class association
+
+$c-svg-accent:      $c-teal;
+$c-svg-accent-dark: $c-teal2;

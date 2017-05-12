@@ -47,8 +47,8 @@ class ControlsLetters extends React.Component {
               </filter>
             </defs>
             <g transform="translate(10, 10) rotate(-90) translate(-10, -10) ">
-              <use fill="black" fillOpacity="1" filter="url(#triangle-shadow)" xlinkHref="#triangle"></use>
-              <polygon id="triangle" points="10 0 20 20 0 20"></polygon>
+              <use className="c-bg-dark" fillOpacity="1" filter="url(#triangle-shadow)" xlinkHref="#triangle"></use>
+              <polygon id="triangle" className="c-bg-primary" points="10 0 20 20 0 20"></polygon>
             </g>
           </svg>
         </div>

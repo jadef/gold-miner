@@ -1,0 +1,36 @@
+// ----- SVGs
+svg {
+  fill: none;
+  stroke: none;
+
+  // -- Color class naming
+  // backgrounds
+  .c-bg-light {
+    fill: $c-white;
+  }
+
+  .c-bg-primary {
+    fill: $c-primary;
+  }
+
+  .c-bg-accent {
+    fill: $c-svg-accent;
+  }
+
+  .c-bg-accent-dark {
+    fill: $c-svg-accent-dark;
+  }
+
+  .c-bg-dark {
+    fill: $c-black;
+  }
+
+  // strokes
+  .c-s-light {
+    stroke: $c-white;
+  }
+
+  .c-s-accent {
+    stroke: $c-svg-accent;
+  }
+}

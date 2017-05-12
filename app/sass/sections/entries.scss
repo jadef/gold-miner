@@ -25,6 +25,10 @@
   .results-none {
     position: relative;
 
+    svg {
+      margin: 40px 0;
+    }
+
     .oops {
       align-items: center;
       color: $c-background;
