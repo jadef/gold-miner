@@ -67,12 +67,15 @@ class Letter extends React.Component {
     };
   }
 
-  handleClick = () => {
+  handleClick = (event) => {
     /*
     - remove all active classes
     - add active class
     - placehold MORE
     */
+
+    // Disable
+    this.props.disabled ? event.preventDefault() : null;
 
     const currentState = this.state.active;
     this.setState({
