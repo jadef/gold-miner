@@ -27,11 +27,27 @@ import { letters } from '../../data/app.json'
 
 // ---- All Letters Control
 class ControlsLetters extends React.Component {
-  render() {
+  constructor(props) {
+    super(props)
+    this.state = {
+      activeIndex: 0
+    }
+  }
 
+  handleClick(key) {
+    this.setState({activeIndex: key})
+  }
+
+  render() {
     // Build Letter List
     const allLetters = letters.map((data, i) => (
-      <Letter letter={data.letter} disabled={data.disabled} first={i} key={data.letter.toString()} />
+      <Letter key={i}
+        letter={data.letter}
+        index={i}
+        disabled={data.disabled}
+        isActive={this.state.activeIndex===i}
+        onClick={ this.handleClick.bind(this) }
+      />
     ));
 
     // Return All Letters (and handle)
@@ -58,42 +74,24 @@ class ControlsLetters extends React.Component {
   }
 }
 
-// -- Single Letter
+// // -- Single Letter
 class Letter extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      active: false
-    };
+
+  handleClick(event) {
+    this.props.disabled ? event.preventDefault() : this.props.onClick(this.props.index);
   }
 
-  handleClick = (event) => {
-    /*
-    - remove all active classes
-    - add active class
-    - placehold MORE
-    */
-
-    // Disable
-    this.props.disabled ? event.preventDefault() : null;
-
-    const currentState = this.state.active;
-    this.setState({
-      active: !currentState
-    });
-  }
-
-  render() {
+  render () {
     let classes = "";
     (this.props.disabled ? classes += "none" : null);
-    (this.props.first == 0 ? classes += " active" : null);
-    (this.state.active && !this.props.disabled ? classes += " active" : null);
+    (this.props.isActive && !this.props.disabled ? classes += " active" : null);
 
     return (
-      <li
-        className={classes}
-        onClick={this.handleClick}
-      ><a href={"#jump" + this.props.letter}>{this.props.letter}</a></li>
+      <li className={classes}>
+        <a href={"#jump" + this.props.letter} onClick={this.handleClick.bind(this)}>
+          {this.props.letter}
+        </a>
+      </li>
     );
   }
 }
@@ -101,8 +99,10 @@ class Letter extends React.Component {
 // -- Props
 Letter.propTypes = {
   letter: PropTypes.string.isRequired,
+  onClick: PropTypes.func,
   disabled: PropTypes.bool,
-  first: PropTypes.number,
+  isActive: PropTypes.bool,
+  index: PropTypes.number,
 };
 
 export default ControlsLetters;
