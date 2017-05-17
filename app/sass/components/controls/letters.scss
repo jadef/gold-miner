@@ -3,12 +3,17 @@
 // ----- Letters
 .controls.letters {
   @include breakpoint(small) {
-    padding-left: 10px;
-    position: relative;
+    background-color: $c-light;
+    box-shadow: 0 2px 6px 0 rgba($c-black, 0.15);
+    padding: $gutter 0;
+    // padding-left: 10px;
+
+    .letter-wrapper {
+      position: relative;
+      width: 100%;
+    }
 
     ul {
-      background-color: $c-light;
-      box-shadow: 0 2px 6px 0 rgba($c-black, 0.15);
       display: flex;
       flex-direction: column;
       flex-wrap: nowrap;
@@ -17,12 +22,12 @@
       justify-content: space-between;
       list-style: none;
       margin: 0;
-      padding: $gutter 0;
       text-align: center;
       width: 100%;
 
       li {
         cursor: pointer;
+        padding: 0;
 
         &.active {
           // box-shadow: 0 4px 6px 0 rgba($c-black, 0.15);
@@ -54,14 +59,16 @@
 
     .handle {
       height: 20px;
+      margin-top: -15px;
       position: absolute;
       top: 0;
+      transition: top 0.2s ease;
       width: 100%;
 
       svg {
         height: 20px;
         position: absolute;
-        right: -5px;
+        right: -15px;
         top: 4px;
         width: 20px;
       }
@@ -71,13 +78,16 @@
         content: '';
         position: absolute;
         top: 50%;
-        width: 95%;
+        width: 100%;
       }
     }
   }
 
   @include breakpoint(medium) {
     padding-left: 0;
-    padding-right: 10px;
+
+    .letter-wrapper {
+      padding-right: 10px;
+    }
   }
 }
