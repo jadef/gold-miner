@@ -5,8 +5,7 @@
   @include breakpoint(small) {
     background-color: $c-light;
     box-shadow: 0 2px 6px 0 rgba($c-black, 0.15);
-    padding: $gutter 0;
-    // padding-left: 10px;
+    padding: $gutter 0 10px 0;
 
     .letter-wrapper {
       position: relative;
@@ -27,7 +26,9 @@
 
       li {
         cursor: pointer;
+        display: flex;
         padding: 0;
+        flex-grow: 1;
 
         &.active {
           // box-shadow: 0 4px 6px 0 rgba($c-black, 0.15);
@@ -49,6 +50,8 @@
 
       a {
         color: $c-dark;
+        display: block;
+        width: 100%;
       }
 
       a:hover,
@@ -85,9 +88,5 @@
 
   @include breakpoint(medium) {
     padding-left: 0;
-
-    .letter-wrapper {
-      padding-right: 10px;
-    }
   }
 }
