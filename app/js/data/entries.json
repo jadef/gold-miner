@@ -1,6 +1,215 @@
 {
   "entries": [
     {
+      "id": "capybara",
+      "title": "Capybara",
+      "link": "//teamcapybara.github.io/capybara/",
+      "content": "<p></p>",
+      "rank": 0,
+      "notes": "",
+      "tags": [
+        "Automation",
+        "Ruby",
+        "Testing"
+      ],
+      "stamps": "2017/05/18"
+    },
+    {
+      "id": "docker",
+      "title": "Docker",
+      "link": "//www.docker.com/",
+      "content": "<p></p>",
+      "rank": 0,
+      "notes": "",
+      "tags": [
+        "Manager"
+      ],
+      "stamps": "2017/05/18"
+    },
+    {
+      "id": "drupal",
+      "title": "Drupal",
+      "link": "//www.drupal.org/",
+      "content": "<p></p>",
+      "rank": 0,
+      "notes": "",
+      "tags": [
+        "CMS",
+        "PHP"
+      ],
+      "stamps": "2017/05/18"
+    },
+    {
+      "id": "guard",
+      "title": "Guard",
+      "link": "//guardgem.org/",
+      "content": "<p></p>",
+      "rank": 0,
+      "notes": "",
+      "tags": [
+        "Automation",
+        "Preprocessor",
+        "Ruby"
+      ],
+      "stamps": "2017/05/18"
+    },
+    {
+      "id": "knockout",
+      "title": "Knockout",
+      "link": "//knockoutjs.com/",
+      "content": "<p></p>",
+      "rank": 0,
+      "notes": "",
+      "tags": [
+        "Framework",
+        "JavaScript"
+      ],
+      "stamps": "2017/05/18"
+    },
+    {
+      "id": "markdown",
+      "title": "Markdown",
+      "link": "//commonmark.org/",
+      "content": "<p>It's actually hard to poinpoint markdown as a singular language with a source of authority. The <a href=\"http://daringfireball.net/projects/markdown/\">Daring Fireball version</a> is the first, but probably out of date at this point. I'm leaning on <a href=\"http://commonmark.org/\">CommonMark</a> as the real thing. <a href=\"https://guides.github.com/features/mastering-markdown/\">Gihub</a> is also pretty solid on this.</p>",
+      "rank": 0,
+      "notes": "",
+      "tags": [
+        "Abstraction"
+      ],
+      "stamps": "2017/05/18"
+    },
+    {
+      "id": "prototype",
+      "title": "Prototype",
+      "link": "//prototypejs.org/",
+      "content": "<p></p>",
+      "rank": 0,
+      "notes": "",
+      "tags": [
+        "JavaScript",
+        "Library"
+      ],
+      "stamps": "2017/05/18"
+    },
+    {
+      "id": "selenium",
+      "title": "Selenium",
+      "link": "//www.seleniumhq.org/",
+      "content": "<p></p>",
+      "rank": 0,
+      "notes": "",
+      "tags": [
+        "Automation",
+        "Testing"
+      ],
+      "stamps": "2017/05/18"
+    },
+    {
+      "id": "svg",
+      "title": "SVG",
+      "link": "//www.w3.org/Graphics/SVG/",
+      "content": "<p></p>",
+      "rank": 0,
+      "notes": "",
+      "tags": [
+        "Animation"
+      ],
+      "stamps": "2017/05/18"
+    },
+    {
+      "id": "xml",
+      "title": "XML",
+      "link": "//www.w3.org/TR/REC-xml/",
+      "content": "<p></p>",
+      "rank": 0,
+      "notes": "",
+      "tags": [
+        "Abstraction"
+      ],
+      "stamps": "2017/05/18"
+    },
+    {
+      "id": "wraith",
+      "title": "Wraith",
+      "link": "//bbc-news.github.io/wraith/",
+      "content": "<p></p>",
+      "rank": 0,
+      "notes": "",
+      "tags": [
+        "Automation",
+        "Ruby",
+        "Testing"
+      ],
+      "stamps": "2017/05/18"
+    },
+    {
+      "id": "swift",
+      "title": "Swift",
+      "link": "//swift.org/",
+      "content": "<p></p>",
+      "rank": 0,
+      "notes": "",
+      "tags": [
+        "Mobile"
+      ],
+      "stamps": "2017/05/17"
+    },
+    {
+      "id": "webcomponents",
+      "title": "Web Components",
+      "link": "//www.webcomponents.org",
+      "content": "<p></p>",
+      "rank": 0,
+      "notes": "",
+      "tags": [
+        "Library",
+        "Templating"
+      ],
+      "stamps": "2017/05/17"
+    },
+    {
+      "id": "watchman",
+      "title": "Watchman",
+      "link": "//facebook.github.io/watchman/",
+      "content": "<p></p>",
+      "rank": 0,
+      "notes": "",
+      "tags": [
+        "Automation",
+        "Node",
+        "Preprocessor"
+      ],
+      "stamps": "2017/05/17"
+    },
+    {
+      "id": "native",
+      "title": "React Native",
+      "link": "//facebook.github.io/react-native/",
+      "content": "<p></p>",
+      "rank": 0,
+      "notes": "",
+      "tags": [
+        "JavaScript",
+        "Library",
+        "Mobile",
+        "Node"
+      ],
+      "stamps": "2017/05/17"
+    },
+    {
+      "id": "grunt",
+      "title": "Grunt",
+      "link": "//gruntjs.com/",
+      "content": "<p></p>",
+      "rank": 0,
+      "notes": "",
+      "tags": [
+        "JavaScript",
+        "Preprocessor"
+      ],
+      "stamps": "2017/05/17"
+    },
+    {
       "id": "liquid",
       "title": "Liquid",
       "link": "//shopify.github.io/liquid/",
