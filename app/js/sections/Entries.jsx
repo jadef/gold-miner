@@ -20,15 +20,29 @@ import '../../sass/sections/entries.scss';
 class Entries extends React.Component {
 
   BuildEntries = () => {
+    let previousLetter = "0";
+    let thisLetter = "A";
+    let newLetter = false;
 
     // Alphabetical sort of id
     const sortEntries = this.props.entries.sort(function(a, b) {
       return a.id.localeCompare(b.id);
     })
 
-    const allEntries = sortEntries.map((data) => (
-      <Entry entry={data} key={data.id} activeTags={this.props.activeTags} />
-    ))
+    const allEntries = sortEntries.map((data) => {
+      // check first letter against previous
+      // If different, add prop for new section id
+      newLetter = false;
+      thisLetter = data.id.charAt(0).toUpperCase();
+      if (previousLetter != thisLetter) {
+        newLetter = true;
+        previousLetter = thisLetter;
+      }
+
+      return (
+        <Entry entry={data} key={data.id} activeTags={this.props.activeTags} newLetter={newLetter} />
+      );
+    });
 
     return ( allEntries );
 
@@ -147,7 +161,6 @@ class Entries extends React.Component {
       <div className="entries">
         <div className="fade" />
         {this.Results()}
-        <br className="jump" id="jumpA" />
         {this.BuildEntries()}
       </div>
     );

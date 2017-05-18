@@ -20,11 +20,22 @@ import '../../../sass/components/entries/entry.scss';
 */
 
 class Entry extends React.Component {
+
+  checkLetter = () => {
+    // If passed a new jump
+    if (this.props.newLetter) {
+      const letter = this.props.entry.id.charAt(0).toUpperCase();
+      return (
+        "jump"+letter
+      );
+    }
+  }
+
   render() {
     const entry = this.props.entry;
 
     return (
-      <section className="entry">
+      <section className="entry" id={this.checkLetter()}>
         <div className="title" id={entry.id}>
           <h3>{entry.title}</h3>
           {entry.link ? <a className="external" href={entry.link} target="_blank"><img src="images/external.svg" alt="external link" /></a> : null}
@@ -46,6 +57,7 @@ class Entry extends React.Component {
 // -- Props
 Entry.propTypes = {
   entry: PropTypes.object,
+  newLetter: PropTypes.bool,
   activeTags: PropTypes.array
 };
 
