@@ -1,18 +1,17 @@
 {
   "entries": [
     {
-      "id": "capybara",
-      "title": "Capybara",
-      "link": "//teamcapybara.github.io/capybara/",
+      "id": "craft",
+      "title": "Craft",
+      "link": "//craftcms.com/",
       "content": "<p></p>",
       "rank": 0,
       "notes": "",
       "tags": [
-        "Automation",
-        "Ruby",
-        "Testing"
+        "CMS",
+        "PHP"
       ],
-      "stamps": "2017/05/18"
+      "stamp": "2017/05/18"
     },
     {
       "id": "docker",
@@ -24,7 +23,7 @@
       "tags": [
         "Manager"
       ],
-      "stamps": "2017/05/18"
+      "stamp": "2017/05/18"
     },
     {
       "id": "drupal",
@@ -37,7 +36,7 @@
         "CMS",
         "PHP"
       ],
-      "stamps": "2017/05/18"
+      "stamp": "2017/05/18"
     },
     {
       "id": "guard",
@@ -51,7 +50,7 @@
         "Preprocessor",
         "Ruby"
       ],
-      "stamps": "2017/05/18"
+      "stamp": "2017/05/18"
     },
     {
       "id": "knockout",
@@ -64,7 +63,7 @@
         "Framework",
         "JavaScript"
       ],
-      "stamps": "2017/05/18"
+      "stamp": "2017/05/18"
     },
     {
       "id": "markdown",
@@ -76,7 +75,7 @@
       "tags": [
         "Abstraction"
       ],
-      "stamps": "2017/05/18"
+      "stamp": "2017/05/18"
     },
     {
       "id": "prototype",
@@ -89,7 +88,7 @@
         "JavaScript",
         "Library"
       ],
-      "stamps": "2017/05/18"
+      "stamp": "2017/05/18"
     },
     {
       "id": "selenium",
@@ -102,7 +101,7 @@
         "Automation",
         "Testing"
       ],
-      "stamps": "2017/05/18"
+      "stamp": "2017/05/18"
     },
     {
       "id": "svg",
@@ -114,7 +113,7 @@
       "tags": [
         "Animation"
       ],
-      "stamps": "2017/05/18"
+      "stamp": "2017/05/18"
     },
     {
       "id": "xml",
@@ -126,7 +125,7 @@
       "tags": [
         "Abstraction"
       ],
-      "stamps": "2017/05/18"
+      "stamp": "2017/05/18"
     },
     {
       "id": "wraith",
@@ -140,7 +139,7 @@
         "Ruby",
         "Testing"
       ],
-      "stamps": "2017/05/18"
+      "stamp": "2017/05/18"
     },
     {
       "id": "swift",
@@ -152,7 +151,7 @@
       "tags": [
         "Mobile"
       ],
-      "stamps": "2017/05/17"
+      "stamp": "2017/05/17"
     },
     {
       "id": "webcomponents",
@@ -165,7 +164,7 @@
         "Library",
         "Templating"
       ],
-      "stamps": "2017/05/17"
+      "stamp": "2017/05/17"
     },
     {
       "id": "watchman",
@@ -179,7 +178,7 @@
         "Node",
         "Preprocessor"
       ],
-      "stamps": "2017/05/17"
+      "stamp": "2017/05/17"
     },
     {
       "id": "native",
@@ -194,7 +193,7 @@
         "Mobile",
         "Node"
       ],
-      "stamps": "2017/05/17"
+      "stamp": "2017/05/17"
     },
     {
       "id": "grunt",
@@ -207,7 +206,7 @@
         "JavaScript",
         "Preprocessor"
       ],
-      "stamps": "2017/05/17"
+      "stamp": "2017/05/17"
     },
     {
       "id": "liquid",
@@ -220,7 +219,7 @@
         "Ruby",
         "Templating"
       ],
-      "stamps": "2017/05/02"
+      "stamp": "2017/05/02"
     },
     {
       "id": "jekyll",
@@ -234,7 +233,7 @@
         "Ruby",
         "Templating"
       ],
-      "stamps": "2017/05/02"
+      "stamp": "2017/05/02"
     },
     {
       "id": "foundation",
@@ -268,8 +267,8 @@
       "id": "browsersync",
       "title": "Browsersync",
       "link": "//www.browsersync.io/",
-      "content": "<p></p>",
-      "rank": 0,
+      "content": "<p>Two major reasons to use it:</p><ul><li>One: it syncs browsers, so you can have multiple windows (and devices) open and looking at something all at the same time.</li><li>Two: if you don't have something else doing it, it's a great watcher for hot reloading of styles and such on file save.</li></ul>",
+      "rank": 4,
       "notes": "",
       "tags": [
         "Automation",
@@ -282,9 +281,9 @@
       "id": "babel",
       "title": "Babel",
       "link": "//babeljs.io/",
-      "content": "<p></p>",
-      "rank": 0,
-      "notes": "",
+      "content": "<p>Use ES2015 (or whatever the next generation of JavaScript is) even though browser support isn't quite there.</><p>This opens up a lot of new aspects to vanilla JavaScript, though I've started in conjunction with React.</p>",
+      "rank": 4,
+      "notes": "Took some work to get setup, and I'm not sure how to use all of it, but it does make JavaScript a bit better.",
       "tags": [
         "Abstraction",
         "JavaScript",
@@ -310,8 +309,8 @@
       "id": "ava",
       "title": "Ava",
       "link": "//github.com/avajs/ava",
-      "content": "<p></p>",
-      "rank": 0,
+      "content": "<p>JavaScript testing. Still a bit intimidating to really figure out full coverage, but something I should sit down with, and on a javascript project (like react) this would be a good solution.</p><p>Selling point, tests run concurently, so faster suites.</p>",
+      "rank": 2,
       "notes": "",
       "tags": [
         "JavaScript",
@@ -324,6 +323,20 @@
       "id": "autoprefixer",
       "title": "Autoprefixer",
       "link": "//github.com/postcss/autoprefixer",
+      "content": "<p>A PostCSS plugin that is the backbone of the <a href=\"#postcss\">PostCSS</a> world. It lets you completly forget about vendor prefixes for \"partially supported\" css stuff. Pretty necessary for all projects in my mind.</p>",
+      "rank": 5,
+      "notes": "",
+      "tags": [
+        "Automation",
+        "CSS",
+        "Preprocessor"
+      ],
+      "stamp": "2017/04/24"
+    },
+    {
+      "id": "postcss",
+      "title": "PostCSS",
+      "link": "//postcss.org/",
       "content": "<p></p>",
       "rank": 0,
       "notes": "",
@@ -405,8 +418,8 @@
       "id": "bootstrap",
       "title": "Bootstrap",
       "link": "//getbootstrap.com/",
-      "content": "<p></p>",
-      "rank": 0,
+      "content": "<p>Big player in the frontend framework world.</p><p>I have never fully embraced all the features/components, but the logic of using it for things that you don't need \"custom\" or as a starting point for the basics makes sense.</p><p>Does have some specific dependencies like jQuery and Grunt.</p>",
+      "rank": 3,
       "notes": "",
       "tags": [
         "CSS",
@@ -445,8 +458,8 @@
       "id": "bundler",
       "title": "Bundler",
       "link": "//bundler.io/",
-      "content": "<p></p>",
-      "rank": 0,
+      "content": "<p>A dependency manager for Ruby projects. it generally just works and makes sense as the defacto need for Ruby projects.</p>",
+      "rank": 3,
       "notes": "",
       "tags": [
         "Manager",
@@ -579,8 +592,8 @@
       "id": "angular",
       "title": "Angular",
       "link": "https://angular.io",
-      "content": "<p></p>",
-      "rank": 1,
+      "content": "<p>Angular has become a big player. If/when I get my hands in it, I'll most likely be in version 2 (vs 1) which was a major overhaul.</p><p>Worth noting, they will move to semantic versioning, so they're already on to 4, or 5 or whatever</p>",
+      "rank": 3,
       "notes": "Considering looking into it, but put it lower in priority.",
       "tags": [
         "Framework",
@@ -592,9 +605,9 @@
       "id": "backbone",
       "title": "Backbone",
       "link": "http://backbonejs.org/",
-      "content": "<p></p>",
-      "rank": 2,
-      "notes": "",
+      "content": "<p>Older player in the single page app world, but still solid IMO. Really what this primarily brought to the table for me was MVC and structure with things like <code>initialize</code>, <code>construct</code> etc.</p>",
+      "rank": 3,
+      "notes": "Thanks to Adam and the Rejuvenation project I feel like I have some real world experience, just can't loose it all.",
       "tags": [
         "Framework",
         "JavaScript",
@@ -618,9 +631,9 @@
       "id": "burbon",
       "title": "Burbon",
       "link": "http://bourbon.io/",
-      "content": "<p>Another CSS Framework (in Sass). Should look deeper on where this is at these days.</p>",
-      "rank": 4,
-      "notes": "Might be the framework that I finally accept",
+      "content": "<p>Another CSS Framework (in Sass). Comparable to Compass, and honestly, not nearly as pertinent as it used to be for me as it used to be since things like autoprefixer and flexbox have replaced a lot of the need.</p>",
+      "rank": 3,
+      "notes": "",
       "tags": [
         "CSS",
         "Framework"
@@ -630,14 +643,14 @@
       "id": "capybara",
       "title": "Capybara",
       "link": "http://jnicklas.github.io/capybara/",
-      "content": "<p></p>",
-      "rank": 3,
+      "content": "<p>An interested aspect of testing suites (Ruby projects to be more specific).</p><p>I would need to spend more time with it (and a testing suite in conjuction), but it seems like a nice add on to \"humanize\" the process a little more.</p>",
+      "rank": 2,
       "notes": "",
       "tags": [
         "Ruby",
         "Testing"
       ],
-      "stamp": "2017/03/28"
+      "stamp": "2017/05/19"
     } , {
       "id": "coffescript",
       "title": "CoffeeScript",
