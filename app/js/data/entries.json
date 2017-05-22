@@ -4,33 +4,33 @@
       "id": "craft",
       "title": "Craft",
       "link": "//craftcms.com/",
-      "content": "<p></p>",
-      "rank": 0,
+      "content": "<p>At the time of first writing this, Craft is the up and coming CMS. I haven't worked with it yet, but I'd be interested to see it in action.</p>",
+      "rank": 3,
       "notes": "",
       "tags": [
         "CMS",
         "PHP"
       ],
-      "stamp": "2017/05/18"
+      "stamp": "2017/05/22"
     },
     {
       "id": "docker",
       "title": "Docker",
       "link": "//www.docker.com/",
-      "content": "<p></p>",
-      "rank": 0,
+      "content": "<p>\"Packaged\" containers for getting an environment set up. Mostly for local dev in my case, but also used for servers.</p><p>The idea is nice, and I could see how it's just as approachable as VMs (if not more so). But my one experience with it at work was a little cumbersome and it felt very intensive for my machine. Not sure it's something I'd play with on my own.</p>",
+      "rank": 2,
       "notes": "",
       "tags": [
         "Manager"
       ],
-      "stamp": "2017/05/18"
+      "stamp": "2017/05/22"
     },
     {
       "id": "drupal",
       "title": "Drupal",
       "link": "//www.drupal.org/",
-      "content": "<p></p>",
-      "rank": 0,
+      "content": "<p>It's been years, but I've never cared to jump into the Drupal world. Would if I had to, but not even on my radar these days.</p>",
+      "rank": 1,
       "notes": "",
       "tags": [
         "CMS",
@@ -42,8 +42,8 @@
       "id": "guard",
       "title": "Guard",
       "link": "//guardgem.org/",
-      "content": "<p></p>",
-      "rank": 0,
+      "content": "<p>Ruby specific task runner. The old man of the group, but was my original go to into the task runner world.</p><p>Don't think it's applicable anymore.</p>",
+      "rank": 2,
       "notes": "",
       "tags": [
         "Automation",
@@ -56,8 +56,8 @@
       "id": "knockout",
       "title": "Knockout",
       "link": "//knockoutjs.com/",
-      "content": "<p></p>",
-      "rank": 0,
+      "content": "<p>Yet another JavaScript framework, seems something like between react and jQuery, but I've been resistent to even read about it.</p><p>Wouldn't care one bit about it, except that it's part of Magento 2, I don't understand why they make those kind of decisions.</p>",
+      "rank": 1,
       "notes": "",
       "tags": [
         "Framework",
@@ -70,7 +70,7 @@
       "title": "Markdown",
       "link": "//commonmark.org/",
       "content": "<p>It's actually hard to poinpoint markdown as a singular language with a source of authority. The <a href=\"http://daringfireball.net/projects/markdown/\">Daring Fireball version</a> is the first, but probably out of date at this point. I'm leaning on <a href=\"http://commonmark.org/\">CommonMark</a> as the real thing. <a href=\"https://guides.github.com/features/mastering-markdown/\">Gihub</a> is also pretty solid on this.</p>",
-      "rank": 0,
+      "rank": 3,
       "notes": "",
       "tags": [
         "Abstraction"
@@ -184,8 +184,8 @@
       "id": "native",
       "title": "React Native",
       "link": "//facebook.github.io/react-native/",
-      "content": "<p></p>",
-      "rank": 0,
+      "content": "<p>Like react? Want to build apps for iOS and Android? Sure, why not.</p><p>A whole nother world, this could be an interesting way to cross from the web app to the native app world a little easier.</p>",
+      "rank": 3,
       "notes": "",
       "tags": [
         "JavaScript",
@@ -199,8 +199,8 @@
       "id": "grunt",
       "title": "Grunt",
       "link": "//gruntjs.com/",
-      "content": "<p></p>",
-      "rank": 0,
+      "content": "<p>A little more mature task runner, it got a little out-shone by Gulp. And now with things like webpack, task runner's scope is narrowing down a bit futher.</p></p>Still has a good place, and depending on the project will still be part of my life, but for personal projects not my go to.</p>",
+      "rank": 3,
       "notes": "",
       "tags": [
         "JavaScript",
@@ -212,8 +212,8 @@
       "id": "liquid",
       "title": "Liquid",
       "link": "//shopify.github.io/liquid/",
-      "content": "<p></p>",
-      "rank": 0,
+      "content": "<p>Templating language that I stumbled on with Jekyll. If I do anything with Shopify, that's also Liquid.</p><p>If you can use any template language, you can use this one. Just a few differences, but overall a basic layer as you'd expect.</p>",
+      "rank": 2,
       "notes": "",
       "tags": [
         "Ruby",
@@ -225,8 +225,8 @@
       "id": "jekyll",
       "title": "Jekyll",
       "link": "//jekyllrb.com/",
-      "content": "<p></p>",
-      "rank": 0,
+      "content": "<p>An interesting \"light CMS \" that builds static sites off of your different template/content pages.</p><p>I wouldn't have given it any attention except Github Pages uses it, and so I got my feet wet with my io site.</p>",
+      "rank": 2,
       "notes": "",
       "tags": [
         "CMS",
@@ -239,9 +239,9 @@
       "id": "foundation",
       "title": "Foundation",
       "link": "//foundation.zurb.com/",
-      "content": "<p></p>",
-      "rank": 0,
-      "notes": "",
+      "content": "<p>Foundation and Bootstrap, definitely on the same level, both potentially super useful, but also give me that feeling of loss of control.</p><p>Do like that you can selectively choose your components.</p>",
+      "rank": 3,
+      "notes": "Maybe lean toward Foundation over Bootstrap just a little bit.",
       "tags": [
         "CSS",
         "Framework"
@@ -295,8 +295,8 @@
       "id": "cssnano",
       "title": "cssnano",
       "link": "//cssnano.co/",
-      "content": "<p></p>",
-      "rank": 0,
+      "content": "<p>A PostCSS plugin that essentially does Uglification for CSS. Good to use when really locking down a production build.</p>",
+      "rank": 4,
       "notes": "",
       "tags": [
         "Automation",
@@ -351,8 +351,8 @@
       "id": "eslint",
       "title": "ESLint",
       "link": "//eslint.org/",
-      "content": "<p></p>",
-      "rank": 0,
+      "content": "<p>Pluggable JS linter, which means I've probably just scratched the surface. But even at it's most basic, it's nice to have the reinforcement of good JS.</p><p>Because linting is a little work up front, but then just keeps you on track during dev, I think this is an important part of any build. Plays nice with JSX which is good.</p>",
+      "rank": 4,
       "notes": "",
       "tags": [
         "JavaScript",
@@ -365,8 +365,8 @@
       "id": "lodash",
       "title": "Lodash",
       "link": "//lodash.com/",
-      "content": "<p></p>",
-      "rank": 0,
+      "content": "<p>A javaScript utility library, just gives a bit of extra stuff when writing JS. The hard part for me, when to use it and remembering I can use it.</p>",
+      "rank": 2,
       "notes": "",
       "tags": [
         "JavaScript",
@@ -378,8 +378,8 @@
       "id": "jsx",
       "title": "JSX",
       "link": "//jsx.github.io",
-      "content": "<p></p>",
-      "rank": 0,
+      "content": "<p>Taking JavaScript a little further, the primary difference for someone like me, integrating html type content directly in the JS. It seems counter intuitive, and gave me a serious headache at first, but it kind of makes sense now.</p><p>If this wasn't a kind of important part of React I would never have even considered playing with it.</p>",
+      "rank": 2,
       "notes": "",
       "tags": [
         "Abstraction",
@@ -681,20 +681,20 @@
       "id": "cucumber",
       "title": "Cucumber",
       "link": "http://cukes.info/",
-      "content": "<p></p>",
+      "content": "<p>Language for writing Behavior driven development acceptance testing.</p><p>Kind of takes a brain shift that I havn't found the groove with yet. Also most applicable in group collaboration, but <em>should</em> be able to implement on smaller projects too.</p>",
       "rank": 2,
-      "notes": "",
+      "notes": "Why do I struggle with implementation on this?",
       "tags": [
         "Ruby",
         "Testing"
       ],
-      "stamp": "2017/03/28"
+      "stamp": "2017/05/22"
     } , {
       "id": "ember",
       "title": "Ember",
       "link": "http://emberjs.com/",
-      "content": "<p></p>",
-      "rank": 3,
+      "content": "<p>A single page app framework that still has potential, but I feel like React and Angular 2 have really pushed this back. Unless work pushed me in this direction I don't think it will ever by in my world.</p>",
+      "rank": 2,
       "notes": "",
       "tags": [
         "Framework",
@@ -720,8 +720,8 @@
       "id": "expression",
       "title": "Expression Engine",
       "link": "http://ellislab.com/expressionengine",
-      "content": "<p></p>",
-      "rank": 4,
+      "content": "<p>Well, I know it, so that's a thing. Work pushes it, I could keep going, but otherwise, I'm ok with this fading away or being replaced by something like <a href=\"#craft\">Craft</a>.</p>",
+      "rank": 2,
       "notes": "",
       "tags": [
         "CMS",
@@ -732,13 +732,13 @@
       "id": "git",
       "title": "Git",
       "link": "http://git-scm.com/",
-      "content": "<p></p>",
+      "content": "<p>Version control is a good thing. Whether small personal projects or large team, it's critical.</p><p>I remember trying to set up my own SVN back in the day and hating it. Using Git (in conjunction with Github or Bitbucket) just makes my life so much better.</p>",
       "rank": 4,
       "notes": "",
       "tags": [
         "Manager"
       ],
-      "stamp": "2017/03/28"
+      "stamp": "2017/05/22"
     } , {
       "id": "gulp",
       "title": "Gulp",
@@ -755,7 +755,7 @@
       "id": "haml",
       "title": "Haml",
       "link": "http://haml.info/",
-      "content": "<p>Mostly for Ruby</p>",
+      "content": "<p>A ruby html templating language that takes some serious indentation control.</p><p>I feel pretty comfortable with it and would be ok if I was on another larger Ruby project.</p>",
       "rank": 3,
       "notes": "",
       "tags": [
@@ -802,9 +802,9 @@
       "id": "jquery",
       "title": "jQuery",
       "link": "http://jquery.com/",
-      "content": "<p></p>",
-      "rank": 5,
-      "notes": "The ol' jQuery. Still has it's place, but nice when I see a project without it.",
+      "content": "<p>The ol' jQuery. Still has it's place, but nice when I see a project without it.</p>",
+      "rank": 4,
+      "notes": "",
       "tags": [
         "JavaScript",
         "Library"
@@ -824,8 +824,8 @@
       "id": "magento",
       "title": "Magento",
       "link": "http://magento.com/",
-      "content": "<p></p>",
-      "rank": 3,
+      "content": "<p>Version 1, frustrating but I got my head around it.</p><p> Version 2, no idea, might have to re-learn.</p><p>Do I want to? Ehh, only if necessary, but not my ideal work anymore.</p>",
+      "rank": 2,
       "notes": "",
       "tags": [
         "PHP"
@@ -835,9 +835,9 @@
       "id": "modernizr",
       "title": "Modernizr",
       "link": "http://modernizr.com/",
-      "content": "<p></p>",
+      "content": "<p>I've used modernizr for a long time, but honestly, I've never really needed it (or should say, leveraged it).</p><p>The theory is nice, to let you know what the browser is capable of, and you can then target progressive enhancements. Or the other way around, if it can't do something, then give them the basics.</p>",
       "rank": 4,
-      "notes": "",
+      "notes": "I really should take the time to really sink my teeth into a good test of using it to it's full potential.",
       "tags": [
         "JavaScript"
       ],
@@ -858,7 +858,7 @@
       "id": "nodejs",
       "title": "Node.js",
       "link": "http://nodejs.org/",
-      "content": "<p></p>",
+      "content": "<p>You can call it server side JavaScript, but honestly for people like me, it's just an ecosystem for higher things (read react, or any of the million npm package uses).</p><p>Even more than PHP or Ruby environments, I spend my time writing JavaScript not fully understanding if it has anything to do with Node or not, but that's fine.</p>",
       "rank": 2,
       "notes": "",
       "tags": [
