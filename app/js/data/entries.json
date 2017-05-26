@@ -1,10 +1,39 @@
 {
   "entries": [
     {
+      "id": "ghost",
+      "title": "Ghost",
+      "link": "//ghost.org/",
+      "content": "<p>Remember when WordPress was blog platform? That's what Ghost is, just in modern times. It's not trying to be all the things, but just the linear published content aka blog.</p><p>The technology stack is interesting though, it's ember on node. So handlebar templates are a big part of the theming.</p>",
+      "rank": 3,
+      "notes": "",
+      "tags": [
+        "CMS",
+        "JavaScript",
+        "Node"
+      ],
+      "stamp": "2017/05/26"
+    },
+    {
+      "id": "meteor",
+      "title": "Meteor",
+      "link": "//www.meteor.com/",
+      "content": "<p>I haven't explored yet, but my perception is that it's focused on simplifying App building aspects. Very similar to React's native, but more generalized to other aspects like Mongo integration or Angular instead of React.</p>",
+      "rank": 3,
+      "notes": "",
+      "tags": [
+        "JavaScript",
+        "Library",
+        "Mobile",
+        "Single Page"
+      ],
+      "stamp": "2017/05/26"
+    },
+    {
       "id": "twig",
       "title": "Twig",
       "link": "//twig.sensiolabs.org/",
-      "content": "<p></p>",
+      "content": "<p>I don't know much about Twig, but it's templating for PHP, so that checks out. PHP with curly braces ala mustache.</p>",
       "rank": 0,
       "notes": "",
       "tags": [
@@ -132,8 +161,8 @@
       "id": "xml",
       "title": "XML",
       "link": "//www.w3.org/TR/REC-xml/",
-      "content": "<p></p>",
-      "rank": 0,
+      "content": "<p>A strange cousin to HTML, it's actually way more robust than I give it credit for. But really, I think of it kind of like JSON is to JS, in that it should really just be an organizational tool for specific content that you want to retrieve from other sources (could be php, JS, etc).</p>",
+      "rank": 2,
       "notes": "",
       "tags": [
         "Abstraction"
@@ -144,8 +173,8 @@
       "id": "wraith",
       "title": "Wraith",
       "link": "//bbc-news.github.io/wraith/",
-      "content": "<p></p>",
-      "rank": 0,
+      "content": "<p>An interesting mix of automation with visualization. It takes screenshots and compares differences.</p><p>The theory is to weave it into testing and deploy processes so that you know only the thing you wanted to change on the front-end has changed in your development.</p><p>I really like the idea and was interesting seeing it in action, but have failed to see it used properly.</p>",
+      "rank":3,
       "notes": "",
       "tags": [
         "Automation",
@@ -158,8 +187,8 @@
       "id": "swift",
       "title": "Swift",
       "link": "//swift.org/",
-      "content": "<p></p>",
-      "rank": 0,
+      "content": "<p>Apple's newish replacement for C-based languages. I believe it's focused mostly toward app programming, but really, it's a software language that could be used for all kinds of thingsl</p>",
+      "rank": 2,
       "notes": "",
       "tags": [
         "Mobile"
@@ -170,8 +199,8 @@
       "id": "webcomponents",
       "title": "Web Components",
       "link": "//www.webcomponents.org",
-      "content": "<p></p>",
-      "rank": 0,
+      "content": "<p>This is actually an interesting new fronteir for front-end html processes. It breaks elements of the page down to a component, just like JavaScript is doing all the time, but this is more on the DOM/HTML level, so that you build a reuable component and then the include is super simple... That said, the barrier isn't actually super simple, it still involves JS setup, bower including, and previously built element libraries (which I guess is a selling point, but a barier for wanting to use your own processes).</p>",
+      "rank": 3,
       "notes": "",
       "tags": [
         "Library",
@@ -183,8 +212,8 @@
       "id": "watchman",
       "title": "Watchman",
       "link": "//facebook.github.io/watchman/",
-      "content": "<p></p>",
-      "rank": 0,
+      "content": "<p>No frills file watching. That's all it does, you tell it to watch certain files and then do something, usually a seperate process (could be something like postCSS processes).</p><p>It's another aspect of task runners that have been broken away, so yes, there are other ways to do this, but might be a cleaner way to implement watching.</p>",
+      "rank": 3,
       "notes": "",
       "tags": [
         "Automation",
@@ -265,8 +294,8 @@
       "id": "webpack",
       "title": "Web Pack",
       "link": "//webpack.js.org/",
-      "content": "<p></p>",
-      "rank": 0,
+      "content": "<p>A little daunting at first, but it can become part of a JS build pretty well. Similar to what Browserify was doing, but way more modularly bundly. It can serve up JS assets, it can compile CSS, it can (propably) handle different templating aspects.</p><p>It can fell like it pretty much negates the need for task runners, but they say they're a little different.</p>",
+      "rank": 4,
       "notes": "",
       "tags": [
         "JavaScript",
@@ -444,8 +473,8 @@
       "id": "thin",
       "title": "Thin",
       "link": "//code.macournoyer.com/thin/",
-      "content": "<p></p>",
-      "rank": 0,
+      "content": "<p>Ruby web server. It's what pulls together database and app, so it's kind of a set it and forget it aspect but useful in a Ruby build project.</p>",
+      "rank": 2,
       "notes": "",
       "tags": [
         "Automation",
@@ -484,8 +513,8 @@
       "id": "yarn",
       "title": "Yarn",
       "link": "//yarnpkg.com/en/",
-      "content": "<p></p>",
-      "rank": 0,
+      "content": "<p>At first I baulked, NPM works fine for node dependency management, why would I add something else to it.</p><p>I actually do like it, not only is it faster, but makes a bit more sense to me. Maybe it's because the lock file makes me feel like it behaves like ruby gems.</p>",
+      "rank": 4,
       "notes": "",
       "tags": [
         "Manager",
@@ -511,8 +540,8 @@
       "id": "vuejs",
       "title": "Vue.js",
       "link": "//vuejs.org",
-      "content": "<p></p>",
-      "rank": 0,
+      "content": "<p>A UI framework that's touted as progressive and incrementally adoptable (rather than a full buy in I guess).</p><p>Supposedly kind of approachable, it follows a pretty JS single page app approach of attaching to basic DOM elements with templating, bindings (and yes, components).</p>",
+      "rank": 3,
       "notes": "",
       "tags": [
         "Framework",
@@ -525,8 +554,8 @@
       "id": "yeoman",
       "title": "Yeoman",
       "link": "//yeoman.io/",
-      "content": "<p></p>",
-      "rank": 0,
+      "content": "<p>Scaffolding tool for webapps. Interesting idea. It's a \"generator\" that quickly builds up a project (usually based on someone elses stack definitions).</p><p>It's very... opinionated, by design. If you're using a prebuilt generator you'll get all kinds of things out of the box, like a webpack/react application with xyz already part of the process.</p><p>The other side of the coin is that you can also use it to build your own generator, like the styleguide builder ideas we had. You can package up your workflow and make it reuable.</p>",
+      "rank": 3,
       "notes": "",
       "tags": [
         "Automation",
@@ -552,9 +581,9 @@
       "id": "web-animations-api",
       "title": "Web Animations API",
       "link": "//developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API",
-      "content": "<p></p>",
-      "rank": 0,
-      "notes": "",
+      "content": "<p>Currently a bit cutting edge in that it hasn't been integrated into browsers. But it's a potentially big step in front end animations that negats things like velocity.js or snapsvg.</p>",
+      "rank": 4,
+      "notes": "Keeping my eye on this one.",
       "tags": [
         "Animation"
       ],
@@ -578,8 +607,8 @@
       "id": "velocityjs",
       "title": "Velocity.js",
       "link": "//velocityjs.org/",
-      "content": "<p></p>",
-      "rank": 0,
+      "content": "<p>Compared to the animate aspect of jQuery, but cleaner and faster (and isolated).</p><p>Interestingly it also competes a lot with CSS animations, but the theory is that if you're already using JS for some of the animation, then it you probably don't want to mix and match.</p>",
+      "rank": 4,
       "notes": "",
       "tags": [
         "Animation",
@@ -720,8 +749,8 @@
       "id": "wordpress",
       "title": "WordPress",
       "link": "http://wordpress.org/",
-      "content": "<p></p>",
-      "rank": 0,
+      "content": "<p>We all know the big guy in the open source, blog turned any website you need platform.</p>",
+      "rank": 4,
       "notes": "",
       "tags": [
         "CMS",
@@ -954,9 +983,9 @@
       "id": "underscore",
       "title": "Underscore",
       "link": "http://underscorejs.org/",
-      "content": "<p></p>",
-      "rank": 1,
-      "notes": "Not sure why, but I'm really not excited about looking into this",
+      "content": "<p>Additional functions for JavaScript. It's a bunch more things you either can't do, or would be convoluted with vanilla javascript.</p><p>Seems really useful, but for some reason getting more power with JavaScript just feels like more to learn.",
+      "rank": 3,
+      "notes": "",
       "tags": [
         "Library",
         "JavaScript"
