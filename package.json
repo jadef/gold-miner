@@ -5,7 +5,7 @@
   "author": "Jade Faist",
   "repository": {
     "type": "git",
-    "url": "git@bitbucket.org:jadef/gold-miner.git"
+    "url": "git@github.com:jadef/gold-miner.git"
   },
   "license": "ISC",
   "dependencies": {
