@@ -6,11 +6,11 @@ svg {
   // -- Color class naming
   // backgrounds
   .c-bg-light {
-    fill: $c-white;
+    fill: $c-svg-light;
   }
 
   .c-bg-primary {
-    fill: $c-primary;
+    fill: $c-svg-primary;
   }
 
   .c-bg-accent {
@@ -22,12 +22,12 @@ svg {
   }
 
   .c-bg-dark {
-    fill: $c-black;
+    fill: $c-svg-dark;
   }
 
   // strokes
   .c-s-light {
-    stroke: $c-white;
+    stroke: $c-svg-light;
   }
 
   .c-s-accent {

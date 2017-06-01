@@ -1,30 +1,65 @@
-// ----- Colors
-$c-white:         #fff;
-$c-orange:        #de7a22;
-$c-orange2:       #f4cc70;
-$c-light-orange:  #e48e42;
-$c-tan:           #f8e4b5;
-$c-tan2:          #fdf9f0;
-$c-burnt-tan:     #d7c69d;
-$c-teal:          #20948b;
-$c-teal2:         #086059;
-$c-black:         #4a4a4a;
+// ----- Themes
+// - 1
+$c-1-primary:       #de7a22;
+$c-1-secondary:     #f4cc70;
+$c-1-light:         #fff;
+$c-1-dark:          #4a4a4a;
+$c-1-accent:        #20948b;
+$c-1-accent-light:  lighten($c-1-accent, 15%);
+$c-1-accent-dark:   darken($c-1-accent, 10%);
+$c-1-background:    lighten($c-1-secondary, 25%);
 
+// - 2
+$c-2-primary:       #1995ad;
+$c-2-secondary:     #a1d7e2;
+$c-2-light:         #f1f1f2;
+$c-2-dark:          #000;
+$c-2-accent:        #bf292c;
+$c-2-accent-light:  lighten($c-2-accent, 20%);
+$c-2-accent-dark:   darken($c-2-accent, 20%);
+$c-2-background:    lighten($c-2-secondary, 28%);
+
+// - 3
+$c-3-primary:       #fbcd4b;
+$c-3-secondary:     #edeca0;
+$c-3-light:         #fff;
+$c-3-dark:          #282623;
+$c-3-accent:        #88a550;
+$c-3-accent-light:  lighten($c-3-accent, 20%);
+$c-3-accent-dark:   darken($c-3-accent, 18%);
+$c-3-background:    lighten($c-3-secondary, 22%);
+
+// - 4
+$c-4-primary:       #4cb5f5;
+$c-4-secondary:     #e4e1dc;
+$c-4-light:         #fff;
+$c-4-dark:          #000;
+$c-4-accent:        #b3c100;
+$c-4-accent-light:  lighten($c-4-accent, 5%);
+$c-4-accent-dark:   darken($c-4-accent, 12%);
+$c-4-background:    lighten($c-4-secondary, 10%);
+
+// --------------
 // ----- Pallette
-$c-primary:       $c-orange;
-$c-secondary:     $c-orange2;
-$c-light:         $c-white;
-$c-dark:          $c-black;
-$c-accent:        $c-teal;
-$c-background:    $c-tan2;
+$c-primary:       $c-1-primary;
+$c-secondary:     $c-1-secondary;
+$c-light:         $c-1-light;
+$c-dark:          $c-1-dark;
+$c-accent:        $c-1-accent;
+$c-accent-light:  $c-1-accent-light;
+$c-accent-dark:   $c-1-accent-dark;
+$c-background:    $c-1-background;
 
 // ----- Gradients
-$c-gr-light:   linear-gradient($c-white 0%, $c-background 50%);
-$c-gr-light2:  linear-gradient($c-white 0%, $c-secondary 100%);
+$c-gr-light:   linear-gradient($c-light 0%, $c-background 50%);
+$c-gr-light2:  linear-gradient($c-light 0%, $c-secondary 100%);
 $c-gr-primary: linear-gradient($c-primary 0%, $c-secondary 100%);
-$c-gr-accent:  linear-gradient(90deg, #47b8af 0%, $c-teal 100%);
+$c-gr-accent:  linear-gradient(90deg, $c-accent-light 0%, $c-accent 100%);
 
 // ---- SVG class association
-
-$c-svg-accent:      $c-teal;
-$c-svg-accent-dark: $c-teal2;
+$c-svg-primary:     $c-primary;
+$c-svg-secondary:   $c-secondary;
+$c-svg-light:       $c-light;
+$c-svg-dark:        $c-dark;
+$c-svg-accent:      $c-accent;
+$c-svg-accent-dark: $c-accent-dark;
