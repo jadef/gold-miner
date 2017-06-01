@@ -1,4 +1,8 @@
 // ----- Themes
+// Defined with number identifier
+// Shouldn't be used directly anywhere but below in the lower
+// definition sections of this file
+
 // - 1
 $c-1-primary:       #de7a22;
 $c-1-secondary:     #f4cc70;
@@ -41,6 +45,8 @@ $c-4-background:    lighten($c-4-secondary, 10%);
 
 // --------------
 // ----- Pallette
+// Color variables to use throughout the styles
+
 $c-primary:       $c-1-primary;
 $c-secondary:     $c-1-secondary;
 $c-light:         $c-1-light;
@@ -51,15 +57,8 @@ $c-accent-dark:   $c-1-accent-dark;
 $c-background:    $c-1-background;
 
 // ----- Gradients
+// Define any css gradients here for organization and reuse
 $c-gr-light:   linear-gradient($c-light 0%, $c-background 50%);
 $c-gr-light2:  linear-gradient($c-light 0%, $c-secondary 100%);
 $c-gr-primary: linear-gradient($c-primary 0%, $c-secondary 100%);
 $c-gr-accent:  linear-gradient(90deg, $c-accent-light 0%, $c-accent 100%);
-
-// ---- SVG class association
-$c-svg-primary:     $c-primary;
-$c-svg-secondary:   $c-secondary;
-$c-svg-light:       $c-light;
-$c-svg-dark:        $c-dark;
-$c-svg-accent:      $c-accent;
-$c-svg-accent-dark: $c-accent-dark;

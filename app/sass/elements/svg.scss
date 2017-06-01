@@ -6,31 +6,31 @@ svg {
   // -- Color class naming
   // backgrounds
   .c-bg-light {
-    fill: $c-svg-light;
+    fill: $c-light;
   }
 
   .c-bg-primary {
-    fill: $c-svg-primary;
+    fill: $c-primary;
   }
 
   .c-bg-accent {
-    fill: $c-svg-accent;
+    fill: $c-accent;
   }
 
   .c-bg-accent-dark {
-    fill: $c-svg-accent-dark;
+    fill: $c-accent-dark;
   }
 
   .c-bg-dark {
-    fill: $c-svg-dark;
+    fill: $c-dark;
   }
 
   // strokes
   .c-s-light {
-    stroke: $c-svg-light;
+    stroke: $c-light;
   }
 
   .c-s-accent {
-    stroke: $c-svg-accent;
+    stroke: $c-accent;
   }
 }

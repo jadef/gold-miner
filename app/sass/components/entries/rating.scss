@@ -34,13 +34,13 @@
 
     svg {
       polygon {
-        fill: $c-svg-light;
+        fill: $c-light;
       }
 
       &.no {
         polygon {
-          fill: $c-svg-secondary;
-          stroke: $c-svg-secondary;
+          fill: $c-secondary;
+          stroke: $c-secondary;
         }
       }
     }
