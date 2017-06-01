@@ -4,7 +4,7 @@
       "id": "ghost",
       "title": "Ghost",
       "link": "//ghost.org/",
-      "content": "<p>Remember when WordPress was blog platform? That's what Ghost is, just in modern times. It's not trying to be all the things, but just the linear published content aka blog.</p><p>The technology stack is interesting though, it's ember on node. So handlebar templates are a big part of the theming.</p>",
+      "content": "<p>Remember when WordPress was a blog platform? That's what Ghost is, just in modern times. It's not trying to be all the things, but just the linear published content... aka blog.</p><p>The technology stack is interesting though, it's ember on node. So handlebar templates are a big part of the theming.</p>",
       "rank": 3,
       "notes": "",
       "tags": [
@@ -187,7 +187,7 @@
       "id": "swift",
       "title": "Swift",
       "link": "//swift.org/",
-      "content": "<p>Apple's newish replacement for C-based languages. I believe it's focused mostly toward app programming, but really, it's a software language that could be used for all kinds of thingsl</p>",
+      "content": "<p>Apple's newish replacement for C-based languages. I believe it's focused mostly toward app programming, but really, it's a software language that could be used for all kinds of things.</p>",
       "rank": 2,
       "notes": "",
       "tags": [
@@ -226,7 +226,7 @@
       "id": "native",
       "title": "React Native",
       "link": "//facebook.github.io/react-native/",
-      "content": "<p>Like react? Want to build apps for iOS and Android? Sure, why not.</p><p>A whole nother world, this could be an interesting way to cross from the web app to the native app world a little easier.</p>",
+      "content": "<p>Like react? Want to build apps for iOS and Android? Sure, why not.</p><p>A whole other world, this could be an interesting way to cross from the web app to the native app world a little easier.</p>",
       "rank": 3,
       "notes": "",
       "tags": [
@@ -267,7 +267,7 @@
       "id": "jekyll",
       "title": "Jekyll",
       "link": "//jekyllrb.com/",
-      "content": "<p>An interesting \"light CMS \" that builds static sites off of your different template/content pages.</p><p>I wouldn't have given it any attention except Github Pages uses it, and so I got my feet wet with my io site.</p>",
+      "content": "<p>An interesting \"light CMS \" that builds static sites off of your different template/content pages.</p><p>I wouldn't have given it any attention except GitHub pages uses it, and so I got my feet wet with my .io site.</p>",
       "rank": 2,
       "notes": "",
       "tags": [
@@ -294,7 +294,7 @@
       "id": "webpack",
       "title": "Web Pack",
       "link": "//webpack.js.org/",
-      "content": "<p>A little daunting at first, but it can become part of a JS build pretty well. Similar to what Browserify was doing, but way more modularly bundly. It can serve up JS assets, it can compile CSS, it can (propably) handle different templating aspects.</p><p>It can fell like it pretty much negates the need for task runners, but they say they're a little different.</p>",
+      "content": "<p>A little daunting at first, but it can become part of a JS build pretty well. Similar to what Browserify was doing, but way more modularly bundly. It can serve up JS assets, it can compile CSS, it can (propably) handle different templating aspects.</p><p>It can feel like it pretty much negates the need for task runners, but they say they're a little different.</p>",
       "rank": 4,
       "notes": "",
       "tags": [
@@ -379,7 +379,7 @@
       "id": "postcss",
       "title": "PostCSS",
       "link": "//postcss.org/",
-      "content": "<p>Preprocessor CSS building has always felt like a semi temporary step in the growth of CSS. This is the next step in that it's not exactly the same as preprocessor builds, but kind of is.</p><p>It's technically just a platform for a bunch of different plugins, so it can be as singular as autoprefixes, or have all kinds of progressive, modular, precss (not sass anymore).</p>",
+      "content": "<p>Preprocessor CSS building has always felt like a semi temporary step in the growth of CSS. This is the next step in that it's not exactly the same as preprocessor builds... but kind of is.</p><p>It's technically just a platform for a bunch of different plugins, so it can be as singular as autoprefixes, or have all kinds of progressive, modular, precss (not sass anymore) stuff going on.</p>",
       "rank": 4,
       "notes": "",
       "tags": [
@@ -393,7 +393,7 @@
       "id": "eslint",
       "title": "ESLint",
       "link": "//eslint.org/",
-      "content": "<p>Pluggable JS linter, which means I've probably just scratched the surface. But even at it's most basic, it's nice to have the reinforcement of good JS.</p><p>Because linting is a little work up front, but then just keeps you on track during dev, I think this is an important part of any build. Plays nice with JSX which is good.</p>",
+      "content": "<p>Pluggable JS linter, which means I've probably just scratched the surface. But even at its most basic, it's nice to have the reinforcement of good JS.</p><p>Because linting is a little work up front, but then just keeps you on track during dev, I think this is an important part of any build. Plays nice with JSX which is good.</p>",
       "rank": 4,
       "notes": "",
       "tags": [
@@ -540,7 +540,7 @@
       "id": "vuejs",
       "title": "Vue.js",
       "link": "//vuejs.org",
-      "content": "<p>A UI framework that's touted as progressive and incrementally adoptable (rather than a full buy in I guess).</p><p>Supposedly kind of approachable, it follows a pretty JS single page app approach of attaching to basic DOM elements with templating, bindings (and yes, components).</p>",
+      "content": "<p>A UI framework thats touted as progressive and incrementally adoptable (rather than a full buy in I guess).</p><p>Supposedly kind of approachable, it follows a pretty JS single page app approach of attaching to basic DOM elements with templating, bindings (and yes, components).</p>",
       "rank": 3,
       "notes": "",
       "tags": [
@@ -554,7 +554,7 @@
       "id": "yeoman",
       "title": "Yeoman",
       "link": "//yeoman.io/",
-      "content": "<p>Scaffolding tool for webapps. Interesting idea. It's a \"generator\" that quickly builds up a project (usually based on someone elses stack definitions).</p><p>It's very... opinionated, by design. If you're using a prebuilt generator you'll get all kinds of things out of the box, like a webpack/react application with xyz already part of the process.</p><p>The other side of the coin is that you can also use it to build your own generator, like the styleguide builder ideas we had. You can package up your workflow and make it reuable.</p>",
+      "content": "<p>Scaffolding tool for webapps. Interesting idea. It's a \"generator\" that quickly builds up a project (usually based on someone elses stack definitions).</p><p>It's very opinionated... by design. If you're using a prebuilt generator you'll get all kinds of things out of the box, like a webpack/react application with xyz already part of the process.</p><p>The other side of the coin is that you can also use it to build your own generator, like the styleguide builder ideas we had. You can package up your workflow and make it reuable.</p>",
       "rank": 3,
       "notes": "",
       "tags": [
@@ -567,7 +567,7 @@
       "id": "snapsvg",
       "title": "Snap.svg",
       "link": "//snapsvg.io/",
-      "content": "<p>A JavaScript library that helps with interacting (mostly means animating) SVGs.</p><p>SVGs are very interesting to me, and this is a nice way to speed up the learning curve for manipulation. It's kind of like velocity, but more specifically targetted. It might not last forever, but right now it's a decent solution.</p>",
+      "content": "<p>A JavaScript library that helps with interacting wish (mostly means animating) SVGs.</p><p>SVGs are very interesting to me, and this is a nice way to speed up the learning curve for manipulation. It's kind of like velocity, but more specifically targetted. It might not last forever, but right now it's a decent solution.</p>",
       "rank": 4,
       "notes": "",
       "tags": [
@@ -607,7 +607,7 @@
       "id": "velocityjs",
       "title": "Velocity.js",
       "link": "//velocityjs.org/",
-      "content": "<p>Compared to the animate aspect of jQuery, but cleaner and faster (and isolated).</p><p>Interestingly it also competes a lot with CSS animations, but the theory is that if you're already using JS for some of the animation, then it you probably don't want to mix and match.</p>",
+      "content": "<p>Compared to the animate aspect of jQuery, but cleaner and faster (and isolated).</p><p>Interestingly it also competes a lot with CSS animations, but the theory is that if you're already using JS for some of the animation, then you probably don't want to mix and match.</p>",
       "rank": 4,
       "notes": "",
       "tags": [
@@ -621,7 +621,7 @@
       "id": "requirejs",
       "title": "Require.js",
       "link": "//requirejs.org/",
-      "content": "<p>It's actually been around for a while, but for some reason I've never had experience with it. I think that's because it's kind of just the basic aspect of modular thinking that the larger libraries do (looks very similar to React structure).</p>",
+      "content": "<p>It has actually been around for a while, but for some reason I've never had experience with it. I think that's because it's kind of just the basic aspect of modular thinking that the larger libraries do (looks very similar to React or vue structure).</p>",
       "rank": 3,
       "notes": "",
       "tags": [
@@ -634,7 +634,7 @@
       "id": "angular",
       "title": "Angular",
       "link": "https://angular.io",
-      "content": "<p>Angular has become a big player. If/when I get my hands in it, I'll most likely be in version 2 (vs 1) which was a major overhaul.</p><p>Worth noting, they will move to semantic versioning, so they're already on to 4, or 5 or whatever</p>",
+      "content": "<p>Angular has become a big player. If/when I get in it, I'll most likely be in version 2 (vs 1) which was a major overhaul.</p><p>Worth noting, they will move to semantic versioning, so they're already on to 4, or 5 or whatever.</p>",
       "rank": 3,
       "notes": "Considering looking into it, but put it lower in priority.",
       "tags": [
@@ -673,7 +673,7 @@
       "id": "burbon",
       "title": "Burbon",
       "link": "http://bourbon.io/",
-      "content": "<p>Another CSS Framework (in Sass). Comparable to Compass, and honestly, not nearly as pertinent as it used to be for me as it used to be since things like autoprefixer and flexbox have replaced a lot of the need.</p>",
+      "content": "<p>Another CSS Framework (in Sass). Comparable to Compass, and honestly, not nearly as pertinent as it used to be for me since things like autoprefixer and flexbox have replaced a lot of the need.</p>",
       "rank": 3,
       "notes": "",
       "tags": [
@@ -735,7 +735,7 @@
       "id": "ember",
       "title": "Ember",
       "link": "http://emberjs.com/",
-      "content": "<p>A single page app framework that still has potential, but I feel like React and Angular 2 have really pushed this back. Unless work pushed me in this direction I don't think it will ever by in my world.</p>",
+      "content": "<p>A single page app framework that still has potential, but I feel like React and Angular 2 have really pushed this back. Unless work pushed me in this direction I don't think it will ever be in my world.</p>",
       "rank": 2,
       "notes": "",
       "tags": [
