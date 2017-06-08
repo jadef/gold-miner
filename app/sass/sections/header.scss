@@ -2,8 +2,8 @@
 
 // ----- Header
 header {
-  background-color: $c-background;
-  background-image: linear-gradient($c-background 80%, adjust-color($c-background, $saturation: -20%, $lightness: -10%) 100%);
+  background-color: $c-background-dk;
+  background-image: linear-gradient($c-background-dk 80%, adjust-color($c-background-dk, $saturation: -35%, $lightness: -15%) 100%);
   height: $s-header;
   overflow: hidden;
   position: fixed;

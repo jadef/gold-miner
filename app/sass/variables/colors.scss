@@ -12,6 +12,7 @@ $c-1-accent:        #20948b;
 $c-1-accent-light:  lighten($c-1-accent, 15%);
 $c-1-accent-dark:   darken($c-1-accent, 10%);
 $c-1-background:    lighten($c-1-secondary, 25%);
+$c-1-background-dk: #f8e4b5;
 
 // - 2
 $c-2-primary:       #1995ad;
@@ -22,6 +23,7 @@ $c-2-accent:        #bf292c;
 $c-2-accent-light:  lighten($c-2-accent, 20%);
 $c-2-accent-dark:   darken($c-2-accent, 20%);
 $c-2-background:    lighten($c-2-secondary, 28%);
+$c-2-background-dk: #efefef;
 
 // - 3
 $c-3-primary:       #fbcd4b;
@@ -32,6 +34,7 @@ $c-3-accent:        #88a550;
 $c-3-accent-light:  lighten($c-3-accent, 20%);
 $c-3-accent-dark:   darken($c-3-accent, 18%);
 $c-3-background:    lighten($c-3-secondary, 22%);
+$c-3-background-dk: #f0eee4;
 
 // - 4
 $c-4-primary:       #4cb5f5;
@@ -42,6 +45,7 @@ $c-4-accent:        #b3c100;
 $c-4-accent-light:  lighten($c-4-accent, 5%);
 $c-4-accent-dark:   darken($c-4-accent, 12%);
 $c-4-background:    lighten($c-4-secondary, 10%);
+$c-4-background-dk: #eae9e8;
 
 // --------------
 // ----- Pallette
@@ -55,6 +59,7 @@ $c-accent:        $c-1-accent;
 $c-accent-light:  $c-1-accent-light;
 $c-accent-dark:   $c-1-accent-dark;
 $c-background:    $c-1-background;
+$c-background-dk: $c-1-background-dk;
 
 // ----- Gradients
 // Define any css gradients here for organization and reuse

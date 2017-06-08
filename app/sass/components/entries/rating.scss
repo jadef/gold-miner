@@ -39,8 +39,8 @@
 
       &.no {
         polygon {
-          fill: $c-secondary;
-          stroke: $c-secondary;
+          fill: lighten($c-primary, 10%);
+          stroke: lighten($c-primary, 10%);
         }
       }
     }
