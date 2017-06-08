@@ -120,19 +120,6 @@
       "stamp": "2017/05/18"
     },
     {
-      "id": "prototype",
-      "title": "Prototype",
-      "link": "//prototypejs.org/",
-      "content": "<p></p>",
-      "rank": 0,
-      "notes": "",
-      "tags": [
-        "JavaScript",
-        "Library"
-      ],
-      "stamp": "2017/05/18"
-    },
-    {
       "id": "selenium",
       "title": "Selenium",
       "link": "//www.seleniumhq.org/",
