@@ -4,6 +4,13 @@
 
 <p align="center">A fun (and useful) pet project to keep track of personal notes on various web technologies.</p>
 
+[![CircleCI](https://img.shields.io/circleci/project/github/RedSparr0w/node-csgo-parser.svg)](https://circleci.com/gh/jadef/gold-miner)
+
+[![VersionEye](https://img.shields.io/versioneye/d/ruby/rails.svg)](https://www.versioneye.com/user/projects/5941cac76725bd0030ec507d)
+
+[![GitHub release](https://img.shields.io/github/release/qubyte/rubidium.svg)](https://github.com/jadef/gold-miner/releases/latest)
+
+
 # Table of Contents
 
 * [Setup](#setup)
