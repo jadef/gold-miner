@@ -51,7 +51,7 @@
   },
   "jest": {
     "moduleNameMapper": {
-      "^.*\\.scss$": "<rootDir>/__mocks__/styleMock.js"
+      "^.*\\.scss$": "<rootDir>/testing/mocks/styleMock.js"
     }
   }
 }
