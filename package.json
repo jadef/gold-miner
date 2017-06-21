@@ -50,8 +50,12 @@
     "test": "jest"
   },
   "jest": {
+    "testRegex": "(/tests/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "testPathIgnorePatterns" : [
+      "<rootDir>/tests/mocks/"
+    ],
     "moduleNameMapper": {
-      "^.*\\.scss$": "<rootDir>/testing/mocks/styleMock.js"
+      "^.*\\.scss$": "<rootDir>/tests/mocks/styleMock.js"
     }
   }
 }
