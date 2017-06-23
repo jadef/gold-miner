@@ -98,18 +98,24 @@ Technically also components, these are isolated into more "mid-level" structural
 **v1.0**
 
 - Introduce React
+- Data storage
+- Content build
 
 **v1.1**
 
-- Data Storage
-- Content build
+- JS and Sass linting
+- JS Testing
+- CI build / badges
+- Controls functionality
 
 **v1.2**
 
-- Controls functionality
+- Function cleanup / bugfixes
+- Frontend animations / polish
 
 **v1.3**
 
-- Frontend animations/polish
+- Production build
+
 
 <p align="center"><img src="https://rawgithub.com/jadef/gold-miner/master/docs/images/logo-sm.svg" alt="Mining for Gold" /></p>
