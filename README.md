@@ -4,6 +4,8 @@
 
 <p align="center">A fun (and useful) pet project to keep track of personal notes on various web technologies.</p>
 
+<p align="center"><a href="https://circleci.com/gh/jadef/gold-miner"><img src="https://img.shields.io/circleci/project/github/jadef/gold-miner.svg" alt="Circle CI" /></a> <a href='https://www.versioneye.com/user/projects/5941cac76725bd0030ec507d'><img src='https://www.versioneye.com/user/projects/5941cac76725bd0030ec507d/badge.svg?style=flat-square' alt="Dependency Status" /></a>  <a href="https://github.com/jadef/gold-miner/releases/latest"><img src="https://img.shields.io/github/release/jadef/gold-miner/all.svg" alt="Dependency Status" /></a></p>
+
 # Table of Contents
 
 * [Setup](#setup)
