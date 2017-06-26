@@ -83,35 +83,7 @@ Technically also components, these are isolated into more "mid-level" structural
 
 ## Roadmap
 
-**v0.0**
+![Roadmap](https://rawgithub.com/jadef/gold-miner/master/docs/images/roadmap.png)
 
-- Document
-- Architect
-
-**v0.1**
-
-- Environment setup
-- Wireframes
-
-**v0.2**
-
--  Frontend statics
-
-**v1.0**
-
-- Introduce React
-
-**v1.1**
-
-- Data Storage
-- Content build
-
-**v1.2**
-
-- Controls functionality
-
-**v1.3**
-
-- Frontend animations/polish
 
 <p align="center"><img src="https://rawgithub.com/jadef/gold-miner/master/docs/images/logo-sm.svg" alt="Mining for Gold" /></p>
