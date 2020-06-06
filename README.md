@@ -35,7 +35,7 @@ The absolute basic: `yarn start`
 
 ### JavaScript
 
-This is a [React](https://facebook.github.io/react/) project, so obviously JS heavy. It has [babel](http://babeljs.io/), notably with `"presets": ["es2015", "react", "stage-2"]`.
+This is a [React](https://facebook.github.io/react/) project, so obviously JS heavy. It has [babel](http://babeljs.io/), notably with `"presets": ["@babel/preset-env", "@babel/preset-react"]` and one plugin of `"@babel/plugin-proposal-class-properties"`.
 
 The (dev) build itself is using [Webpack](https://webpack.js.org/). The local dev uses a combination of [Browsersync](https://www.browsersync.io/) and webpack dev middlewhare. Since it runs in middlewhere there is no "compilation" to a public folder, it's created in memory. This also has a layer of "hot reloading" so that during dev the whole page doesn't need refreshing, saving a `.jsx` file will just reload affected components.
 
