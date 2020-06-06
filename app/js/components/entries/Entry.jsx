@@ -38,7 +38,7 @@ class Entry extends React.Component {
       <section className="entry" id={this.checkLetter()}>
         <div className="title" id={entry.id}>
           <h3>{entry.title}</h3>
-          {entry.link ? <a className="external" href={entry.link} target="_blank"><img src="images/external.svg" alt="external link" /></a> : null}
+          {entry.link ? <a className="external" href={entry.link} target="_blank" rel="noreferrer"><img src="images/external.svg" alt="external link" /></a> : null}
         </div>
         <Rating rank={entry.rank} />
         <div className="desc">

@@ -133,7 +133,7 @@ class Logo extends React.Component {
       <section className="logo">
   <svg className={this.state.scrollClass} id="mining-crest" width="250px" height="250px" viewBox="0 0 250 250" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
     <title>mining crest</title>
-    <desc>Created by Jade Faist for "Gold Miner": https://github.com/jadef/gold-miner</desc>
+    <desc>Created by Jade Faist for Gold Miner: https://github.com/jadef/gold-miner</desc>
     <defs>
         <filter x="-2.9%" y="-2.9%" width="107.4%" height="107.5%" filterUnits="objectBoundingBox" id="filter-1">
             <feOffset dx="2" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>

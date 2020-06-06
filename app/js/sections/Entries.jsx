@@ -146,7 +146,7 @@ class Entries extends React.Component {
             </g>
           </svg>
 
-          <p className="oops">Oops, couldn't find anything. Maybe you filtered a bit too far?</p>
+          <p className="oops">Oops, couldn&aps;t find anything. Maybe you filtered a bit too far?</p>
         </div>
       );
     }
