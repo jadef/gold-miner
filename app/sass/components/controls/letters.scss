@@ -24,6 +24,17 @@
       text-align: center;
       width: 100%;
 
+      a {
+        color: $c-dark;
+        display: block;
+        width: 100%;
+      }
+
+      a:hover,
+      a:focus {
+        color: $c-accent;
+      }
+
       li {
         cursor: pointer;
         display: flex;
@@ -44,17 +55,6 @@
             cursor: default;
           }
         }
-      }
-
-      a {
-        color: $c-dark;
-        display: block;
-        width: 100%;
-      }
-
-      a:hover,
-      a:focus {
-        color: $c-accent;
       }
     }
 
