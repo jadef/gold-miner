@@ -24,8 +24,8 @@
 version: 2.1
 jobs:
   build:
-    docker:
-      - image: 'circleci/node:latest'
+    # docker:
+    #   - image: 'circleci/node:latest'
     steps:
-      - checkout
+      # - checkout
       - run: echo 'hello world'
