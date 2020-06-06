@@ -1,24 +1,24 @@
 # Replaces NPM with Yarn in CircleCI
-machine:
-  environment:
-    PATH: "${PATH}:${HOME}/${CIRCLE_PROJECT_REPONAME}/node_modules/.bin"
-  node:
-    version: v6.11.0
+# machine:
+#   environment:
+#     PATH: "${PATH}:${HOME}/${CIRCLE_PROJECT_REPONAME}/node_modules/.bin"
+#   node:
+#     version: v6.11.0
 
-dependencies:
-  override:
-    - yarn
-  cache_directories:
-    - ~/.cache/yarn
+# dependencies:
+#   override:
+#     - yarn
+#   cache_directories:
+#     - ~/.cache/yarn
 
-test:
-  override:
-    - yarn test
+# test:
+#   override:
+#     - yarn test
 
-general:
-  branches:
-    only:
-     - master
+# general:
+#   branches:
+#     only:
+#      - master
 
 ## Basic CI start
 version: 2.1
