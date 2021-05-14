@@ -17,7 +17,6 @@ module.exports = {
     "filename": 'bundle.js'
   },
   "plugins": [
-    new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     // new webpack.NoEmitOnErrorsPlugin(),
     new StyleLintPlugin({
@@ -37,21 +36,17 @@ module.exports = {
         "enforce": "pre",
         "test": /\.jsx?$/,
         "exclude": /node_modules/,
-        "loader": "eslint-loader",
-        "options": {
-          "failOnError": false,
-        }
+        "use": [
+          { "loader": "eslint-loader" }
+        ]
       }, {
         "test": /\.jsx?$/,
         "exclude": /node_modules/,
-        "loaders": [
-          'react-hot-loader/webpack',
-          'babel-loader',
-          'webpack-module-hot-accept'
+        "use": [
+          { "loader": "react-hot-loader/webpack" },
+          { "loader": "babel-loader" },
+          { "loader": "webpack-module-hot-accept" }
         ]
-      }, {
-        "test": require.resolve('snapsvg'),
-        "loader": 'imports-loader?this=>window,fix=>module.exports=0'
       }, {
         "test": /\.scss$/,
         "use": [
