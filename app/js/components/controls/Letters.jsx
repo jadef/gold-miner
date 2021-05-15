@@ -13,10 +13,11 @@ import PropTypes from 'prop-types';
 TODO:
 - [x] Data controlled letters
 - [ ] First one active
-- [ ] Map jumps
+- [x] Map jumps
 - [ ] Track location
 - [ ] Closest location
 - [ ] Update location
+- [ ] Accessible scroll
 */
 
 // -- Styles
@@ -82,15 +83,22 @@ class ControlsLetters extends React.Component {
 class Letter extends React.Component {
 
   handleClick(event) {
+    event.preventDefault();
     if (!this.props.disabled) {
       // Make only this active (passed to parent component)
       this.props.onClick(this.props.index);
       // Compute math for Handle Position
-      let topLocation = this.props.index / 26 * 100;
+      let handleLocation = this.props.index / 26 * 100;
       // Find Handle element and add top style
-      document.getElementById("letter-handle").style.top = topLocation + "%";
-    } else {
-      event.preventDefault();
+      document.getElementById("letter-handle").style.top = handleLocation + "%";
+      // Smooth scroll to destination
+      let target = event.target.hash.substring(1);
+      let targetLocation = document.getElementById(target).offsetTop - 100;
+      window.scroll({
+        top: targetLocation,
+        left: 0,
+        behavior: 'smooth'
+      });
     }
   }
 

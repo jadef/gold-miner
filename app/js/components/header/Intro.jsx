@@ -6,7 +6,7 @@ import '../../../sass/components/header/intro.scss';
 // -- Data
 import packageInfo from '../../data/app.json'
 
-const projectName = packageInfo.packageInfo;
+const projectName = packageInfo.projectName;
 const intro = packageInfo.intro;
 
 /* -- Hierarchy
