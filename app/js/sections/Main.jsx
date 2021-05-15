@@ -8,7 +8,7 @@ import Entries from './Entries';
 import '../../sass/sections/main.scss';
 
 // -- Data
-import packageInfo from '../data/app.json'
+import packageInfo from '../data/entries.json'
 
 const entries = packageInfo.entries;
 
