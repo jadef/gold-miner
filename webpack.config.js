@@ -1,6 +1,7 @@
 var webpack = require('webpack');
 var path = require('path');
-var StyleLintPlugin = require('stylelint-webpack-plugin');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
 module.exports = {
   "mode": "development",
@@ -18,6 +19,7 @@ module.exports = {
   },
   "plugins": [
     new webpack.HotModuleReplacementPlugin(),
+    new ReactRefreshWebpackPlugin(),
     // new webpack.NoEmitOnErrorsPlugin(),
     new StyleLintPlugin({
       "configFile": 'stylelint.config.js'
@@ -43,7 +45,6 @@ module.exports = {
         "test": /\.jsx?$/,
         "exclude": /node_modules/,
         "use": [
-          { "loader": "react-hot-loader/webpack" },
           { "loader": "babel-loader" },
           { "loader": "webpack-module-hot-accept" }
         ]

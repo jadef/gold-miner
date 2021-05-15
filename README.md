@@ -21,8 +21,6 @@
 
 ## Setup
 
-`TODO` List local dev requirements
-
 ### Install dependencies
 
 NPM works, but I've moved to Yarn for package dependencies. If you haven't already installed yarn on the machine (but do have homebrew): `brew install yarn`
@@ -37,7 +35,7 @@ The absolute basic: `yarn start`
 
 This is a [React](https://facebook.github.io/react/) project, so obviously JS heavy. It has [babel](http://babeljs.io/), notably with `"presets": ["@babel/preset-env", "@babel/preset-react"]` and one plugin of `"@babel/plugin-proposal-class-properties"`.
 
-The (dev) build itself is using [Webpack](https://webpack.js.org/). The local dev uses a combination of [Browsersync](https://www.browsersync.io/) and webpack dev middlewhare. Since it runs in middlewhere there is no "compilation" to a public folder, it's created in memory. This also has a layer of "hot reloading" so that during dev the whole page doesn't need refreshing, saving a `.jsx` file will just reload affected components.
+The (dev) build itself is using [Webpack](https://webpack.js.org/). The local dev uses a combination of [Browsersync](https://www.browsersync.io/), webpack dev middleware and react-refresh. Since it runs in middleware there is no "compilation" to a public folder, it's created in memory. This also has a layer of "fast refresh" so that during dev the whole page doesn't need refreshing, saving a `.jsx` file will just reload affected components.
 
 All of that said, it should **just work**, but the files to pay most attention to in relation, more or less in this order:
 
@@ -51,7 +49,7 @@ All of that said, it should **just work**, but the files to pay most attention t
 
 [Eslint](http://eslint.org/) is integrated into the dev build (as well as being independently triggered.) The rules are part of the configuration file found at `.eslintrc.json`. However, it's notable just `"extends": ["eslint:recommended", "plugin:react/recommended"]`
 
-If you want to use the linting independent of the build, `yarn run lint` will do a single run.
+If you want to use the linting independent of the build, `yarn run lint` clubs js and sass, or more specifically `yarn run lint:js` will do a single run.
 
 ### Sass
 
@@ -59,7 +57,9 @@ Sass is also compiled by webpack in the dev environment. Notably, the `.scss` fi
 
 #### Sass Linting
 
-Similar to JS linting, [Stylelint](https://stylelint.io/) is integrated into webpack, and runs every time the Sass is first compiled or modified. To see the rules (based on [stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard)) can be found at `stylelint.config.js`
+Similar to JS linting, [Stylelint](https://stylelint.io/) is integrated into webpack, and runs every time the Sass is first compiled or modified. To see the rules (based on [stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard)) can be found at `stylelint.config.js`. 
+
+If you want to use the linting independent of the build, `yarn run lint` clubs js and sass, or more specifically `yarn run lint:sass` will do a single run.
 
 ## Structure
 
