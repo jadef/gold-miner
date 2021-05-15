@@ -49,7 +49,11 @@ All of that said, it should **just work**, but the files to pay most attention t
 
 [Eslint](http://eslint.org/) is integrated into the dev build (as well as being independently triggered.) The rules are part of the configuration file found at `.eslintrc.json`. However, it's notable just `"extends": ["eslint:recommended", "plugin:react/recommended"]`
 
-If you want to use the linting independent of the build, `yarn run lint` clubs js and sass, or more specifically `yarn run lint:js` will do a single run.
+If you want to use the linting independent of the build, `yarn lint` clubs js and sass, or more specifically `yarn lint:js` will do a single run.
+
+#### JS Testing
+
+The [Jest](https://jestjs.io/) testing framework is in place to cover the jsx files. Current plan is to use Jest for snapshot comparison.
 
 ### Sass
 
@@ -59,7 +63,7 @@ Sass is also compiled by webpack in the dev environment. Notably, the `.scss` fi
 
 Similar to JS linting, [Stylelint](https://stylelint.io/) is integrated into webpack, and runs every time the Sass is first compiled or modified. To see the rules (based on [stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard)) can be found at `stylelint.config.js`. 
 
-If you want to use the linting independent of the build, `yarn run lint` clubs js and sass, or more specifically `yarn run lint:sass` will do a single run.
+If you want to use the linting independent of the build, `yarn lint` clubs js and sass, or more specifically `yarn lint:sass` will do a single run.
 
 ## Structure
 

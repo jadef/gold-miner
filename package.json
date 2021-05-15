@@ -55,7 +55,7 @@
     "lint": "yarn lint:js && yarn lint:sass",
     "lint:js": "./node_modules/.bin/eslint -c .eslintrc.json --ext .js,.jsx app",
     "lint:sass": "yarn stylelint '**/*.scss'",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "jest": {
     "testRegex": "(/tests/.*|\\.(test|spec))\\.(ts|tsx|js)$",
