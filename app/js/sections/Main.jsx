@@ -8,7 +8,9 @@ import Entries from './Entries';
 import '../../sass/sections/main.scss';
 
 // -- Data
-import { entries } from '../data/entries.json'
+import packageInfo from '../data/app.json'
+
+const entries = packageInfo.entries;
 
 /* -- Hierarchy
   - App

@@ -16,6 +16,11 @@
   "globals": {
     "mina": false
   },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
   "rules": {
     "no-console": 1
   }

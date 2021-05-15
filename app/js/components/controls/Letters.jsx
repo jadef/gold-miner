@@ -23,7 +23,9 @@ TODO:
 import '../../../sass/components/controls/letters.scss';
 
 // -- Data
-import { letters } from '../../data/app.json'
+import packageInfo from '../../data/app.json'
+
+const letters = packageInfo.letters;
 
 // ---- All Letters Control
 class ControlsLetters extends React.Component {

@@ -5,7 +5,9 @@ import PropTypes from 'prop-types';
 import '../../../sass/components/controls/tags.scss';
 
 // -- Data
-import { tags } from '../../data/app.json'
+import packageInfo from '../../data/app.json'
+
+const tags = packageInfo.tags;
 
 /* -- Hierarchy
   - App
