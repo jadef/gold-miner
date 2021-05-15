@@ -48,13 +48,9 @@ module.exports = {
           { "loader": "webpack-module-hot-accept" }
         ]
       }, {
-        "test": require.resolve('snapsvg'),
+        "test": require.resolve('snapsvg/dist/snap.svg.js'),
         "use": [
-          { "loader": "imports-loader",
-            "options": {
-              wrapper: "window",
-              additionalCode: "module.exports=0"
-            }
+          { "loader": "imports-loader?wrapper=window&additionalCode=module.exports=0;"
           }
         ]
       }, {
