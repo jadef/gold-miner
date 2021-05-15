@@ -28,3 +28,7 @@ TODO.md
 # OS generated files #
 ######################
 .DS_Store
+
+# Build #
+######################
+app/bundle.js

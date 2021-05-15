@@ -7,14 +7,13 @@ var bundler = webpack(webpackConfig);
 
 browserSync({
   notify: false,
-  port: 5060,
+  port: 5080,
   server: {
     baseDir: 'app',
     index: "index.html",
     middleware: [
       webpackDevMiddleware(bundler, {
         publicPath: webpackConfig.output.publicPath,
-        noInfo: true,
         stats: {
           colors: true,
         //   modules: true,

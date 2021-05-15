@@ -4,7 +4,10 @@ import React from 'react';
 import '../../../sass/components/header/intro.scss';
 
 // -- Data
-import { projectName, intro  } from '../../data/app.json'
+import packageInfo from '../../data/app.json'
+
+const projectName = packageInfo.packageInfo;
+const intro = packageInfo.intro;
 
 /* -- Hierarchy
   - App
