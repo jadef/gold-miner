@@ -1,6 +1,69 @@
 {
   "entries": [
     {
+      "id": "isml",
+      "title": "isml",
+      "link": "",
+      "content": "<p>Would never have known it existed except it's the propietary template language of commerce cloud.</p><p>It's pretty much straight html, but with some key logic ammendments like <code>if</code> statements, decorator including, and variable setting.",
+      "rank": 3,
+      "notes": "",
+      "tags": [
+        "Abstraction",
+        "Templating"
+      ],
+      "stamp": "2020/05/16"
+    } , {
+      "id": "squarespace",
+      "title": "Squarespace",
+      "link": "https://www.squarespace.com/",
+      "content": "<p>It is what it is...Do it yourself websites without development knowledge. Direct parallel to wix.</p><p>Arguably also an eCom platform, but since it's baked in rather than an external component I'd say it also competes with the likes of shopify.</p>",
+      "rank": 2,
+      "notes": "",
+      "tags": [
+        "CMS",
+        "Platform",
+        "eCom"
+      ],
+      "stamp": "2020/05/16"
+    } , {
+      "id": "wix",
+      "title": "Wix",
+      "link": "https://www.wix.com/",
+      "content": "<p>It is what it is...Do it yourself websites without development knowledge. Direct parallel to squarespace.</p>",
+      "rank": 2,
+      "notes": "",
+      "tags": [
+        "CMS",
+        "Platform"
+      ],
+      "stamp": "2020/05/16"
+    } , {
+      "id": "shopify",
+      "title": "Shopify",
+      "link": "https://www.shopify.com/",
+      "content": "<p>No direct experience at time of writing this. But I picture them like the squarespace of eCom. Of course there's multiple options out there, but it's positioned itself as the easy, smaller business platform.</p>",
+      "rank": 2,
+      "notes": "",
+      "tags": [
+        "Ruby",
+        "eCom",
+        "Platform"
+      ],
+      "stamp": "2020/05/16"
+    } , {
+      "id": "commercecloud",
+      "title": "Commerce Cloud",
+      "link": "https://www.salesforce.com/products/commerce-cloud/overview/",
+      "content": "<p>SFCC. have got to know the in's and out's with icebreaker.</p><p>When it was demandware, the proprietary nature meant they introduced their own stuff like .isml, .ds, pipelines. All of which are fading away for more modern, standard javascript solutions.</p>",
+      "rank": 4,
+      "notes": "",
+      "tags": [
+        "JavaScript",
+        "eCom",
+        "Platform"
+      ],
+      "stamp": "2020/05/16"
+    } , {
       "id": "ghost",
       "title": "Ghost",
       "link": "//ghost.org/",
@@ -10,7 +73,8 @@
       "tags": [
         "CMS",
         "JavaScript",
-        "Node"
+        "Node",
+        "Platform"
       ],
       "stamp": "2017/05/26"
     },
@@ -51,7 +115,8 @@
       "notes": "",
       "tags": [
         "CMS",
-        "PHP"
+        "PHP",
+        "Platform"
       ],
       "stamp": "2017/05/22"
     },
@@ -76,7 +141,8 @@
       "notes": "",
       "tags": [
         "CMS",
-        "PHP"
+        "PHP",
+        "Platform"
       ],
       "stamp": "2017/05/18"
     },
@@ -741,7 +807,8 @@
       "notes": "",
       "tags": [
         "CMS",
-        "PHP"
+        "PHP",
+        "Platform"
       ],
       "stamp": "2017/03/28"
     },
@@ -754,7 +821,8 @@
       "notes": "",
       "tags": [
         "CMS",
-        "PHP"
+        "PHP",
+        "Platform"
       ],
       "stamp": "2017/03/28"
     } , {
@@ -853,13 +921,15 @@
       "id": "magento",
       "title": "Magento",
       "link": "http://magento.com/",
-      "content": "<p>Version 1, frustrating but I got my head around it.</p><p> Version 2, no idea, might have to re-learn.</p><p>Do I want to? Ehh, only if necessary, but not my ideal work anymore.</p>",
-      "rank": 2,
+      "content": "<p>My work experience with magento was version 1. Which they've now moved on to major update version 2.</p><p>The fact that it was bought by adobe in 2018, think they're pushing a lot harder on the paid version vs the opensource.</p>",
+      "rank": 3,
       "notes": "",
       "tags": [
-        "PHP"
+        "PHP",
+        "eCom",
+        "Platform"
       ],
-      "stamp": "2017/03/28"
+      "stamp": "2020/04/22"
     } , {
       "id": "modernizr",
       "title": "Modernizr",
